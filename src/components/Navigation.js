@@ -5,7 +5,7 @@ export default class Navigation extends React.Component {
     return (
       <div>
         <p className="hed">
-          <a href="/home">
+          <a href="/">
             <span>Home</span>
           </a>{' '}
           /{' '}

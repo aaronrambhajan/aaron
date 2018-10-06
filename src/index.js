@@ -21,7 +21,7 @@ const App = () => (
       <Navigation />
 
       <div>
-        <Route path="/home" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/writing" component={WritingPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/work" component={WorkPage} />
