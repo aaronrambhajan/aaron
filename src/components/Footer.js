@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHub from '../images/GitHub';
 import LinkedIn from '../images/LinkedIn';
+import Email from '../images/Email';
 
 const styles = {
   main: {
@@ -20,6 +21,10 @@ export default class Footer extends React.Component {
         <a target="_blank" href="https://github.com/aaronrambhajan">
           <GitHub size={24} />
         </a>
+
+        {/* <a target="_blank" href="mailto:aaron.rambhajan@mail.utoronto.ca">
+          <Email size={24} />
+        </a> */}
       </p>
     );
   };
