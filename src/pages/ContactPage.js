@@ -10,12 +10,11 @@ export default class ContactPage extends React.Component {
     return (
       <div>
         <h1 className="intro-hed">
-          You can find me in a few different places. Catch me chirping with the
-          birds on{' '}
+          Catch me chirping with the birds on{' '}
           <a href="https://twitter.com/AARONRAMBHAJAN">
             <Twitter size={24} />
           </a>
-          , snappin' around at{' '}
+          , snappin' around on{' '}
           <a href="https://instagram.com/aaronrambhajan/">
             <Instagram size={24} />
           </a>
