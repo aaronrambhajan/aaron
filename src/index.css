@@ -157,6 +157,7 @@ p {
 p.writing span {
   font-size: 2em;
   font-weight: bold;
+  color: black;
 }
 
 em {
