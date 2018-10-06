@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class GitHub extends React.Component {
+export default class Email extends React.Component {
   props: {
     size: Number,
   };
