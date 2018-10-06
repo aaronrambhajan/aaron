@@ -113,9 +113,9 @@ ul {
 
 li {
   /* font-size: 1em; */
-  font-weight: 50;
+  /* font-weight: 50; */
   line-height: 1.5;
-  font-family: menlo, monospace;
+  /* font-family: menlo, monospace; */
 }
 
 blockquote,
@@ -181,9 +181,19 @@ a:visited {
   color: #181818;
 }
 
+a span {
+  font-weight: 100;
+  background-color: #e7e7e7;
+}
+
+a:hover span {
+  color: #e7e7e7;
+  background-color: #00adef;
+}
+
 a:hover {
   text-decoration: none;
-  color: #181818;
+  color: #00adef;
 }
 
 .intro-hed {
@@ -198,9 +208,9 @@ a:hover {
   margin: 0 auto;
 }
 
-p span {
-  font-size: 2em;
-  font-weight: bold;
+.hed {
+  font-weight: 100;
+  font-size: 0.8em;
 }
 
 @media only screen and (min-width: 540px) {
