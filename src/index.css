@@ -112,10 +112,7 @@ ul {
 }
 
 li {
-  /* font-size: 1em; */
-  /* font-weight: 50; */
   line-height: 1.5;
-  /* font-family: menlo, monospace; */
 }
 
 blockquote,
@@ -155,6 +152,11 @@ body {
 
 p {
   margin-bottom: 1em;
+}
+
+p.writing span {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 em {
