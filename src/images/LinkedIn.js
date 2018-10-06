@@ -8,6 +8,7 @@ export default class LinkedIn extends React.Component {
   render = () => {
     return (
       <svg
+        className="linkedin"
         style={{ marginRight: 10 }}
         width={this.props.size}
         height={this.props.size}

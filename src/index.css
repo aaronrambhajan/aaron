@@ -216,6 +216,26 @@ a:hover {
   font-size: 0.8em;
 }
 
+svg.twitter:hover {
+  fill: #1da1f2;
+}
+
+svg.instagram:hover {
+  fill: #c13584;
+}
+
+svg.soundcloud:hover {
+  fill: #ff8800;
+}
+
+svg.linkedin:hover {
+  fill: #0077b5;
+}
+
+svg.github:hover {
+  fill: #6e5494;
+}
+
 @media only screen and (min-width: 540px) {
   body {
     font-size: 19px;

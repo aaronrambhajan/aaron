@@ -7,6 +7,7 @@ export default class GitHub extends React.Component {
   render = () => {
     return (
       <svg
+        className="github"
         style={{ marginLeft: 10, marginRight: 10 }}
         width={this.props.size}
         height={this.props.size}
