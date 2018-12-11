@@ -9,7 +9,9 @@ export default class ContactPage extends React.Component {
   render = () => {
     return (
       <div class="contact">
-        <p />
+        <h1 class="intro-hed" style={{ color: 'black' }}>
+          Get in touch at the links <strong>below</strong>.
+        </h1>
       </div>
     );
   };
