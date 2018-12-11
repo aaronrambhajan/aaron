@@ -32,7 +32,7 @@ export default class ProjectHeader extends React.Component {
           size="sm"
           style={{ marginRight: 10 }}
         >
-          See more
+          Read
         </Button>
       </div>
     );

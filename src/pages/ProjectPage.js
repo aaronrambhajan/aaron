@@ -11,15 +11,21 @@ import Todoist from '../images/ADHD/Todoist';
 
 export default class HomePage extends React.Component {
   state: {
-    collapse: boolean,
+    problem: boolean,
+    story: boolean,
   };
 
   state = {
-    collapse: false,
+    problem: false,
+    story: false,
   };
 
-  toggleCollapse = () => {
-    this.setState({ collapse: !this.state.collapse });
+  toggleProblem = () => {
+    this.setState({ problem: !this.state.problem });
+  };
+
+  toggleStory = () => {
+    this.setState({ story: !this.state.story });
   };
 
   render = () => {
@@ -60,31 +66,38 @@ export default class HomePage extends React.Component {
         <hr />
 
         <div class="project-article">
-          <Persona />
+          <ProjectHeader
+            toggle={this.toggleStory}
+            title="Story"
+            titleColor={this.state.story ? 'grey' : 'black'}
+          />
 
-          {/* @todo: Add tooltips to the symptoms. */}
-          <p>
-            Having ADHD, Natalia struggles with <strong>impulsivity</strong>,{' '}
-            <strong>hyperactivity</strong>, and <strong>inattention</strong>.
-            But, what does that mean? The only thing you need to understand
-            about Natalia's symptoms is that it makes{' '}
-            <code>
-              the <strong>simplest</strong> things feel{' '}
-              <strong>impossible</strong>.
-            </code>
-          </p>
+          <Collapse isOpen={this.state.story}>
+            <Persona />
 
+            {/* @todo: Add tooltips to the symptoms. */}
+            <p>
+              Having ADHD, Natalia struggles with <strong>impulsivity</strong>,{' '}
+              <strong>hyperactivity</strong>, and <strong>inattention</strong>.
+              But, what does that mean? The only thing you need to understand
+              about Natalia's symptoms is that it makes{' '}
+              <code>
+                the <strong>simplest</strong> things feel{' '}
+                <strong>impossible</strong>.
+              </code>
+            </p>
+          </Collapse>
           <hr />
           <h2>Context</h2>
           <hr />
 
           <ProjectHeader
-            toggle={this.toggleCollapse}
+            toggle={this.toggleProblem}
             title="Problem"
-            titleColor={this.state.collapse ? 'grey' : 'black'}
+            titleColor={this.state.problem ? 'grey' : 'black'}
           />
 
-          <Collapse isOpen={this.state.collapse}>
+          <Collapse isOpen={this.state.problem}>
             <ImageRow
               img1={Trello}
               img1txt="Trello"
