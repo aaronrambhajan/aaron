@@ -4,6 +4,7 @@ export default class Navigation extends React.Component {
   render = () => {
     return (
       <div
+        class="navigation"
         style={{
           display: 'flex',
           flexDirection: 'row',
@@ -11,32 +12,15 @@ export default class Navigation extends React.Component {
         }}
       >
         <div>
-          <p className="hed">
-            <a href="/">
-              <span>Home</span>
-            </a>{' '}
-            /{' '}
-            <a href="/work">
-              <span>Work</span>
-            </a>{' '}
-            /{' '}
-            {/* <a href="/writing">
-            <span>Writing</span>
-          </a>{' '}
-          /{' '} */}
-            <a href="/about">
-              <span>About</span>
-            </a>{' '}
-            /{' '}
-            <a href="/contact">
-              <span>Contact</span>
-            </a>{' '}
+          <p>
+            <a href="/">Home</a> / <a href="/work">Work</a> /{' '}
+            <a href="/about">About</a> / <a href="/contact">Contact</a>{' '}
             <a className="thoughts" href="/thoughts">
-              <span>/ Thoughts</span>
+              / Thoughts
             </a>
           </p>
         </div>
-        <div style={{ fontWeight: '600', color: 'grey' }}>AR</div>
+        <div style={{ color: 'grey' }}>AR</div>
       </div>
     );
   };

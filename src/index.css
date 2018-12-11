@@ -189,22 +189,6 @@ a:visited {
   color: #181818;
 }
 
-a span {
-  font-weight: 100;
-  background-color: #e7e7e7;
-}
-
-a.thoughts,
-a.thoughts span {
-  color: white;
-  background-color: white;
-}
-
-a:hover span {
-  color: #e7e7e7;
-  background-color: #00adef;
-}
-
 a:hover {
   text-decoration: none;
   color: #00adef;
@@ -230,6 +214,27 @@ a:hover {
 .footer {
   display: flex;
   flex-direction: row;
+}
+
+/*
+  NAVIGATION
+*/
+.navigation {
+  color: #454545;
+  font-size: 0.8em;
+}
+.navigation a {
+  font-weight: 100;
+  background-color: #e7e7e7;
+}
+.navigation a.thoughts {
+  color: white;
+  background-color: white;
+}
+
+.navigation a:hover {
+  color: #e7e7e7;
+  background-color: #454545;
 }
 
 /*
@@ -260,6 +265,11 @@ svg.email:hover {
 }
 
 /*
+  WORK
+*/
+.work a {
+}
+/*
   PROJECT WORK CODE
 */
 .projects p {
@@ -270,6 +280,7 @@ svg.email:hover {
 .projects-header {
   background-color: #fff0f5;
   padding: 0.75em;
+  margin-bottom: 20;
 }
 
 .project-article h2 {
