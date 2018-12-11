@@ -43,7 +43,7 @@ export default class ProjectCard extends React.Component {
   };
 }
 
-function ButtonGroupings(label) {
+export function ButtonGroupings(label) {
   switch (label) {
     case 'User Research':
       return (
@@ -55,8 +55,9 @@ function ButtonGroupings(label) {
     case 'Data Analysis':
       return (
         <Button disabled color="info" size="sm" style={{ marginRight: 10 }}>
-          User Research
+          Data Analysis
         </Button>
       );
+      break;
   }
 }

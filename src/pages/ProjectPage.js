@@ -4,6 +4,7 @@ import React from 'react';
 import { Button, Collapse } from 'reactstrap';
 import Persona from '../components/Persona';
 import ProjectHeader from '../components/ProjectHeader';
+import { ButtonGroupings } from '../components/ProjectCard';
 import ImageRow from '../components/ImageRow';
 import Asana from '../images/ADHD/Asana';
 import Trello from '../images/ADHD/Trello';
@@ -48,18 +49,11 @@ export default class HomePage extends React.Component {
             </code>
             .
           </p>
-          <div class="skill-group">
-            <Button
-              disabled
-              color="danger"
-              size="sm"
-              style={{ marginRight: 10 }}
-            >
-              User Research
-            </Button>
-            <Button disabled color="info" size="sm" style={{ marginRight: 10 }}>
-              Data Analysis
-            </Button>
+
+          <div>
+            {['User Research', 'Data Analysis'].map((label) =>
+              ButtonGroupings(label)
+            )}
           </div>
         </div>
 
