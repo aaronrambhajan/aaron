@@ -196,7 +196,6 @@ a:hover {
 
 .intro-hed {
   font-size: 1.35em;
-  margin-bottom: 1em;
 }
 
 .container {
@@ -214,6 +213,7 @@ a:hover {
 .footer {
   display: flex;
   flex-direction: row;
+  margin-top: 1em;
 }
 
 /*
@@ -267,8 +267,19 @@ svg.email:hover {
 /*
   WORK
 */
-.work a {
+.work .disabled {
+  text-decoration: line-through;
+  color: #e7e7e7;
 }
+
+.work p {
+  margin-bottom: 0;
+}
+
+.work-list {
+  /* background-color: #454545; */
+}
+
 /*
   PROJECT WORK CODE
 */
