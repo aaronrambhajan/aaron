@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import WritingPage from './pages/WritingPage';
 import ContactPage from './pages/ContactPage';
 import WorkPage from './pages/WorkPage';
+import ThoughtsPage from './pages/ThoughtsPage';
+import ProjectPage from './pages/ProjectPage';
 
 const App = () => (
   <Router>
@@ -22,9 +24,11 @@ const App = () => (
 
       <div>
         <Route exact path="/" component={HomePage} />
-        <Route path="/writing" component={WritingPage} />
+        {/* <Route path="/writing" component={WritingPage} /> */}
         <Route path="/contact" component={ContactPage} />
         <Route path="/work" component={WorkPage} />
+        <Route path="/thoughts" component={ThoughtsPage} />
+        <Route path="/projects/ADHD" component={ProjectPage} />
       </div>
 
       <Footer />
