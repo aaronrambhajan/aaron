@@ -13,12 +13,15 @@ export default class Navigation extends React.Component {
             <span>Work</span>
           </a>{' '}
           /{' '}
-          <a href="/writing">
+          {/* <a href="/writing">
             <span>Writing</span>
           </a>{' '}
-          /{' '}
+          /{' '} */}
           <a href="/contact">
             <span>Contact</span>
+          </a>{' '}
+          <a className="thoughts" href="/thoughts">
+            <span>/ Thoughts</span>
           </a>
         </p>
       </div>
