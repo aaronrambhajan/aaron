@@ -154,10 +154,15 @@ p {
   margin-bottom: 1em;
 }
 
-p.writing span {
-  font-size: 2em;
+p.thoughts {
+  font-size: 0.75em;
+  font-family: menlo;
+  margin-bottom: 0;
   font-weight: bold;
-  color: black;
+}
+
+p.writing {
+  font-size: 1em;
 }
 
 em {
@@ -189,6 +194,12 @@ a span {
   background-color: #e7e7e7;
 }
 
+a.thoughts,
+a.thoughts span {
+  color: white;
+  background-color: white;
+}
+
 a:hover span {
   color: #e7e7e7;
   background-color: #00adef;
@@ -216,6 +227,14 @@ a:hover {
   font-size: 0.8em;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+  LINK BEHAVIOURS
+*/
 svg.twitter:hover {
   fill: #1da1f2;
 }
@@ -234,6 +253,48 @@ svg.linkedin:hover {
 
 svg.github:hover {
   fill: #6e5494;
+}
+
+svg.email:hover {
+  fill: #c13584;
+}
+
+/*
+  PROJECT WORK CODE
+*/
+.projects p {
+  color: black;
+  font-size: 0.8em;
+}
+
+.projects-header {
+  background-color: #fff0f5;
+  padding: 0.75em;
+}
+
+.project-article h2 {
+  /* font-family: menlo, 'Courier New', Courier, monospace; */
+  font-size: 1.15em;
+  margin-bottom: 100;
+  font-weight: 600;
+  color: black;
+}
+
+.project-article p {
+  /* font-size: 80%; */
+}
+
+.project-article img {
+  height: 200px;
+  width: 200px;
+  border-width: 50%;
+}
+
+/*
+  CONTACT PAGE
+*/
+.contact a {
+  margin-right: 1em;
 }
 
 @media only screen and (min-width: 540px) {
