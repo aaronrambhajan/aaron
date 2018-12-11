@@ -16,6 +16,7 @@ import ContactPage from './pages/ContactPage';
 import WorkPage from './pages/WorkPage';
 import ThoughtsPage from './pages/ThoughtsPage';
 import ProjectPage from './pages/ProjectPage';
+import AboutPage from './pages/AboutPage';
 
 const App = () => (
   <Router>
@@ -24,6 +25,7 @@ const App = () => (
 
       <div>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
         {/* <Route path="/writing" component={WritingPage} /> */}
         <Route path="/contact" component={ContactPage} />
         <Route path="/work" component={WorkPage} />
