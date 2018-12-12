@@ -3,17 +3,12 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-export default class ProjectHeader extends React.Component {
+export default class ProjectTitle extends React.Component {
   props: {
     toggle: Function,
     title: string,
-    titleColor: boolean,
-  };
-  state: {
-    collapse: boolean,
-  };
-  state = {
-    collapse: false,
+    titleColor: string,
+    backgroundColor: string,
   };
 
   render = () => {
@@ -23,9 +18,16 @@ export default class ProjectHeader extends React.Component {
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
+          backgroundColor: this.props.backgroundColor,
         }}
       >
-        <h2 style={{ color: this.props.titleColor }}>{this.props.title}</h2>
+        <h2
+          style={{
+            color: this.props.titleColor,
+          }}
+        >
+          {this.props.title}
+        </h2>
         <Button
           onClick={this.props.toggle}
           color="secondary"

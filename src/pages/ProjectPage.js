@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button, Collapse } from 'reactstrap';
 import Persona from '../components/Persona';
-import ProjectHeader from '../components/ProjectHeader';
+import ProjectTitle from '../components/ProjectTitle';
 import { ButtonGroupings } from '../components/ProjectCard';
 import ImageRow from '../components/ImageRow';
 import Asana from '../images/ADHD/Asana';
@@ -60,10 +60,11 @@ export default class HomePage extends React.Component {
         <hr />
 
         <div class="project-article">
-          <ProjectHeader
+          <ProjectTitle
             toggle={this.toggleStory}
             title="Story"
             titleColor={this.state.story ? 'grey' : 'black'}
+            // backgroundColor={this.state.story ? 'lavender' : 'white'}
           />
 
           <Collapse isOpen={this.state.story}>
@@ -82,10 +83,8 @@ export default class HomePage extends React.Component {
             </p>
           </Collapse>
           <hr />
-          <h2>Context</h2>
-          <hr />
 
-          <ProjectHeader
+          <ProjectTitle
             toggle={this.toggleProblem}
             title="Problem"
             titleColor={this.state.problem ? 'grey' : 'black'}
