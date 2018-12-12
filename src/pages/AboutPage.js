@@ -55,6 +55,8 @@ export default class AboutPage extends React.Component {
           analytical, and I believe that’s all that innovation is.
           Intersections.
         </p>
+
+        {/* Thank you to Russell Goldenberg for this website layout. */}
       </div>
     );
   };
