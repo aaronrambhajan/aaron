@@ -29,7 +29,7 @@ const App = () => (
         {/* <Route path="/writing" component={WritingPage} /> */}
         <Route path="/contact" component={ContactPage} />
         <Route path="/work" component={WorkPage} />
-        <Route path="/thoughts" component={ThoughtsPage} />
+        {/* <Route path="/thoughts" component={ThoughtsPage} /> */}
         <Route path="/projects/ADHD" component={ProjectPage} />
       </div>
 
