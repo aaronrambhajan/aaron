@@ -34,36 +34,41 @@ export default class AboutPage extends React.Component {
         {/* Bio description */}
         <div class="about" style={{ marginTop: 10 }}>
           <p>
-            I still feel like a 4-year-old discovering LEGO. I'm so excited to
-            be alive, I love learning and I'm the luckiest kid in the world
-            because I've had the opportunity to learn so much from so many
-            amazing people. I'm a passionate creative problem-solver and I hope
-            you'll consider me for an opportunity to learn even more.
+            I still feel like I'm 4-years-old discovering LEGO for the first
+            time. I love learning more than anything in the world and I'm lucky
+            enough to have had the opportunity to learn so much from so many
+            amazing people. I'm technical, creative, and analytical, but at my
+            core, I'm a creative problem-solver who loves to build.
           </p>
-          <p>
-            I'm a <u>software engineer</u>, a <u>behavioural researcher</u>, and
-            a <u>music producer</u>. My place in the world—in technology, more
-            saliently—is making connections you'd never expect. I believe
-            innovation is really just timely combinations no one
-            expected—ambient music existed before 808's & Heartbreak, Kanye just
-            found it first. I'm technical, creative, and analytical—there's
-            nothing I won't learn to solve a problem. I'm passionate about
-            music, mentorship/community-building, and mental health.
-          </p>
+
           <p>
             Currently, I'm a researcher and developer at the Mack Lab, doing my
-            Masters of Information at the University of Toronto, and working
+            Master of Information at the University of Toronto and working
             part-time at Drop Mobility as a Software Engineer. I did my
-            undergrad at U of T, as well, in Psychology, Art History, and
-            Computer Science (wild, right?), with a brief interlude studying
-            Electronic Production and Design at Berklee College of Music in
-            Boston, MA (wilder, right?).
+            undergrad at U of T in Psychology, Art History, and Computer Science
+            , with a brief interlude studying Electronic Production and Design
+            at Berklee College of Music in Boston, MA.
           </p>
           <p>
+            My place in the world—in technology, more saliently—is making
+            connections you'd never expect. I believe innovation is just making
+            timely combinations no one expected—ambient music existed before
+            808's & Heartbreak, Kanye just got to it first. There's nothing I
+            won't learn to solve a problem, and no greater feat than being able
+            to impact communities by doing so.
+          </p>
+          <p>
+            In any case, thanks for dropping by. If you'd like to get in touch,
+            please feel free to contact me at any of the links below.
+            (Pssssstttt....you can also check out my music{' '}
+            <a href="https://soundcloud.com/rambhajan">here</a>
+            .)
+          </p>
+          {/* <p>
             I'd like to take a bit of space here to thank those amazing people.
             In the spirit of Amazon recommendations, if you like me, you'll also
             like:
-          </p>
+          </p> */}
         </div>
 
         {/* Thank you to Russell Goldenberg for this website layout. */}
