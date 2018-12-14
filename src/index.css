@@ -306,6 +306,12 @@ svg.email:hover {
   /* font-size: 80%; */
 }
 
+.project-article .citation {
+  color: red;
+}
+
+.with-side-caption {
+}
 .with-side-caption img {
   height: 200px;
   width: 200px;

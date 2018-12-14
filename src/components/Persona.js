@@ -6,7 +6,11 @@ import AnxiousGirl from '../images/ADHD/anxious-girl-round.png';
 export default class Persona extends React.Component {
   render = () => {
     return (
-      <div>
+      <div
+        style={{
+          padding: 10,
+        }}
+      >
         <div
           class="with-side-caption"
           style={{
@@ -20,16 +24,7 @@ export default class Persona extends React.Component {
             overflow: 'scroll',
           }}
         >
-          <div
-            style={
-              {
-                // maxWidth: 200,
-                // maxHeight: 200,
-                // borderRadius: '50%',
-                // overflow: 'hidden',
-              }
-            }
-          >
+          <div>
             <img src={AnxiousGirl} alt="anxious-girl" />
           </div>
 
