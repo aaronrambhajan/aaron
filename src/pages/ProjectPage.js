@@ -11,6 +11,7 @@ import { ButtonGroupings } from '../components/ProjectCard';
 import ImageRow from '../components/ImageRow';
 import ImageWithSideCaption from '../components/ImageWithSideCaption';
 import ImageWide from '../components/ImageWide';
+import Carousel from '../components/Carousel';
 
 /* IMAGES */
 // Apps
@@ -46,21 +47,57 @@ export default class ProjectPage extends React.Component {
   state: {
     problem: boolean,
     story: boolean,
+    needs: boolean,
+    product: boolean,
     credits: boolean,
   };
 
   state = {
     problem: false,
-    story: true,
+    story: false,
+    needs: false,
+    product: false,
     credits: false,
   };
 
   toggleProblem = () => {
-    this.setState({ problem: !this.state.problem });
+    this.setState({
+      problem: !this.state.problem,
+      story: false,
+      needs: false,
+      product: false,
+      credits: false,
+    });
   };
 
   toggleStory = () => {
-    this.setState({ story: !this.state.story });
+    this.setState({
+      problem: false,
+      story: !this.state.story,
+      needs: false,
+      product: false,
+      credits: false,
+    });
+  };
+
+  toggleNeeds = () => {
+    this.setState({
+      problem: false,
+      story: false,
+      needs: !this.state.needs,
+      product: false,
+      credits: false,
+    });
+  };
+
+  toggleProduct = () => {
+    this.setState({
+      problem: false,
+      story: false,
+      needs: false,
+      product: !this.state.product,
+      credits: false,
+    });
   };
 
   toggleCredits = () => {
@@ -79,15 +116,26 @@ export default class ProjectPage extends React.Component {
             ADHD <code>&</code> Time Management
           </h1>
 
-          <p>
-            Being a student with ADHD is hard. Most people think it’s about
-            getting things done. We learned that it’s about{' '}
-            <code>
-              helping them live their lives, how{' '}
-              <span style={{ fontWeight: 600 }}>they</span> want to
-            </code>
-            .
-          </p>
+          <div>
+            <p>
+              For <em>Fundamental of User Experience</em>, we created{' '}
+              <strong>10Four</strong>, an mobile productivity application
+              designed for <strong>students with ADHD</strong>. We designed a
+              product focused on <strong>measurably reducing overwhelm</strong>{' '}
+              by partnering people on tasks.
+            </p>
+
+            <p>
+              We learned that being a student with ADHD is hard, but not in the
+              way we expect—most people think it’s about getting things done. We
+              learned that it’s really about{' '}
+              <code>
+                helping them live their lives, how{' '}
+                <span style={{ fontWeight: 600 }}>they</span> want to
+              </code>
+              .
+            </p>
+          </div>
 
           <div>
             {['User Research', 'UX/UI Design'].map((label) =>
@@ -96,9 +144,8 @@ export default class ProjectPage extends React.Component {
           </div>
         </div>
 
-        {/* SECTION 1 */}
-
         <div class="project-article">
+          {/* SECTION 1 */}
           <hr />
           <ProjectTitle
             toggle={this.toggleProblem}
@@ -107,11 +154,11 @@ export default class ProjectPage extends React.Component {
           />
 
           <Collapse isOpen={this.state.problem}>
-            <ProjectSubheading text="The Mystery of ADHD" />
             <p>
               When most people think of ADHD, we think of children bouncing off
-              the walls. We think of the dog from <strong>Up</strong> being
-              easily distracted, or a friend who's always fidgeting.
+              the walls. We think of the dog from <strong>Up</strong> getting
+              distracted at the sight of a squirrel, or a friend who's always
+              fidgeting.
             </p>
 
             <ImageWide
@@ -123,9 +170,9 @@ export default class ProjectPage extends React.Component {
             <p>
               What most people don't know is that this is far from the whole
               truth. The reality is that people with ADHD experience focus in{' '}
-              <strong>extremes</strong>. Sure, they <i>can</i> be distractable,
-              but they can just as easily be so hyperfocused they forget about
-              the world around them.
+              <strong>extremes</strong>. Sure, they <em>can</em> be
+              distractable, but they can just as easily be so hyperfocused they
+              forget about the world around them.
             </p>
 
             <p>
@@ -134,15 +181,12 @@ export default class ProjectPage extends React.Component {
               symptoms as abstract as impulsivity, hyperactivity, and
               inattention, how are we to even understand that? This is where we
               started our project. Our task was to{' '}
-              <a
-                class="citation"
-                href="https://chi2019.acm.org/authors/student-design-competition/"
-              >
+              <a href="https://chi2019.acm.org/authors/student-design-competition/">
                 "weave the social fabric"{' '}
               </a>
               using technology, and we sought to do that for people with ADHD by
               asking ourselves:
-              <i> How are these symptoms experienced? How are they felt?</i>
+              <em> How are these symptoms experienced? How are they felt?</em>
             </p>
 
             <ProjectSubheading text="Research" />
@@ -162,7 +206,7 @@ export default class ProjectPage extends React.Component {
               loved ones, technology, and themselves. Conducting semi-structured
               interviews, these conversations took on lives of their own,
               becoming a treasure trove of insight. We supplemented this data
-              with surveys focused on people whom <i>struggle</i> with
+              with surveys focused on people whom <em>struggle</em> with
               productivity—in part to cope with our lack of population, and in
               part to address quiet ADHD.
             </p>
@@ -174,66 +218,6 @@ export default class ProjectPage extends React.Component {
               for <strong>Natalia</strong>, our persona.
             </p>
             <ImageWide image={procEmpathyMap} alt="empathy-map" />
-            {/*
-            <p>
-              Unsurprisingly, people who have ADHD struggle with productivity.
-              Like many of us, they're (clinical) procrastinators, tending to do
-              things only when they feel urgent—more often than not, that means
-              it's happening at the last minute. The thing is, it's not that
-              simple. They <i>do</i> get things done. It's just that it's
-              draining. It only happens at the last minute. It only happens when
-              they hyperfocus. <strong>They don't have control over it</strong>.
-            </p>
-
-            <h3 style={{ fontWeight: 700 }}>Research</h3>
-
-            <p>
-              So, how do people with ADHD deal with that right now? How do they
-              manage their lives, right now? We talked to them to find out. We
-              found out that they struggle with this thing and that thing, and
-              these symptoms affect them the most. Three apps that came up
-              during our primary research were:
-            </p>
-
-            <ImageRow
-              img1={appTrello}
-              img1txt="Trello"
-              img2={appAsana}
-              img2txt="Asana"
-              img3={appTodoist}
-              img3txt="Todoist"
-              size={90}
-            />
-
-            <p>
-              They work fine for most people. The issue is that{' '}
-              <strong>these apps weren't built for ADHD</strong>. They're just
-              reminders. They don't help people with ADHD because they just
-              forget. Well, not quite. Let me explain why they don't work—
-            </p>
-
-            <ImageWithSideCaption
-              text="Notification systems built for her symptoms that keep her self-aware"
-              image={needsAccountability}
-              alt="needs-accountability"
-            />
-
-            <ImageWithSideCaption
-              text="Someone who can empathize with her and hold her accountable"
-              image={needsAwareness}
-              alt="needs-awareness"
-            />
-
-            <p>
-              The current apps fail on these specific dimensions. So... we
-              started thinking, how can we address that?
-            </p>
-
-            <h3 style={{ fontWeight: 700 }}>Big Ideas</h3>
-
-            <ImageWide image={procIdeation} alt="big ideas" />
-            <ImageWide image={storyTextAnxious} alt="storytime" />
-             */}
           </Collapse>
 
           <hr />
@@ -248,23 +232,12 @@ export default class ProjectPage extends React.Component {
             <Persona />
 
             <p>
-              Having ADHD, Natalia struggles with <strong>impulsivity</strong>,{' '}
-              <strong>hyperactivity</strong>, and <strong>inattention</strong>.
-              But, what does that mean? The only thing you need to understand
-              about Natalia's symptoms is that it makes{' '}
-              <code>
-                the <strong>simplest</strong> things feel{' '}
-                <strong>impossible</strong>.
-              </code>
-            </p>
-
-            <p>
               Tonight, Natalia has plans with an old friend,{' '}
               <strong>Rebeka</strong>. They went to elementary school together,
               and they're seeing each other for the first time in a year. As you
               can imagine, Natalia's super excited. She comes home from class in
               the afternoon, and heads to her room to get ready. But when she
-              gets in... Her room is a mess.
+              gets in, her room is a mess.
             </p>
 
             <ImageWide
@@ -272,35 +245,163 @@ export default class ProjectPage extends React.Component {
               alt="messy room"
               caption="Natalia's Room"
             />
-
             <p>
-              Natalia feels like she <strong>needs</strong> to clean it. Well,
-              it's not so much that she needs to. She's getting anxious and
-              starting to freak out. Really, it's because she's{' '}
-              <strong>hyperfocusing</strong>.
+              Natalia feels like she <strong>needs</strong> to clean it. She's
+              getting anxious and starting to forget what's going on. Becoming
+              overwhlemed, Natalia's mind is racing with thoughts about her
+              room, about cancelling on Rebeka...
             </p>
+
+            <ImageWide
+              image={storyTextAnxious}
+              alt="Natalia's phone"
+              caption="Natalia's phone"
+              style={{ height: 500, width: 'auto' }}
+            />
 
             <p>
               I know what you're thinking.{' '}
-              <i>Why can't she just... clean it later?</i> Totally fair. After
-              all, that's what most of us would do. Here's the thing, though.
-              See, people with ADHD experience focus in <i>extremes</i>. Most of
-              us think of ADHD as young children, bouncing off the walls, being
-              easily distracted. But the opposite is also common—being so
-              focused into something that she forgets the rest of the world.
-            </p>
-            <p>
-              {' '}
-              What you need to understand, is that Natalia doesn't just see a
-              messy room. <strong>This</strong> is what she sees.
+              <em>Why can't she just clean it later?</em> After all, that's what
+              most of us would do. Here's the thing. Remember when we said
+              people with ADHD experience focus in <em>extremes</em>? This is
+              Natalia in one of those extremes. <strong>Hyperfocusing</strong>.
+              Natalia doesn't <em>just</em> see a messy room. In her mind, this
+              is what's happening.
             </p>
             <ImageWide
               image={storyMessyRoom}
               alt="messy room animation"
-              caption="What she sees"
+              caption="What Natalia sees"
             />
+            <p>
+              Her brain is all over the place. Natalia hates this feeling. Sure,
+              ADHD makes simple things impossible, but this is where it really
+              affects her. She can get through her work, through school—but when
+              it starts affecting her loved ones, she gets so frustrated.
+              Natalia <em>loves</em> her friends and family, but her{' '}
+              <strong>symptoms make it so hard to connect</strong> with them.
+            </p>
+          </Collapse>
+          <hr />
+          <ProjectTitle
+            toggle={this.toggleNeeds}
+            title="Needs"
+            titleColor={this.state.needs ? 'grey' : 'black'}
+          />
+
+          <Collapse isOpen={this.state.needs}>
+            <p>How would Natalia deal with her symptoms right now?</p>
+
+            <ImageRow
+              img1={appTrello}
+              img1txt="Trello"
+              img2={appAsana}
+              img2txt="Asana"
+              img3={appTodoist}
+              img3txt="Todoist"
+              size={90}
+            />
+
+            <p>
+              These are all productivity apps that she'd normally use. They
+              improve productivity by using checklists and alarms, alerting her
+              around deadlines. For most people this is fine, but for Natalia,
+              there's no sense of urgency, and ultimately, though it will alert
+              her, it won't hold her accountable. This is to say that these apps{' '}
+              <strong>weren't made for Natalia</strong>.
+            </p>
+            <p>
+              Natalia's needs are different than most, and we realized
+              throughout this process that understanding what this means would
+              be the crux of helping her. So, what <em>does</em> she need?
+            </p>
+
+            <ProjectSubheading
+              style={{ textAlign: 'center' }}
+              text="Natalia needs..."
+            />
+
+            <ImageWithSideCaption
+              text="Notification systems built for her symptoms that keep her self-aware."
+              image={needsAwareness}
+              alt="needs-accountability"
+            />
+
+            <p>
+              Traditional push notifications are easy to ignore and fall into
+              the noise of other apps. Natalia needs notifications that
+              facilitate a strong <strong>sense of urgency</strong>. We created
+              a way to make notifications salient and meaningful to specific
+              situations by creating custom notifications tailored to Natalia's
+              symptoms.
+            </p>
+
+            {/* @todo: Replace these needs with a needs carousel of slidess */}
+            {/* <Carousel /> */}
+            <ImageWithSideCaption
+              text="Someone who can empathize with her and hold her accountable."
+              image={needsAccountability}
+              alt="needs-awareness"
+            />
+            <p>
+              Part of helping Natalia is about de-escalating her symptoms. When
+              she's hyperfocusing, it's so easy for her to get lost, and most
+              people don't understand that. Having an accountability partner
+              will help her feel normal and focus on the task at hand.
+            </p>
+
+            {/* <h3 style={{ fontWeight: 700 }}>Big Ideas</h3>
+
+*/}
           </Collapse>
 
+          <hr />
+          <ProjectTitle
+            toggle={this.toggleProduct}
+            title="Product"
+            titleColor={this.state.product ? 'grey' : 'black'}
+          />
+
+          <Collapse isOpen={this.state.product}>
+            <p>
+              Using those needs, we started ideating. We focused on features
+              that directly addressed those to really make an impact:{' '}
+              <strong>pairing users doing similar tasks</strong> and{' '}
+              <strong>notifications as voice memos</strong>.
+            </p>
+            <ImageWide
+              image={procPhone1}
+              alt="The final wireframe"
+              caption="Final wireframe"
+            />
+            <p>
+              These features were focused on her needs, and intended to directly
+              address how she would actually cope with her symptoms in our{' '}
+              <strong>real-life</strong> situation. To test this, we conducted{' '}
+              <strong>think-alouds</strong> and <strong>interviews</strong>,
+              putting our participants in Natalia's story by asking them to use
+              the product while doing a crossword puzzle.
+            </p>
+            <p>
+              What we found wasn't surprising, but was incredibly enlightening.
+              We know that people who have ADHD struggle with productivity. Like
+              many of us, they're (clinical) procrastinators, doing things only
+              when they feel urgent—more often than not at the last minute. They{' '}
+              <em>do</em> get things done, but their real problem is{' '}
+              <em>how</em>
+              .They don't <strong>feel like they have control</strong> over it.
+            </p>
+            <p>
+              Realizing that was the key to our final product, and our
+              perspective as we wrapped up the project. Understanding that
+              thinking about ADHD as productivity is an easy way to explain away
+              the nuances of what makes their experience unique. Natalia helped
+              us understand what it means to deal with ADHD, and taught all of
+              us a crucial lesson in the role empathy plays in designing great
+              product. Though our idea is far from perfect, I'm grateful to have
+              had the opportunity to learn as much as I did.
+            </p>
+          </Collapse>
           <hr />
           <ProjectTitle
             toggle={this.toggleCredits}

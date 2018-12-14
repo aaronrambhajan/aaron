@@ -1,14 +1,21 @@
 // @flow
 
 import React from 'react';
-import AnxiousGirl from '../images/ADHD/anxious-girl-round.png';
+import NataliaNormal from '../images/ADHD/natalia-normal.png';
 
 export default class Persona extends React.Component {
   render = () => {
     return (
       <div
         style={{
-          padding: 10,
+          paddingLeft: 10,
+          paddingRight: 10,
+          paddingTop: 5,
+          paddingBottom: 5,
+          marginTop: 10,
+          marginBottom: 10,
+          backgroundColor: '#e7e7e7',
+          borderRadius: 10,
         }}
       >
         <div
@@ -25,7 +32,7 @@ export default class Persona extends React.Component {
           }}
         >
           <div>
-            <img src={AnxiousGirl} alt="anxious-girl" />
+            <img src={NataliaNormal} alt="anxious-girl" />
           </div>
 
           <div style={{ marginLeft: 20 }}>
@@ -40,6 +47,16 @@ export default class Persona extends React.Component {
             </p>
           </div>
         </div>
+        <p>
+          Having ADHD, Natalia struggles with <strong>impulsivity</strong>,{' '}
+          <strong>hyperactivity</strong>, and <strong>inattention</strong>. But,
+          what does that mean? The only thing you need to understand about
+          Natalia's symptoms is that it makes{' '}
+          <code>
+            the <strong>simplest</strong> things feel{' '}
+            <strong>impossible</strong>.
+          </code>
+        </p>
       </div>
     );
   };
