@@ -46,21 +46,21 @@ export default class ProjectPage extends React.Component {
   };
 
   state = {
-    problem: true,
+    problem: false,
     story: false,
     credits: false,
   };
 
   toggleProblem = () => {
-    this.setState({ problem: !this.state.problem });
+    // this.setState({ problem: !this.state.problem });
   };
 
   toggleStory = () => {
-    this.setState({ story: !this.state.story });
+    // this.setState({ story: !this.state.story });
   };
 
   toggleCredits = () => {
-    this.setState({ credits: !this.state.credits });
+    // this.setState({ credits: !this.state.credits });
   };
 
   render = () => {

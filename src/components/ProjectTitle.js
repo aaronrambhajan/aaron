@@ -36,7 +36,7 @@ export default class ProjectTitle extends React.Component {
           size="sm"
           style={{ marginRight: 10 }}
         >
-          Read
+          Coming soon
         </Button>
       </div>
     );

@@ -34,19 +34,21 @@ export default class AboutPage extends React.Component {
         {/* Bio description */}
         <div class="about" style={{ marginTop: 10 }}>
           <p>
-            I still feel like a 4-year-old discovering LEGO . I really love
-            learning and I'm the luckiest kid in the world because I've had the
-            opportunity to learn so much from so many amazing people. I hope
-            you'll consider me for an opportunity to learn even more. I'm so
-            excited to be alive.
+            I still feel like a 4-year-old discovering LEGO. I'm so excited to
+            be alive, I love learning and I'm the luckiest kid in the world
+            because I've had the opportunity to learn so much from so many
+            amazing people. I'm a passionate creative problem-solver and I hope
+            you'll consider me for an opportunity to learn even more.
           </p>
           <p>
-            I'm a <u>software engineer</u>, a <u>researcher</u>, and a{' '}
-            <u>music producer</u>. My place in the world—in technology, more
-            saliently—is connecting thhin you'd never expect. I'm technical,
-            creative, and analytical, and I believe that’s all that innovation
-            is—unexpected combination. I'm passionate about music,
-            mentorship/community-building, and mental health.
+            I'm a <u>software engineer</u>, a <u>behavioural researcher</u>, and
+            a <u>music producer</u>. My place in the world—in technology, more
+            saliently—is making connections you'd never expect. I believe
+            innovation is really just timely combinations no one
+            expected—ambient music existed before 808's & Heartbreak, Kanye just
+            found it first. I'm technical, creative, and analytical—there's
+            nothing I won't learn to solve a problem. I'm passionate about
+            music, mentorship/community-building, and mental health.
           </p>
           <p>
             Currently, I'm a researcher and developer at the Mack Lab, doing my
@@ -55,7 +57,7 @@ export default class AboutPage extends React.Component {
             undergrad at U of T, as well, in Psychology, Art History, and
             Computer Science (wild, right?), with a brief interlude studying
             Electronic Production and Design at Berklee College of Music in
-            Boston, MA.
+            Boston, MA (wilder, right?).
           </p>
           <p>
             I'd like to take a bit of space here to thank those amazing people.
