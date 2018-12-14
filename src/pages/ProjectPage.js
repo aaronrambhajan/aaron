@@ -86,7 +86,7 @@ export default class ProjectPage extends React.Component {
           </p>
 
           <div>
-            {['User Research', 'Data Analysis'].map((label) =>
+            {['User Research', 'UX/UI Design'].map((label) =>
               ButtonGroupings(label)
             )}
           </div>

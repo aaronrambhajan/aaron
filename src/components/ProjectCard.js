@@ -59,5 +59,11 @@ export function ButtonGroupings(label) {
         </Button>
       );
       break;
+    case 'UX/UI Design':
+      return (
+        <Button disabled color="warning" size="sm" style={{ marginRight: 10 }}>
+          UX/UI Design
+        </Button>
+      );
   }
 }
