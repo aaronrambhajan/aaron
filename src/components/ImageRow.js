@@ -10,6 +10,7 @@ export default class ImageRows extends React.Component {
     img2txt: string,
     img3: Component,
     img3txt: string,
+    size: Number,
   };
 
   render = () => {
@@ -31,7 +32,7 @@ export default class ImageRows extends React.Component {
             marginBottom: '1em',
           }}
         >
-          <this.props.img1 size={90} />
+          <this.props.img1 size={this.props.size} />
           <p
             style={{
               color: 'gray',
@@ -52,7 +53,7 @@ export default class ImageRows extends React.Component {
             marginBottom: '1em',
           }}
         >
-          <this.props.img2 size={90} />
+          <this.props.img2 size={this.props.size} />
           <p
             style={{
               color: 'gray',
@@ -73,7 +74,7 @@ export default class ImageRows extends React.Component {
             marginBottom: '1em',
           }}
         >
-          <this.props.img3 size={90} />
+          <this.props.img3 size={this.props.size} />
           <p
             style={{
               color: 'gray',

@@ -18,7 +18,9 @@ export default class ProjectTitle extends React.Component {
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
+          alignItems: 'center',
           backgroundColor: this.props.backgroundColor,
+          marginBottom: 10,
         }}
       >
         <h2

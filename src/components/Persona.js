@@ -1,13 +1,14 @@
 // @flow
 
 import React from 'react';
-import AnxiousGirl from '../images/ADHD/anxious-girl.jpg';
+import AnxiousGirl from '../images/ADHD/anxious-girl-round.png';
 
 export default class Persona extends React.Component {
   render = () => {
     return (
       <div>
         <div
+          class="with-side-caption"
           style={{
             display: 'flex',
             flexDirection: 'row',
@@ -20,18 +21,16 @@ export default class Persona extends React.Component {
           }}
         >
           <div
-            style={{
-              maxWidth: '200px',
-              maxHeight: '200px',
-            }}
+            style={
+              {
+                // maxWidth: 200,
+                // maxHeight: 200,
+                // borderRadius: '50%',
+                // overflow: 'hidden',
+              }
+            }
           >
-            <img
-              src={AnxiousGirl}
-              alt="anxious-girl"
-              style={{
-                borderRadius: '50%',
-              }}
-            />
+            <img src={AnxiousGirl} alt="anxious-girl" />
           </div>
 
           <div style={{ marginLeft: 20 }}>
