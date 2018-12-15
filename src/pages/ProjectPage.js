@@ -17,7 +17,7 @@ import ImageRow from '../components/ImageRow';
 import ImageWithSideCaption from '../components/ImageWithSideCaption';
 import ImageWide from '../components/ImageWide';
 import CitationPopover from '../components/CitationPopover';
-import Carousel from '../components/Carousel';
+import NeedsCarousel from '../components/NeedsCarousel';
 
 /* IMAGES */
 // Apps
@@ -66,8 +66,8 @@ export default class ProjectPage extends React.Component {
   state = {
     problem: false,
     research: false,
-    story: true,
-    needs: false,
+    story: false,
+    needs: true,
     product: false,
     credits: false,
     popover: false,
@@ -431,12 +431,15 @@ export default class ProjectPage extends React.Component {
           <hr />
           <ProjectTitle
             toggle={this.toggleNeeds}
-            title="Needs"
+            title="ADHD Needs"
             titleColor={this.state.needs ? 'grey' : 'black'}
           />
 
           <Collapse isOpen={this.state.needs}>
-            <p>How would Natalia deal with her symptoms right now?</p>
+            <p>
+              What applications would Natalia use to deal with her symptoms
+              right now?
+            </p>
 
             <ImageRow
               img1={appTrello}
@@ -445,60 +448,39 @@ export default class ProjectPage extends React.Component {
               img2txt="Asana"
               img3={appTodoist}
               img3txt="Todoist"
-              size={90}
+              size={70}
             />
 
             <p>
-              These are all productivity apps that she'd normally use. They
-              improve productivity by using checklists and alarms, alerting her
-              around deadlines. For most people this is fine, but for Natalia,
-              there's no sense of urgency, and ultimately, though it will alert
-              her, it won't hold her accountable. This is to say that these apps{' '}
-              <strong>weren't made for Natalia</strong>.
-            </p>
-            <p>
-              Natalia's needs are different than most, and we realized
-              throughout this process that understanding what this means would
-              be the crux of helping her. So, what <em>does</em> she need?
+              These are productivity apps that she'd normally use. They use
+              checklists and alarms, sending her alerts that fixate on
+              deadlines. For most people, this is fine. For Natalia, it's not
+              quite the same. See, though they'll alert her, they won't hold her
+              accountable. There's no sense of urgency. By this, we mean to say
+              that these apps <strong>weren't made for Natalia</strong>. That
+              begs the question,{' '}
+              <code>
+                <strong>what does Natalia need</strong>
+              </code>
+              ?
             </p>
 
-            <ProjectSubheading
-              style={{ textAlign: 'center' }}
-              text="Natalia needs..."
-            />
-
-            <ImageWithSideCaption
-              caption="Notification systems built for her symptoms that keep her self-aware."
-              image={needsAwareness}
-              alt="needs-accountability"
-            />
+            <NeedsCarousel />
 
             <p>
-              Traditional push notifications are easy to ignore and fall into
-              the noise of other apps. Natalia needs notifications that
-              facilitate a strong <strong>sense of urgency</strong>. We created
-              a way to make notifications salient and meaningful to specific
-              situations by creating custom notifications tailored to Natalia's
-              symptoms.
+              Traditional push notifications are <strong>easy to ignore</strong>
+              . We make notifications <em>salient</em> and <em>meaningful</em>{' '}
+              to specific situations by creating custom notifications tailored
+              to Natalia's symptoms. When she's hyperfocusing, it's critical to{' '}
+              <strong>de-escalate</strong> her symptoms. We make it easier for
+              her to be normal by having an{' '}
+              <strong>accountability partner</strong> for her to work with.
             </p>
-
-            {/* @todo: Replace these needs with a needs carousel of slidess */}
-            {/* <Carousel /> */}
-            <ImageWithSideCaption
-              caption="Someone who can empathize with her and hold her accountable."
-              image={needsAccountability}
-              alt="needs-awareness"
-            />
             <p>
-              Part of helping Natalia is about de-escalating her symptoms. When
-              she's hyperfocusing, it's so easy for her to get lost, and most
-              people don't understand that. Having an accountability partner
-              will help her feel normal and focus on the task at hand.
+              Getting to understand Natalia's needs gave us everything necessary
+              to start ideating and to step even closer towards building a
+              solution that is actually <strong>made for Natalia</strong>.
             </p>
-
-            {/* <h3 style={{ fontWeight: 700 }}>Big Ideas</h3>
-
-*/}
           </Collapse>
 
           <hr />

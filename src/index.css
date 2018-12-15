@@ -311,6 +311,11 @@ svg.email:hover {
   font-weight: 400;
 }
 
+.carousel-indicators {
+  /* background-color: #f00; */
+  margin-bottom: 0.25em;
+}
+
 .citation-popover {
   font-size: 0.7em;
   margin-bottom: 0;

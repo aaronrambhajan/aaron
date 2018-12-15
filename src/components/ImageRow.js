@@ -19,7 +19,7 @@ export default class ImageRows extends React.Component {
         style={{
           display: 'flex',
           flexDirection: 'row',
-          justifyContent: 'space-around',
+          justifyContent: 'space-evenly',
           alignItems: 'center',
         }}
       >
