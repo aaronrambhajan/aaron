@@ -29,6 +29,7 @@ export default class ProjectTitle extends React.Component {
           }}
         >
           {this.props.title}
+          {/* {this.props.title.text} */}
         </h2>
         <Button
           onClick={this.props.toggle}

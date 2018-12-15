@@ -24,8 +24,8 @@ import NeedsCarousel from '../components/NeedsCarousel';
 import appAsana from '../images/ADHD/Asana';
 import appTrello from '../images/ADHD/Trello';
 import appTodoist from '../images/ADHD/Todoist';
-
 import miscUpGif from '../images/ADHD/up-gif.gif';
+import TeamPhoto from '../images/ADHD/the-team.jpeg';
 
 // Story
 import storyNataliaNormal from '../images/ADHD/natalia-normal.png';
@@ -45,6 +45,7 @@ import needsGuilt from '../images/ADHD/needs-guilt.svg';
 import procResearchStats from '../images/ADHD/research-stats.svg';
 import procEmpathyMap from '../images/ADHD/empathy-map.png';
 import procIdeation from '../images/ADHD/ideation.png';
+import procBigIdeas from '../images/ADHD/big-ideas.svg';
 import procLowFidelity from '../images/ADHD/low-fidelity.png';
 import procMidFidelity from '../images/ADHD/medium-fidelity.png';
 import procPhone1 from '../images/ADHD/full-1.png';
@@ -67,8 +68,8 @@ export default class ProjectPage extends React.Component {
     problem: false,
     research: false,
     story: false,
-    needs: true,
-    product: false,
+    needs: false,
+    product: true,
     credits: false,
     popover: false,
   };
@@ -129,7 +130,14 @@ export default class ProjectPage extends React.Component {
   };
 
   toggleCredits = () => {
-    this.setState({ credits: !this.state.credits });
+    this.setState({
+      problem: false,
+      research: false,
+      story: false,
+      needs: false,
+      product: false,
+      credits: !this.state.credits,
+    });
   };
 
   togglePopover = () => {
@@ -163,12 +171,20 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={procPhoneFull}
               alt="full-app"
-              caption="We created 10Four to help them do that."
+              caption={{
+                text: (
+                  <div>
+                    <strong>
+                      We created <code>10Four </code> to help them do that.
+                    </strong>
+                  </div>
+                ),
+              }}
               style={{ maxHeight: 250, width: 'auto' }}
             />
           </div>
 
-          <div>
+          <div style={{ marginTop: 10 }}>
             {['User Research', 'UX/UI Design'].map((label) =>
               ButtonGroupings(label)
             )}
@@ -200,7 +216,13 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={miscUpGif}
               alt="Dog from the movie UP"
-              caption="How we imagine ADHD."
+              caption={{
+                text: (
+                  <div>
+                    How we <strong>imagine</strong> ADHD.
+                  </div>
+                ),
+              }}
             />
             <p>
               Now, that's not <em>entirely</em> wrong. I mean, it's mostly
@@ -315,7 +337,7 @@ export default class ProjectPage extends React.Component {
           <hr />
           <ProjectTitle
             toggle={this.toggleStory}
-            title="Natalia's Story"
+            title="Natalia's story"
             titleColor={this.state.story ? 'grey' : 'black'}
           />
 
@@ -381,7 +403,13 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={storyMessyRoomBlank}
               alt="messy room"
-              caption="Natalia's Room"
+              caption={{
+                text: (
+                  <div>
+                    <strong>Natalia's</strong> room
+                  </div>
+                ),
+              }}
             />
             <p>
               Natalia feels like she <strong>needs</strong> to clean it. She's
@@ -395,7 +423,13 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={storyTextAnxious}
               alt="Natalia's phone"
-              caption="Natalia's phone"
+              caption={{
+                text: (
+                  <div>
+                    <strong>Natalia's</strong> phone
+                  </div>
+                ),
+              }}
               style={{ height: 500, width: 'auto' }}
             />
 
@@ -410,7 +444,14 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={storyMessyRoom}
               alt="messy room animation"
-              caption="Natalia's room, to Natalia"
+              caption={{
+                text: (
+                  <div>
+                    <strong>Natalia's</strong> room, from <strong>her</strong>{' '}
+                    eyes
+                  </div>
+                ),
+              }}
             />
             <p>
               Her brain is all over the place. Natalia <em>hates</em> this
@@ -424,14 +465,21 @@ export default class ProjectPage extends React.Component {
             <ImageWide
               image={storyNataliaAnxious}
               alt="natalia-anxious"
-              caption="Will I ever get better? Is it always going to be like this?"
+              caption={{
+                text: (
+                  <div>
+                    Will I <em>ever</em> get <strong>better</strong>? Is it{' '}
+                    <em>always</em> going to feel like <strong>this</strong>?
+                  </div>
+                ),
+              }}
               style={{ maxHeight: 250, width: 'auto' }}
             />
           </Collapse>
           <hr />
           <ProjectTitle
             toggle={this.toggleNeeds}
-            title="ADHD Needs"
+            title="ADHD needs"
             titleColor={this.state.needs ? 'grey' : 'black'}
           />
 
@@ -486,48 +534,62 @@ export default class ProjectPage extends React.Component {
           <hr />
           <ProjectTitle
             toggle={this.toggleProduct}
-            title="Product"
+            title="Introducing 10Four"
             titleColor={this.state.product ? 'grey' : 'black'}
           />
 
           <Collapse isOpen={this.state.product}>
             <p>
-              Using those needs, we started ideating. We focused on features
-              that directly addressed those to really make an impact:{' '}
-              <strong>pairing users doing similar tasks</strong> and{' '}
-              <strong>notifications as voice memos</strong>.
+              With those needs in mind, we ideated. We came up with a lot of{' '}
+              <strong>awesome</strong> ideas, a few of which we used.
+            </p>
+
+            <ImageWide image={procBigIdeas} alt="Big ideas" />
+            <p>
+              We eventually focused on features that directly addressed how she
+              would actually cope with her symptoms in our{' '}
+              <strong>real-life</strong> situation:{' '}
+              <code>pairing users doing similar tasks</code> and using{' '}
+              <code>voice memos as notifications</code>. Out of those two needs,{' '}
+              <strong>10Four</strong> was born.
             </p>
             <ImageWide
               image={procPhone1}
               alt="The final wireframe"
-              caption="Final wireframe"
+              caption={{
+                text: (
+                  <div>
+                    Our <strong>final</strong> wireframe
+                  </div>
+                ),
+              }}
             />
             <p>
-              These features were focused on her needs, and intended to directly
-              address how she would actually cope with her symptoms in our{' '}
-              <strong>real-life</strong> situation. To test this, we conducted{' '}
-              <strong>think-alouds</strong> and <strong>interviews</strong>,
-              putting our participants in Natalia's story by asking them to use
-              the product while doing a crossword puzzle.
+              To test this, we conducted <strong>think-alouds</strong> and{' '}
+              <strong>interviews</strong>, putting our participants in Natalia's
+              story by asking them to use the product while doing a crossword
+              puzzle.
             </p>
             <p>
-              What we found wasn't surprising, but was incredibly enlightening.
-              We know that people who have ADHD struggle with productivity. Like
-              many of us, they're (clinical) procrastinators, doing things only
-              when they feel urgent—more often than not at the last minute. They{' '}
-              <em>do</em> get things done, but their real problem is{' '}
-              <em>how</em>
-              .They don't <strong>feel like they have control</strong> over it.
+              We knew before testing that people who have ADHD struggle with
+              productivity. Like most, they're procrastinators, doing things
+              only when they feel urgent—more often than not at the last minute.
+              That said, they <em>do</em> get things done, though the perception
+              is that they don't. Their real problem is <em>how</em>. They don't{' '}
+              <strong>feel like they have control</strong> over it. They can't
+              ever seem to do it in the way <em>they</em> want to.
             </p>
             <p>
-              Realizing that was the key to our final product, and our
-              perspective as we wrapped up the project. Understanding that
-              thinking about ADHD as productivity is an easy way to explain away
-              the nuances of what makes their experience unique. Natalia helped
-              us understand what it means to deal with ADHD, and taught all of
-              us a crucial lesson in the role empathy plays in designing great
-              product. Though our idea is far from perfect, I'm grateful to have
-              had the opportunity to learn as much as I did.
+              Realizing that was the key to our final product. Understanding
+              that thinking about{' '}
+              <code>
+                ADHD as productivity is an easy way to explain away the nuances
+                of what makes their experience unique was so powerful
+              </code>
+              . Natalia helped us understand what it means to deal with ADHD,
+              and taught all of us a crucial lesson in the role empathy plays in
+              designing great product. Though our idea is far from perfect, I'm
+              grateful to have had the opportunity to learn as much as I did.
             </p>
           </Collapse>
           <hr />
@@ -543,13 +605,24 @@ export default class ProjectPage extends React.Component {
               Taught by Professor Olivier St-Cyr as a part of the Master of
               Information program at the University of Toronto.
             </p>
-            <p>
-              <strong>Team</strong>:{' '}
-              <a href="https://alexandrascandolo.com" alt="Alexandra Scandolo">
-                Alexandra Scandolo
-              </a>
-              , Ali Jafar, Christina Vuong, Olivia Zhang{' '}
-            </p>
+
+            <ImageWide
+              image={TeamPhoto}
+              alt="the team"
+              caption={{
+                text: (
+                  <div>
+                    Ali Jafar, Christina Vuong, Olivia Zhang, (me),{' '}
+                    <a
+                      href="https://alexandrascandolo.com"
+                      alt="Alexandra Scandolo"
+                    >
+                      Alexandra Scandolo
+                    </a>
+                  </div>
+                ),
+              }}
+            />
           </Collapse>
         </div>
         <hr />
