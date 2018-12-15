@@ -18,7 +18,7 @@ export default class ImageWide extends React.Component {
           justifyContent: 'center',
           alignItems: 'center',
           marginTop: 20,
-          marginBottom: 20,
+          // marginBottom: 10,
         }}
       >
         <div>
@@ -28,7 +28,14 @@ export default class ImageWide extends React.Component {
             style={{ ...this.props.style }}
           />
         </div>
-        <p style={{ marginTop: 10, fontWeight: 600, color: 'grey' }}>
+        <p
+          style={{
+            marginTop: 10,
+            fontSize: '0.7em',
+            fontWeight: 600,
+            color: 'grey',
+          }}
+        >
           {!!this.props.caption ? this.props.caption : ''}
         </p>
       </div>

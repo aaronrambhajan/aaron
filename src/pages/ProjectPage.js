@@ -1,7 +1,13 @@
 // @flow
 
 import React from 'react';
-import { Button, Collapse } from 'reactstrap';
+import {
+  Button,
+  Collapse,
+  Popover,
+  PopoverHeader,
+  PopoverBody,
+} from 'reactstrap';
 
 // Components
 import Persona from '../components/Persona';
@@ -11,6 +17,7 @@ import { ButtonGroupings } from '../components/ProjectCard';
 import ImageRow from '../components/ImageRow';
 import ImageWithSideCaption from '../components/ImageWithSideCaption';
 import ImageWide from '../components/ImageWide';
+import CitationPopover from '../components/CitationPopover';
 import Carousel from '../components/Carousel';
 
 /* IMAGES */
@@ -22,6 +29,7 @@ import appTodoist from '../images/ADHD/Todoist';
 import miscUpGif from '../images/ADHD/up-gif.gif';
 
 // Story
+import storyNataliaNormal from '../images/ADHD/natalia-normal.png';
 import storyMessyRoomBlank from '../images/ADHD/messy-room-blank.png';
 import storyMessyRoom from '../images/ADHD/natalia-room-adhd.gif';
 import storyTextAnxious from '../images/ADHD/text-anxious.gif';
@@ -34,6 +42,7 @@ import needsFocus from '../images/ADHD/needs-focus.svg';
 import needsGuilt from '../images/ADHD/needs-guilt.svg';
 
 // Process
+import procResearchStats from '../images/ADHD/research-stats.svg';
 import procEmpathyMap from '../images/ADHD/empathy-map.png';
 import procIdeation from '../images/ADHD/ideation.png';
 import procLowFidelity from '../images/ADHD/low-fidelity.png';
@@ -46,23 +55,39 @@ import procPhoneFull from '../images/ADHD/phone.png';
 export default class ProjectPage extends React.Component {
   state: {
     problem: boolean,
+    research: boolean,
     story: boolean,
     needs: boolean,
     product: boolean,
     credits: boolean,
+    popover: boolean,
   };
 
   state = {
     problem: false,
-    story: false,
+    research: false,
+    story: true,
     needs: false,
     product: false,
     credits: false,
+    popover: false,
   };
 
   toggleProblem = () => {
     this.setState({
       problem: !this.state.problem,
+      research: false,
+      story: false,
+      needs: false,
+      product: false,
+      credits: false,
+    });
+  };
+
+  toggleResearch = () => {
+    this.setState({
+      problem: false,
+      research: !this.state.research,
       story: false,
       needs: false,
       product: false,
@@ -73,6 +98,7 @@ export default class ProjectPage extends React.Component {
   toggleStory = () => {
     this.setState({
       problem: false,
+      research: false,
       story: !this.state.story,
       needs: false,
       product: false,
@@ -83,6 +109,7 @@ export default class ProjectPage extends React.Component {
   toggleNeeds = () => {
     this.setState({
       problem: false,
+      research: false,
       story: false,
       needs: !this.state.needs,
       product: false,
@@ -93,6 +120,7 @@ export default class ProjectPage extends React.Component {
   toggleProduct = () => {
     this.setState({
       problem: false,
+      research: false,
       story: false,
       needs: false,
       product: !this.state.product,
@@ -102,6 +130,10 @@ export default class ProjectPage extends React.Component {
 
   toggleCredits = () => {
     this.setState({ credits: !this.state.credits });
+  };
+
+  togglePopover = () => {
+    this.setState({ popover: !this.state.popover });
   };
 
   render = () => {
@@ -118,16 +150,8 @@ export default class ProjectPage extends React.Component {
 
           <div>
             <p>
-              For <em>Fundamental of User Experience</em>, we created{' '}
-              <strong>10Four</strong>, an mobile productivity application
-              designed for <strong>students with ADHD</strong>. We designed a
-              product focused on <strong>measurably reducing overwhelm</strong>{' '}
-              by partnering people on tasks.
-            </p>
-
-            <p>
-              We learned that being a student with ADHD is hard, but not in the
-              way we expect—most people think it’s about getting things done. We
+              Being a student with ADHD is hard, but not in the way we
+              expect—most people think it’s about getting things done. We
               learned that it’s really about{' '}
               <code>
                 helping them live their lives, how{' '}
@@ -135,6 +159,13 @@ export default class ProjectPage extends React.Component {
               </code>
               .
             </p>
+
+            <ImageWide
+              image={procPhoneFull}
+              alt="full-app"
+              caption="We created 10Four to help them do that."
+              style={{ maxHeight: 250, width: 'auto' }}
+            />
           </div>
 
           <div>
@@ -149,75 +180,136 @@ export default class ProjectPage extends React.Component {
           <hr />
           <ProjectTitle
             toggle={this.toggleProblem}
-            title="Problem"
+            title="What's ADHD?"
             titleColor={this.state.problem ? 'grey' : 'black'}
           />
 
           <Collapse isOpen={this.state.problem}>
             <p>
-              When most people think of ADHD, we think of children bouncing off
-              the walls. We think of the dog from <strong>Up</strong> getting
-              distracted at the sight of a squirrel, or a friend who's always
-              fidgeting.
+              When we think of ADHD, we tend to imagine children bouncing off
+              walls, forgetting what they're doing, getting distracted every 10
+              seconds, fidgeting constantly. We basically picture Dug, from{' '}
+              <a
+                style={{ fontWeight: 600 }}
+                href="https://en.wikipedia.org/wiki/Up_(2009_film)"
+              >
+                Up
+              </a>
+              .
             </p>
-
             <ImageWide
               image={miscUpGif}
               alt="Dog from the movie UP"
-              caption="Does Dug have ADHD?"
+              caption="How we imagine ADHD."
             />
-
             <p>
-              What most people don't know is that this is far from the whole
-              truth. The reality is that people with ADHD experience focus in{' '}
-              <strong>extremes</strong>. Sure, they <em>can</em> be
-              distractable, but they can just as easily be so hyperfocused they
-              forget about the world around them.
+              Now, that's not <em>entirely</em> wrong. I mean, it's mostly
+              wrong. But what most of us don't realize is that people with ADHD
+              experience focus in <strong>extremes</strong>. Sure, they{' '}
+              <em>can</em> be distractable, but they can just as easily focus so
+              hard they forget about the world.
             </p>
-
             <p>
-              You'd be forgiven for not understanding this. It's largely a{' '}
-              <strong>silent</strong>* illness, and is often misunderstood. With
-              symptoms as abstract as impulsivity, hyperactivity, and
-              inattention, how are we to even understand that? This is where we
-              started our project. Our task was to{' '}
-              <a href="https://chi2019.acm.org/authors/student-design-competition/">
-                "weave the social fabric"{' '}
+              ADHD is often misunderstood beacuse it can be{' '}
+              <a href="https://www.everydayhealth.com/columns/a-doctors-personal-take-on-adhd/whats-quiet-adhd/">
+                silent
               </a>
-              using technology, and we sought to do that for people with ADHD by
-              asking ourselves:
-              <em> How are these symptoms experienced? How are they felt?</em>
+              —it often happens that people with symptoms aren't even aware of
+              it. More pertinently, however, with symptoms as abstract as
+              impulsivity, hyperactivity, and inattention, is it really that
+              surprising we think of ADHD as characters like Dug? We started our
+              project with this question:{' '}
+              <em>
+                how do people with ADHD <u>experience</u> these symptoms?{' '}
+              </em>
+            </p>
+          </Collapse>
+
+          <hr />
+          <ProjectTitle
+            toggle={this.toggleResearch}
+            title="Understanding ADHD"
+            titleColor={this.state.research ? 'grey' : 'black'}
+          />
+
+          <Collapse isOpen={this.state.research}>
+            <p>
+              Understanding what people with ADHD feel took 1 part research, and
+              99 parts empathy. That equation isn't accurate at all, but it sure
+              felt like it. We had to take a deep <em>and</em> wide approach—we
+              looked to{' '}
+              <span
+                class="citation"
+                id="medical-popover"
+                onClick={this.togglePopover}
+              >
+                medical literature*
+              </span>
+              , productivity apps (and reviews), textbooks, and then of course,
+              our own surveys and interviews.
+            </p>
+            <p>
+              We focused on{' '}
+              <strong> students between 18 and 24 with ADHD</strong>. Throughout
+              the process, we interviewed the same 4 people with ADHD, all whom
+              are from our personal lives. We struggled recruiting more ADHD
+              participants because of the nature of dealing with a sensitive
+              population, but the nature of these connections empowered us to
+              understand their experiences so much better. We complemented this
+              with <strong>53 survey participants</strong> without ADHD, but
+              whom <em>struggle with productivity</em>, playing into the
+              quietness of ADHD, but also how regular people experience it.
             </p>
 
-            <ProjectSubheading text="Research" />
+            <ImageWide
+              image={procResearchStats}
+              alt="research-stats"
+              style={{ maxHeight: 250 }}
+            />
             <p>
-              Understanding what people with ADHD feel took one part research,
-              and 99 parts empathy. Throughout this whole process, we
-              interviewed the same 4 people—people from our personal lives we
-              knew who lived with ADHD. Though we struggled with recruiting more
-              ADHD participants, the nature of these connections empowered us to
-              understand their experiences so much better. Taken together with
-              our in-depth clinical research, we were able to start answering
-              the call of empathy—how do we deeply understand someone's{' '}
-              <strong>psychological experience</strong>?
+              We focused on asking questions about their{' '}
+              <code>
+                relationship with their loved ones, technology, and themselves
+              </code>
+              . Our interviews were <strong>semi-structured</strong>, allowing
+              these conversations to take on lives of their own. The surveys
+              helped us understand people's needs, and more vitally,{' '}
+              <em>how</em> people struggle with productivity.
             </p>
             <p>
-              We focused on asking questions about their relationship with their
-              loved ones, technology, and themselves. Conducting semi-structured
-              interviews, these conversations took on lives of their own,
-              becoming a treasure trove of insight. We supplemented this data
-              with surveys focused on people whom <em>struggle</em> with
-              productivity—in part to cope with our lack of population, and in
-              part to address quiet ADHD.
-            </p>
-            <p>
-              What we found was incredible. Our research, though ripe with
-              obstructions along the way, was profoundly insightful. Discussing
-              it together, we built this empathy map, which served as the
-              cornerstone everything that was to come—it became the foundation
-              for <strong>Natalia</strong>, our persona.
+              Though we encountered many obstacles, our research proved to be
+              hugely insightful. After discussing it together, we built the
+              empathy map that would become the foundation for{' '}
+              <strong>Natalia</strong>, our persona.
             </p>
             <ImageWide image={procEmpathyMap} alt="empathy-map" />
+
+            <CitationPopover
+              placement="top"
+              isOpen={this.state.popover}
+              target="medical-popover"
+              toggle={this.togglePopover}
+              content={[
+                {
+                  bio: 'Maté, G. (2011).',
+                  title:
+                    'Scattered Minds: The Origins and Healing of Attention Deficit Disorder.',
+                },
+                {
+                  bio: 'Ratey, N. (2008).',
+                  title: 'The Disorganized Mind: Coaching Your ADHD Brain.',
+                },
+                {
+                  bio: 'Mikami, A. Y., Smit, S., & Khalis, A. (2017).',
+                  title: 'Social Skills Training and ADHD—What Works?',
+                },
+                {
+                  bio: 'Overbey, G. A., Snell, W. E., & Callis, K. E. (2009).',
+                  title:
+                    ' Subclinical ADHD, Stress, and Coping in Romantic Relationships of University Students.',
+                },
+              ]}
+            />
           </Collapse>
 
           <hr />
@@ -229,11 +321,56 @@ export default class ProjectPage extends React.Component {
 
           <Collapse isOpen={this.state.story}>
             {/* @todo: Add tooltips to the symptoms. */}
-            <Persona />
+            {/* I hate so much that I can't use my `ImageWithSideCaption`
+                component because I need to stylize the text... */}
+            <div style={{ marginTop: 20, marginBottom: 20 }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-evenly',
+                  alignItems: 'center',
+                }}
+              >
+                <div
+                  class="with-side-caption"
+                  style={{
+                    maxHeight: 200,
+                    maxWidth: 200,
+                  }}
+                >
+                  <img src={storyNataliaNormal} alt="natalia-normal" />
+                </div>
 
-            <p>
+                <div style={{ marginLeft: 20 }}>
+                  <h3 style={{ color: 'black' }}>
+                    Meet <strong>Natalia</strong>.
+                  </h3>
+                  <p style={{ color: 'grey' }}>22 / Graduate student / ADHD</p>
+                </div>
+              </div>
+            </div>
+
+            <p style={{ marginBottom: 0 }}>
+              Like many of us, Natalia's balancing school, a part-time job, and
+              her friends and family. Unlike many of us, Natalia struggles with{' '}
+              <strong>ADHD</strong>. We know already this means she struggles
+              with <strong>impulsivity</strong>, <strong>hyperactivity</strong>,
+              and <strong>inattention</strong>. But, what you need to understand
+              is that Natalia's symptoms make
+            </p>
+            <h2
+              style={{ textAlign: 'center', marginTop: 10, marginBottom: 10 }}
+            >
+              <code>
+                the <strong>simplest</strong> things feel{' '}
+                <strong>impossible</strong>.
+              </code>
+            </h2>
+
+            <p style={{ marginTop: 20 }}>
               Tonight, Natalia has plans with an old friend,{' '}
-              <strong>Rebeka</strong>. They went to elementary school together,
+              <strong>Rebeka</strong>. They went to elementary school together
               and they're seeing each other for the first time in a year. As you
               can imagine, Natalia's super excited. She comes home from class in
               the afternoon, and heads to her room to get ready. But when she

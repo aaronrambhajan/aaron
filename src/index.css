@@ -307,6 +307,19 @@ svg.email:hover {
   font-weight: 100;
 }
 
+.citation {
+  font-weight: 400;
+}
+
+.citation-popover {
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+
+.citation-popover sup {
+  font-size: 0.7em;
+}
+
 .with-side-caption img {
   height: 200px;
   width: 200px;
