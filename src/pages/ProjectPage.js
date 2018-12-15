@@ -69,7 +69,7 @@ export default class ProjectPage extends React.Component {
     research: false,
     story: false,
     needs: false,
-    product: true,
+    product: false,
     credits: false,
     popover: false,
   };

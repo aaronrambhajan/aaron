@@ -34,28 +34,37 @@ export default class AboutPage extends React.Component {
         {/* Bio description */}
         <div class="about" style={{ marginTop: 10 }}>
           <p>
-            I still feel like I'm 4-years-old discovering LEGO for the first
-            time. I love learning more than anything in the world and I'm lucky
-            enough to have had the opportunity to learn so much from so many
-            amazing people. I'm technical, creative, and analytical, but at my
-            core, I'm a creative problem-solver who loves to build.
+            I still feel like I'm a 4-year-old discovering LEGO for the first
+            time. I <strong>love learning</strong> more than anything in the
+            world and I'm lucky enough to have had the opportunity to learn so
+            much from so many amazing people. I'm <code>technical</code>,{' '}
+            <code>creative</code>, and <code>analytical</code>, but at my core,
+            I'm just a <strong>creative problem-solver</strong> who loves to
+            build.
           </p>
 
           <p>
-            Currently, I'm a researcher and developer at the Mack Lab, doing my
-            Master of Information at the University of Toronto and working
-            part-time at Drop Mobility as a Software Engineer. I did my
-            undergrad at U of T in Psychology, Art History, and Computer Science
-            , with a brief interlude studying Electronic Production and Design
-            at Berklee College of Music in Boston, MA.
+            Right now I'm a researcher and developer at the{' '}
+            <a href="http://macklab.utoronto.ca/members.html">Mack Lab</a>,
+            doing my{' '}
+            <a href="https://www.ischool.utoronto.ca">Master of Information</a>{' '}
+            at the University of Toronto and working part-time at{' '}
+            <a href="http://dropmobility.com">Drop Mobility</a> as a Software
+            Engineer. I did my undergrad at U of T in Psychology, Art History,
+            and Computer Science with a brief interlude studying Electronic
+            Production and Design at{' '}
+            <a href="http://berklee.edu">Berklee College of Music</a> in Boston,
+            MA.
           </p>
           <p>
             My place in the world—in technology, more saliently—is making
-            connections you'd never expect. I believe innovation is just making
-            timely combinations no one expected—ambient music existed before
-            808's & Heartbreak, Kanye just got to it first. There's nothing I
-            won't learn to solve a problem, and no greater feat than being able
-            to impact communities by doing so.
+            unexpected connections, using my diverse background to make
+            technology better for everyone. I believe innovation can be reduced
+            down to making timely combinations no one expects—ambient music
+            existed before 808's & Heartbreak, Kanye just got to it first.
+            There's nothing I won't learn to solve a problem, and this attitude
+            has taken me down the path I've taken, from{' '}
+            <strong>entrepreneurship</strong> to <strong>music</strong>.
           </p>
           <p>
             In any case, thanks for dropping by. If you'd like to get in touch,
@@ -64,6 +73,7 @@ export default class AboutPage extends React.Component {
             <a href="https://soundcloud.com/rambhajan">here</a>
             .)
           </p>
+          {/* @todo I'd also like to eventually include my full CV here, somewhere */}
           {/* <p>
             I'd like to take a bit of space here to thank those amazing people.
             In the spirit of Amazon recommendations, if you like me, you'll also

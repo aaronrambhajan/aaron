@@ -312,7 +312,6 @@ svg.email:hover {
 }
 
 .carousel-indicators {
-  /* background-color: #f00; */
   margin-bottom: 0.25em;
 }
 
@@ -336,6 +335,15 @@ svg.email:hover {
 */
 .about p {
   font-size: 0.8em;
+}
+
+.about a {
+  color: blue;
+  font-weight: 100;
+}
+
+.about a:hover {
+  text-decoration: line-through;
 }
 
 /*
