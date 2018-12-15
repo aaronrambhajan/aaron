@@ -10,7 +10,6 @@ import {
 } from 'reactstrap';
 
 // Components
-import Persona from '../components/Persona';
 import ProjectTitle from '../components/ProjectTitle';
 import ProjectSubheading from '../components/ProjectSubheading';
 import { ButtonGroupings } from '../components/ProjectCard';
@@ -30,6 +29,7 @@ import miscUpGif from '../images/ADHD/up-gif.gif';
 
 // Story
 import storyNataliaNormal from '../images/ADHD/natalia-normal.png';
+import storyNataliaAnxious from '../images/ADHD/natalia-anxious.png';
 import storyMessyRoomBlank from '../images/ADHD/messy-room-blank.png';
 import storyMessyRoom from '../images/ADHD/natalia-room-adhd.gif';
 import storyTextAnxious from '../images/ADHD/text-anxious.gif';
@@ -315,7 +315,7 @@ export default class ProjectPage extends React.Component {
           <hr />
           <ProjectTitle
             toggle={this.toggleStory}
-            title="Story"
+            title="Natalia's Story"
             titleColor={this.state.story ? 'grey' : 'black'}
           />
 
@@ -357,24 +357,25 @@ export default class ProjectPage extends React.Component {
               <strong>ADHD</strong>. We know already this means she struggles
               with <strong>impulsivity</strong>, <strong>hyperactivity</strong>,
               and <strong>inattention</strong>. But, what you need to understand
-              is that Natalia's symptoms make
+              is that Natalia's symptoms make even
             </p>
             <h2
-              style={{ textAlign: 'center', marginTop: 10, marginBottom: 10 }}
+              style={{ textAlign: 'center', marginTop: 20, marginBottom: 20 }}
             >
               <code>
                 the <strong>simplest</strong> things feel{' '}
                 <strong>impossible</strong>.
               </code>
             </h2>
+            <hr />
 
             <p style={{ marginTop: 20 }}>
               Tonight, Natalia has plans with an old friend,{' '}
               <strong>Rebeka</strong>. They went to elementary school together
-              and they're seeing each other for the first time in a year. As you
-              can imagine, Natalia's super excited. She comes home from class in
-              the afternoon, and heads to her room to get ready. But when she
-              gets in, her room is a mess.
+              and they're seeing each other for the first time in a year.
+              Natalia's super excited. She comes home from class and heads to
+              her room to get ready, but when she gets in, she realizes her room
+              is a <strong>mess</strong>.
             </p>
 
             <ImageWide
@@ -384,9 +385,11 @@ export default class ProjectPage extends React.Component {
             />
             <p>
               Natalia feels like she <strong>needs</strong> to clean it. She's
-              getting anxious and starting to forget what's going on. Becoming
-              overwhlemed, Natalia's mind is racing with thoughts about her
-              room, about cancelling on Rebeka...
+              getting anxious, and starts forgetting what's going on. Looking to
+              the laundry piled up in her room, Natalia realizes she doesn't
+              have clean clothes for tonight. Natalia's{' '}
+              <strong>overwhelmed</strong>, and her mind starts racing to coming
+              up with excuses to cancel on Rebeka...
             </p>
 
             <ImageWide
@@ -398,26 +401,32 @@ export default class ProjectPage extends React.Component {
 
             <p>
               I know what you're thinking.{' '}
-              <em>Why can't she just clean it later?</em> After all, that's what
-              most of us would do. Here's the thing. Remember when we said
-              people with ADHD experience focus in <em>extremes</em>? This is
-              Natalia in one of those extremes. <strong>Hyperfocusing</strong>.
-              Natalia doesn't <em>just</em> see a messy room. In her mind, this
-              is what's happening.
+              <em>Why can't she just clean it later?</em> That's what most of us
+              would do. But here's the thing. Remember when we said people with
+              ADHD experience focus in <em>extremes</em>? Right now, Natalia is{' '}
+              <strong>hyperfocusing</strong>. Natalia doesn't <em>just</em> see
+              a messy room. In her mind, this is what's going on.
             </p>
             <ImageWide
               image={storyMessyRoom}
               alt="messy room animation"
-              caption="What Natalia sees"
+              caption="Natalia's room, to Natalia"
             />
             <p>
-              Her brain is all over the place. Natalia hates this feeling. Sure,
-              ADHD makes simple things impossible, but this is where it really
-              affects her. She can get through her work, through school—but when
-              it starts affecting her loved ones, she gets so frustrated.
-              Natalia <em>loves</em> her friends and family, but her{' '}
+              Her brain is all over the place. Natalia <em>hates</em> this
+              feeling. Sure, ADHD makes simple things impossible, but she can
+              handle that. Doing her work sucks, but Natalia's figured out how
+              to cope. This is where it really hurts her—when it starts
+              affecting her loved ones. Natalia <em>loves</em> her friends and
+              family, but her{' '}
               <strong>symptoms make it so hard to connect</strong> with them.
             </p>
+            <ImageWide
+              image={storyNataliaAnxious}
+              alt="natalia-anxious"
+              caption="Will I ever get better? Is it always going to be like this?"
+              style={{ maxHeight: 250, width: 'auto' }}
+            />
           </Collapse>
           <hr />
           <ProjectTitle
@@ -459,7 +468,7 @@ export default class ProjectPage extends React.Component {
             />
 
             <ImageWithSideCaption
-              text="Notification systems built for her symptoms that keep her self-aware."
+              caption="Notification systems built for her symptoms that keep her self-aware."
               image={needsAwareness}
               alt="needs-accountability"
             />
@@ -476,7 +485,7 @@ export default class ProjectPage extends React.Component {
             {/* @todo: Replace these needs with a needs carousel of slidess */}
             {/* <Carousel /> */}
             <ImageWithSideCaption
-              text="Someone who can empathize with her and hold her accountable."
+              caption="Someone who can empathize with her and hold her accountable."
               image={needsAccountability}
               alt="needs-awareness"
             />

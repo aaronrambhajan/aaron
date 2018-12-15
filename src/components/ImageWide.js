@@ -17,7 +17,7 @@ export default class ImageWide extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: 20,
+          marginTop: 0,
           // marginBottom: 10,
         }}
       >

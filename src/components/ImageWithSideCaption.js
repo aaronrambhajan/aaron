@@ -4,7 +4,7 @@ import React from 'react';
 
 export default class ImageWithSideCaption extends React.Component {
   props: {
-    text: string,
+    caption: string,
     image: image,
     alt: string,
   };
@@ -31,7 +31,7 @@ export default class ImageWithSideCaption extends React.Component {
           </div>
 
           <div style={{ marginLeft: 20 }}>
-            <p>{this.props.text}</p>
+            <p>{this.props.caption}</p>
           </div>
         </div>
       </div>
