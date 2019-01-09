@@ -13,14 +13,15 @@ export default class Navigation extends React.Component {
       >
         <div>
           <p>
-            <a href="/">Home</a> / <a href="/work">Work</a> /{' '}
-            <a href="/about">About</a> / <a href="/contact">Contact</a>{' '}
-            {/* <a className="thoughts" href="/thoughts"> */}
-            {/* / Thoughts */}
-            {/* </a> */}
+            <a href="/work">Work</a> / <a href="/about">About</a> /{' '}
+            <a href="/contact">Contact</a>{' '}
           </p>
         </div>
-        <div style={{ color: 'grey' }}>AR</div>
+        <div>
+          <a href="/" style={{ backgroundColor: 'white', color: 'grey' }}>
+            rambhajan.me
+          </a>
+        </div>
       </div>
     );
   };

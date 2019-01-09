@@ -154,17 +154,6 @@ p {
   margin-bottom: 1em;
 }
 
-p.thoughts {
-  font-size: 0.75em;
-  font-family: menlo;
-  margin-bottom: 0;
-  font-weight: bold;
-}
-
-p.writing {
-  font-size: 1em;
-}
-
 em {
   font-style: italic;
 }
@@ -182,6 +171,10 @@ img {
   width: 100%;
   height: auto;
 }
+
+/* .image-wide {
+  font-size: 0.7em;
+} */
 
 a,
 a:visited {
@@ -204,11 +197,6 @@ a:hover {
   max-width: 600px;
   padding: 1em;
   margin: 0 auto;
-}
-
-.hed {
-  font-weight: 100;
-  font-size: 0.8em;
 }
 
 .footer {
@@ -239,46 +227,11 @@ a:hover {
 }
 
 /*
-  LINK BEHAVIOURS
-*/
-svg.twitter:hover {
-  fill: #1da1f2;
-}
-
-svg.instagram:hover {
-  fill: #c13584;
-}
-
-svg.soundcloud:hover {
-  fill: #ff8800;
-}
-
-svg.linkedin:hover {
-  fill: #0077b5;
-}
-
-svg.github:hover {
-  fill: #6e5494;
-}
-
-svg.email:hover {
-  fill: #c13584;
-}
-
-/*
   WORK
 */
-.work .disabled {
-  text-decoration: line-through;
-  color: #e8e8e8;
-}
-
-.work p {
-  margin-bottom: 0;
-}
-
-.work-list {
-  /* background-color: #454545; */
+.project-card {
+  background-color: #fff0f5;
+  padding: 0.75em;
 }
 
 /*
@@ -287,12 +240,6 @@ svg.email:hover {
 .projects p {
   color: black;
   font-size: 0.8em;
-}
-
-.projects-header {
-  background-color: #fff0f5;
-  padding: 0.75em;
-  margin-bottom: 20;
 }
 
 .project-article h2 {
@@ -351,6 +298,40 @@ svg.email:hover {
 */
 .contact a {
   margin-right: 1em;
+}
+
+/*
+  HOME PAGE
+*/
+.now {
+  font-size: 0.8em;
+}
+
+/*
+  LINK BEHAVIOURS
+*/
+svg.twitter:hover {
+  fill: #1da1f2;
+}
+
+svg.instagram:hover {
+  fill: #c13584;
+}
+
+svg.soundcloud:hover {
+  fill: #ff8800;
+}
+
+svg.linkedin:hover {
+  fill: #0077b5;
+}
+
+svg.github:hover {
+  fill: #6e5494;
+}
+
+svg.email:hover {
+  fill: #c13584;
 }
 
 @media only screen and (min-width: 540px) {
