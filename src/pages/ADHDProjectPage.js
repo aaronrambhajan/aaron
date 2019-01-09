@@ -53,7 +53,7 @@ import procPhone2 from '../images/ADHD/full-2.png';
 import procPhone3 from '../images/ADHD/full-3.png';
 import procPhoneFull from '../images/ADHD/phone.png';
 
-export default class ProjectPage extends React.Component {
+export default class ADHDProjectPage extends React.Component {
   state: {
     problem: boolean,
     research: boolean,
@@ -148,7 +148,7 @@ export default class ProjectPage extends React.Component {
     return (
       <div class="projects">
         {/* SUMMARY */}
-        <div class="projects-header">
+        <div class="project-card">
           <h1
             class="intro-hed"
             style={{ color: 'black', fontWeight: 600, marginBottom: 0 }}
