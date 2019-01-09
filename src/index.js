@@ -6,10 +6,14 @@ import './index.css';
 import HomePage from './pages/HomePage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import ContactPage from './pages/ContactPage';
-import WorkPage from './pages/WorkPage';
-import ProjectPage from './pages/ProjectPage';
 import AboutPage from './pages/AboutPage';
+import WorkPage from './pages/WorkPage';
+import MusicPage from './pages/MusicPage';
+import ContactPage from './pages/ContactPage';
+import ADHDProject from './projects/ADHD';
+import TrashProject from './projects/Trash';
+import HeartbeatProject from './projects/Heartbeats';
+import TrashFieldStudyProject from './projects/TrashFieldStudy';
 
 const App = () => (
   <Router>
@@ -18,10 +22,19 @@ const App = () => (
 
       <div>
         <Route exact path="/" component={HomePage} />
+
         <Route exact path="/about" component={AboutPage} />
-        <Route path="/contact" component={ContactPage} />
         <Route path="/work" component={WorkPage} />
-        <Route path="/projects/ADHD" component={ProjectPage} />
+        <Route path="/music" component={MusicPage} />
+        <Route path="/contact" component={ContactPage} />
+
+        <Route path="/projects/ADHD" component={ADHDProject} />
+        <Route path="/projects/trash" component={TrashProject} />
+        <Route path="/projects/heartbeats" component={HeartbeatProject} />
+        <Route
+          path="/projects/trash-field-study"
+          component={TrashFieldStudyProject}
+        />
       </div>
 
       <Footer />
