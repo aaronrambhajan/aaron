@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import ImageWide from '../components/ImageWide';
+import Chevron from '../images/Chevron.svg';
 
 export default class ProjectCard extends React.Component {
   props: {
@@ -45,12 +46,23 @@ export default class ProjectCard extends React.Component {
               return ButtonGroupings(label);
             })}
           </div>
-          <div>
-            <Button color="primary" size="sm">
-              <a href={this.props.href}>
-                See <strong>more</strong>
-              </a>
-            </Button>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <a href={this.props.href} style={{ fontSize: '10' }}>
+              See more
+            </a>
+            <div style={{ marginRight: 10 }} />
+            <img
+              src={Chevron}
+              alt="Chevron"
+              style={{ height: 10, width: 10, fill: 'blue' }}
+            />
           </div>
         </div>
       </div>
@@ -59,6 +71,8 @@ export default class ProjectCard extends React.Component {
 }
 
 export function ButtonGroupings(label) {
+  // colors:
+  //  primary, secondary, success, info, danger, warning
   switch (label) {
     case 'User Research':
       return (
@@ -76,6 +90,29 @@ export function ButtonGroupings(label) {
       return (
         <Button disabled color="warning" size="sm" style={{ marginRight: 10 }}>
           UX/UI Design
+        </Button>
+      );
+    case 'Experimental Design':
+      return (
+        <Button disabled color="primary" size="sm" style={{ marginRight: 10 }}>
+          Experimental Design
+        </Button>
+      );
+    case 'Cognitive Psychology':
+      return (
+        <Button disabled color="success" size="sm" style={{ marginRight: 10 }}>
+          Cognitive Psychology
+        </Button>
+      );
+    case 'Programming':
+      return (
+        <Button
+          disabled
+          color="secondary"
+          size="sm"
+          style={{ marginRight: 10 }}
+        >
+          Programming
         </Button>
       );
     default:
