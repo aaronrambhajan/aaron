@@ -1,25 +1,36 @@
 // @flow
 
 import React from 'react';
-import { Button, Alert } from 'reactstrap';
+import { Button } from 'reactstrap';
+import ImageWide from '../components/ImageWide';
 
 export default class ProjectCard extends React.Component {
   props: {
-    title: string,
-    description: string,
+    href: String,
+    text: Object, // .title, .text
+    image: Object, // .img, .alt, .caption
     labels: Array,
   };
+
   render = () => {
     return (
-      <div class="projects-header" style={{ marginBottom: 20 }}>
+      <div class="project-card" style={{ marginBottom: 20 }}>
         <h1
           class="intro-hed"
           style={{ color: 'black', fontWeight: 600, marginBottom: 0 }}
         >
-          {this.props.title}
+          {this.props.text.title}
         </h1>
 
-        <p>{this.props.description}</p>
+        <p>{this.props.text.description}</p>
+
+        <ImageWide
+          image={this.props.image.img}
+          alt={this.props.image.alt}
+          caption={this.props.image.caption}
+          style={{ maxHeight: 250, width: 'auto' }}
+        />
+
         <div
           style={{
             display: 'flex',
@@ -34,7 +45,9 @@ export default class ProjectCard extends React.Component {
           </div>
           <div>
             <Button color="primary" size="sm">
-              See <strong>more</strong>
+              <a href={this.props.href}>
+                See <strong>more</strong>
+              </a>
             </Button>
           </div>
         </div>
@@ -51,19 +64,19 @@ export function ButtonGroupings(label) {
           User Research
         </Button>
       );
-      break;
     case 'Data Analysis':
       return (
         <Button disabled color="info" size="sm" style={{ marginRight: 10 }}>
           Data Analysis
         </Button>
       );
-      break;
     case 'UX/UI Design':
       return (
         <Button disabled color="warning" size="sm" style={{ marginRight: 10 }}>
           UX/UI Design
         </Button>
       );
+    default:
+      return;
   }
 }
