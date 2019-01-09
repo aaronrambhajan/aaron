@@ -14,7 +14,7 @@ export default class ProjectCard extends React.Component {
 
   render = () => {
     return (
-      <div class="project-card" style={{ marginBottom: 20 }}>
+      <div class="project-card">
         <h1
           class="intro-hed"
           style={{ color: 'black', fontWeight: 600, marginBottom: 0 }}
@@ -22,14 +22,16 @@ export default class ProjectCard extends React.Component {
           {this.props.text.title}
         </h1>
 
-        <p>{this.props.text.description}</p>
+        {this.props.text.description}
 
-        <ImageWide
-          image={this.props.image.img}
-          alt={this.props.image.alt}
-          caption={this.props.image.caption}
-          style={{ maxHeight: 250, width: 'auto' }}
-        />
+        {!!this.props.image && (
+          <ImageWide
+            image={this.props.image.img}
+            alt={this.props.image.alt}
+            caption={{ text: this.props.image.caption }}
+            style={{ maxHeight: 250, width: 'auto' }}
+          />
+        )}
 
         <div
           style={{
