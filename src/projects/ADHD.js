@@ -56,89 +56,11 @@ import procPhoneFull from '../images/ADHD/phone.png';
 
 export default class ADHDProjectPage extends React.Component {
   state: {
-    problem: boolean,
-    research: boolean,
-    story: boolean,
-    needs: boolean,
-    product: boolean,
-    credits: boolean,
     popover: boolean,
   };
 
   state = {
-    problem: false,
-    research: false,
-    story: false,
-    needs: false,
-    product: false,
-    credits: false,
     popover: false,
-  };
-
-  toggleProblem = () => {
-    this.setState({
-      problem: !this.state.problem,
-      research: false,
-      story: false,
-      needs: false,
-      product: false,
-      credits: false,
-    });
-  };
-
-  toggleResearch = () => {
-    this.setState({
-      problem: false,
-      research: !this.state.research,
-      story: false,
-      needs: false,
-      product: false,
-      credits: false,
-    });
-  };
-
-  toggleStory = () => {
-    this.setState({
-      problem: false,
-      research: false,
-      story: !this.state.story,
-      needs: false,
-      product: false,
-      credits: false,
-    });
-  };
-
-  toggleNeeds = () => {
-    this.setState({
-      problem: false,
-      research: false,
-      story: false,
-      needs: !this.state.needs,
-      product: false,
-      credits: false,
-    });
-  };
-
-  toggleProduct = () => {
-    this.setState({
-      problem: false,
-      research: false,
-      story: false,
-      needs: false,
-      product: !this.state.product,
-      credits: false,
-    });
-  };
-
-  toggleCredits = () => {
-    this.setState({
-      problem: false,
-      research: false,
-      story: false,
-      needs: false,
-      product: false,
-      credits: !this.state.credits,
-    });
   };
 
   togglePopover = () => {
