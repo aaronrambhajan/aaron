@@ -12,6 +12,7 @@ export default class ImageWide extends React.Component {
   render = () => {
     return (
       <div
+        class="image-wide"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -32,7 +33,6 @@ export default class ImageWide extends React.Component {
           style={{
             marginTop: 10,
             fontSize: '0.7em',
-            // fontWeight: 600,
             color: 'grey',
           }}
         >
