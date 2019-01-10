@@ -202,6 +202,7 @@ a:hover {
 .footer {
   display: flex;
   flex-direction: row;
+  /* align-items: center; */
   margin-top: 1.25em;
 }
 
@@ -304,7 +305,12 @@ a:hover {
   HOME PAGE
 */
 .now {
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
+  font-family: 'Times New Roman', Times, serif;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   */
 }
 
 /*
@@ -332,6 +338,10 @@ svg.github:hover {
 
 svg.email:hover {
   fill: #c13584;
+}
+
+svg.cv:hover {
+  fill: #e83e8c;
 }
 
 @media only screen and (min-width: 540px) {
