@@ -9,6 +9,7 @@ export default class ImageWide extends React.Component {
     caption: Object,
     style: Object,
   };
+
   render = () => {
     return (
       <div
@@ -22,22 +23,32 @@ export default class ImageWide extends React.Component {
           marginBottom: 0,
         }}
       >
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+          }}
+        >
           <img
             src={this.props.image}
             alt={this.props.alt}
             style={{ ...this.props.style }}
           />
         </div>
-        <p
-          style={{
-            marginTop: 10,
-            fontSize: '0.7em',
-            color: 'grey',
-          }}
-        >
-          {!!this.props.caption ? this.props.caption.text : ''}
-        </p>
+
+        {!!this.props.caption && (
+          <p
+            style={{
+              marginTop: 10,
+              fontSize: '0.7em',
+              color: 'grey',
+            }}
+          >
+            {this.props.caption.text}
+          </p>
+        )}
       </div>
     );
   };
