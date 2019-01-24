@@ -42,6 +42,7 @@ export default class ImageWide extends React.Component {
           <p
             style={{
               marginTop: 10,
+              marginBottom: 0,
               fontSize: '0.7em',
               color: 'grey',
             }}
