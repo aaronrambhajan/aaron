@@ -25,49 +25,68 @@ export default class NewProjectCard extends React.Component {
             alignItems: 'center',
           }}
         >
-          <div style={{ minHeight: 250, minWidth: 250 }}>
-            <div
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <ImageWide
+              image={this.props.image}
+              alt="phone"
               style={{
-                backgroundColor: this.props.color,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-
-                padding: 20,
-                margin: 0,
+                maxHeight: 400,
+                maxWidth: 400,
+                width: '90%',
+                minHeight: 250,
+                minWidth: 250,
+                boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.5)',
               }}
-            >
-              <ImageWide
-                image={this.props.image}
-                alt="phone"
-                style={{ maxWidth: '75%', height: 'auto' }}
-              />
-            </div>
+              // caption={{
+              //   text: (
+              //     <div
+              //       style={{
+              //         display: 'flex',
+              //         flexDirection: 'row',
+              //         justifyContent: 'space-between',
+              //         alignItems: 'center',
+              //         width: '100%  ',
+              //       }}
+              //     >
+              //       <div>@{this.props.org}</div>
+              //       <div>supervised by mikey</div>
+              //     </div>
+              //   ),
+              // }}
+            />
 
-            <Divider size={0.5} />
+            <Divider size={1} />
 
-            <div style={{ maxHeight: 400, overflow: 'hidden' }}>
-              <p
+            <div className="project-card">
+              <h1
+                className="intro-hed"
                 style={{
-                  // fontFamily: 'times',
-                  fontSize: '0.8em',
-                  color: 'grey',
-                  marginBottom: 0,
-                  fontWeight: 100,
+                  margin: 0,
+                  textAlign: 'center',
+                  fontWeight: 600,
+                  color: this.props.color,
                 }}
               >
-                <em>{this.props.roles}</em>
-              </p>
+                {this.props.title}
+              </h1>
               <Divider size={0.5} />
               <h1
                 className="intro-hed"
-                style={{ marginTop: 0, color: 'black' }}
+                style={{
+                  margin: 0,
+                  opacity: 0.5,
+                  fontWeight: 'normal',
+                  textAlign: 'left',
+                }}
               >
-                <span style={{ fontWeight: 600, color: this.props.color }}>
-                  {this.props.title}
-                </span>{' '}
-                – {this.props.caption}.
+                {this.props.caption}
               </h1>
             </div>
           </div>
