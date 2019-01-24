@@ -9,8 +9,10 @@ const styles = {
     padding: 5,
   },
   title: {
-    fontFamily: 'times',
     marginBottom: 2,
+  },
+  caption: {
+    fontFamily: 'helvetica',
   },
 };
 
@@ -19,7 +21,7 @@ export default class ProjectInfo extends React.Component {
     role: string,
     timeline: string,
     team: string,
-    tools: string,
+    methods: string,
   };
 
   render = () => {
@@ -31,26 +33,26 @@ export default class ProjectInfo extends React.Component {
           justifyContent: 'space-between',
           alignItems: 'flex-start',
           margin: 0,
+          opacity: 0.7,
         }}
       >
         <div style={styles.itemContainer}>
           <p style={styles.title}>Role</p>
-          <p>{this.props.role}</p>
+          <p style={styles.caption}>{this.props.role}</p>
         </div>
-
         <div style={styles.itemContainer}>
-          <p style={styles.title}>Timeline</p>
-          <p>{this.props.timeline}</p>
+          <p style={styles.title}>Methods</p>
+          <p style={styles.caption}>{this.props.methods}</p>
         </div>
 
         <div style={styles.itemContainer}>
           <p style={styles.title}>Team</p>
-          <p>{this.props.team}</p>
+          <p style={styles.caption}>{this.props.team}</p>
         </div>
 
         <div style={styles.itemContainer}>
-          <p style={styles.title}>Tools</p>
-          <p>{this.props.tools}</p>
+          <p style={styles.title}>Timeline</p>
+          <p style={styles.caption}>{this.props.timeline}</p>
         </div>
       </div>
     );
