@@ -58,11 +58,9 @@ export default class NewProjectCard extends React.Component {
             {/* <img
                 src={Arrow}
                 style={{
-                  position: 'relative',
-                  left: '75%',
                   opacity: 0.5,
-                  width: 20,
-                  height: 20,
+                  width: 50,
+                  height: 50,
                   zIndex: 1000,
                 }}
               />
