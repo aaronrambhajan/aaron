@@ -172,10 +172,6 @@ img {
   height: auto;
 }
 
-/* .image-wide {
-  font-size: 0.7em;
-} */
-
 a,
 a:visited {
   font-weight: 700;
@@ -260,8 +256,19 @@ a:hover {
 .navigation a:hover {
   opacity: 1;
   color: black;
-  /* background:  */
   background-color: transparent;
+}
+
+.home-modal-dropmobility {
+  background-color: #ff7d26;
+}
+
+.home-modal-macklab {
+  background-color: #00adef;
+}
+
+.home-modal-quan {
+  background-color: black;
 }
 
 /*
@@ -294,6 +301,7 @@ a:hover {
   color: black;
   /* font-size: 0.8em; */
   font-family: times;
+  font-weight: 100;
   margin-bottom: 0;
 }
 

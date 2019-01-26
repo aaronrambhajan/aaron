@@ -10,15 +10,18 @@ const styles = {
   },
   title: {
     marginBottom: 2,
+    opacity: 0.8,
   },
   caption: {
     fontFamily: 'helvetica',
+    fontSize: '0.8em',
+    opacity: 0.6,
   },
 };
 
 export default class ProjectInfo extends React.Component {
   props: {
-    role: string,
+    rolse: string,
     timeline: string,
     team: string,
     methods: string,
@@ -33,12 +36,11 @@ export default class ProjectInfo extends React.Component {
           justifyContent: 'space-between',
           alignItems: 'flex-start',
           margin: 0,
-          opacity: 0.7,
         }}
       >
         <div style={styles.itemContainer}>
           <p style={styles.title}>Role</p>
-          <p style={styles.caption}>{this.props.role}</p>
+          <p style={styles.caption}>{this.props.roles}</p>
         </div>
         <div style={styles.itemContainer}>
           <p style={styles.title}>Methods</p>
@@ -46,7 +48,7 @@ export default class ProjectInfo extends React.Component {
         </div>
 
         <div style={styles.itemContainer}>
-          <p style={styles.title}>Team</p>
+          <p style={styles.title}>Collaborators</p>
           <p style={styles.caption}>{this.props.team}</p>
         </div>
 

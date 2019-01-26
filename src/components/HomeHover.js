@@ -7,6 +7,7 @@ export default class ProjectHover extends React.Component {
     header: string,
     description: string,
     link: string,
+    isOpaque: boolean,
   };
 
   render = () => {

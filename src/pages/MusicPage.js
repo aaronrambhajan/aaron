@@ -1,10 +1,18 @@
 import React from 'react';
 import Youtube from 'react-youtube';
+import Divider from '../components/Divider';
 
 export default class MusicPage extends React.Component {
   render = () => {
     return (
       <div>
+        <p>
+          <strong>Making music</strong> is the foundation of everything I do.
+          Being a producer taught me that empathy is about understanding people{' '}
+          <em>as they understand themselves</em>. Music is another way I create
+          to connect with the world around me.
+        </p>
+        <Divider />
         <iframe
           title="ria-1-aaron"
           width="100%"

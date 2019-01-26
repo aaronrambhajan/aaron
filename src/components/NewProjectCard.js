@@ -3,6 +3,7 @@
 import React from 'react';
 import ImageWide from '../components/ImageWide';
 import Divider from '../components/Divider';
+import Arrow from '../images/arrow.svg';
 
 export default class NewProjectCard extends React.Component {
   props: {
@@ -18,6 +19,7 @@ export default class NewProjectCard extends React.Component {
     return (
       <a href={this.props.route}>
         <div
+          className="project-card"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -33,6 +35,14 @@ export default class NewProjectCard extends React.Component {
               alignItems: 'center',
             }}
           >
+            {/* <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            > */}
             <ImageWide
               image={this.props.image}
               alt="phone"
@@ -44,27 +54,23 @@ export default class NewProjectCard extends React.Component {
                 minWidth: 250,
                 boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.5)',
               }}
-              // caption={{
-              //   text: (
-              //     <div
-              //       style={{
-              //         display: 'flex',
-              //         flexDirection: 'row',
-              //         justifyContent: 'space-between',
-              //         alignItems: 'center',
-              //         width: '100%  ',
-              //       }}
-              //     >
-              //       <div>@{this.props.org}</div>
-              //       <div>supervised by mikey</div>
-              //     </div>
-              //   ),
-              // }}
             />
+            {/* <img
+                src={Arrow}
+                style={{
+                  position: 'relative',
+                  left: '75%',
+                  opacity: 0.5,
+                  width: 20,
+                  height: 20,
+                  zIndex: 1000,
+                }}
+              />
+            </div> */}
 
             <Divider size={1} />
 
-            <div className="project-card">
+            <div>
               <h1
                 className="intro-hed"
                 style={{

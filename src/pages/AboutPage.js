@@ -2,67 +2,105 @@
 
 import React from 'react';
 import Divider from '../components/Divider';
-import Aaron from '../images/aaron-round.png';
+import ImageWide from '../components/ImageWide';
+import AaronDrawing from '../components/AaronDrawing';
 
 export default class AboutPage extends React.Component {
   render = () => {
     return (
       <div style={{ color: 'black' }}>
-        {/* <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            marginTop: 20,
-            marginBottom: 20,
-          }}
-        >
-          <div
-            style={{
-              maxHeight: 300,
-              maxWidth: 300,
-            }}
-          >
-            <img src={Aaron} alt="Aaron" />
-          </div>
-        </div> */}
+        <AaronDrawing />
 
+        <Divider size={2} />
         {/* Bio description */}
         <div class="about" style={{ marginTop: 10 }}>
           <h2>
-            Who <em>is</em> Aaron?
+            Who <strong>is</strong> Aaron?
           </h2>
-          <p>
-            Hi! I'm <strong>Aaron</strong>. I'm a music producer turned{' '}
-            <u>UX Researcher</u> & <u>Software Engineer</u> passionate about
-            understanding how people interact with design.
+          <Divider size={0.33} />
+          <p
+            style={{
+              // maxWidth: '75%',
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            I'm <em>always</em> asking questions, solving problems, and
+            creating. I believe design will solve the world's greatest problems,
+            because in my mind, <strong>design is everywhere</strong>, and in
+            everything. I learned how to think like a designer from music, but I
+            see it in everything from <u>garbage sorting</u> to{' '}
+            <u>heartbeat diagnostics</u>.
           </p>
-          <p>
-            Fascinated with <u>building things</u> and understanding{' '}
-            <u>why they work</u>
-            —how and why are my favourite questions to ask, and my experience
-            has let me do this.
+          <p
+            style={{
+              maxWidth: '75%',
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            Design needs advocates, people from all angles who understand it. My
+            work is a testament to this: take <strong>Quan</strong>, the
+            non-profit I founded to redesign garbage bin UX. We created{' '}
+            <em>stickers</em>, but through deep, multimodal, rigorous research,
+            they became a UN-funded project.
+          </p>
+          <p
+            style={{
+              maxWidth: '75%',
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            My goal in life is to help build the future by <u>empowering</u>{' '}
+            design through <strong>research</strong> and{' '}
+            <strong>software engineering</strong>.
           </p>
           <Divider />
           <h2>
-            Background (a.k.a., where the <em>hell</em> did I come from?)
+            My <strong>Background</strong>
           </h2>
-          <p>
+          <Divider size={0.33} />
+          <p
+            style={{
+              maxWidth: '75%',
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
             I've explored this as a <u>design entrepreneur</u>,{' '}
             <u>psychology researcher</u>, and <u>software engineer</u>. Each
             experience has taught me invaluable lessons about the impact design
             has on people's lives, and importantly, what my role is in that.
+            I've seen the power of design
           </p>
-          <p>
-            Music production is my foundation for understanding technology. My{' '}
-            <em>job</em> is to figure out what the artist is trying to
-            communicate. It's not just about <em>empathizing</em> with them, I
-            have to understand it as <em>they</em> understand it, feel it as
-            they feel it. Ask questions about how the world will receive it.
-            Leverage deep, wide technical knowledge. Focus on insight in the
-            context. Trust the process. It's the kind of job where you have to
-            be able to say that you're not right for it: ego is the opposite of
-            great production.
+          <p
+            style={{
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            Music is my foundation for how I understand technology. Producing
+            music is an empathy-first process that constantly reminds me that
+            empathy is about{' '}
+            <u>understanding people as they understand themselves</u>.
+          </p>
+          <p
+            style={{
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            I still feel like I'm 4 years old, sitting in my grandmother's
+            living room building LEGO. I live to learn, and that I get the
+            opportunity to use that learning to make people's lives better is
+            the most meaningful, beautiful thing I've ever experienced.
           </p>
 
           <Divider />
@@ -70,9 +108,16 @@ export default class AboutPage extends React.Component {
           <h2>
             What I'm <strong>learning</strong>
           </h2>
-          <p>
-            Areas I love solving problems in:
-            <ul style={{ listStyleType: 'disc', paddingLeft: 20 }}>
+          <Divider size={0.33} />
+          <p
+            style={{
+              maxWidth: '75%',
+              // textAlign: 'center',
+              // fontSize: '0.5em',
+              opacity: 0.7,
+            }}
+          >
+            <ul style={{ listStyleType: 'disc', paddingLeft: 30 }}>
               <li>Anything related to music</li>
               <li>Connecting people and communities</li>
               <li>Mental health awareness and treatment</li>
@@ -81,26 +126,6 @@ export default class AboutPage extends React.Component {
             </ul>
           </p>
           <Divider />
-          <p>
-            I still feel like I'm 4 years old, sitting in my grandmother's
-            living room building LEGO. I live to learn, and that I get the
-            opportunity to use that learning to make people's lives better is
-            the most meaningful, beautiful thing I've ever experienced.
-          </p>
-
-          <Divider />
-          <a
-            href="https://www.dropbox.com/s/600rbuu5ydpo8lk/Aaron-Rambhajan-Resume.pdf?dl=0"
-            style={{ fontWeight: 600, font: 'inherit' }}
-          >
-            [CV]
-          </a>
-          {/* @todo I'd also like to eventually include my full CV here, somewhere */}
-          {/* <p>
-            I'd like to take a bit of space here to thank those amazing people.
-            In the spirit of Amazon recommendations, if you like me, you'll also
-            like:
-          </p> */}
         </div>
       </div>
     );
