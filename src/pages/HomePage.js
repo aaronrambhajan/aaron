@@ -118,7 +118,7 @@ export default class HomePage extends React.Component {
 
         <Divider size={2} />
 
-        <a href="http://dropbox.com">
+        <a href="https://www.dropbox.com/s/3x0ksm3xb1d3p5e/Aaron-Rambhajan-Resume.pdf?dl=0">
           <HomeTitle header="Resume" description="🛠️ Things I've done" />
         </a>
 
