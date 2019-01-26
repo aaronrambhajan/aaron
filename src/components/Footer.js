@@ -7,8 +7,16 @@ import CV from '../images/CV';
 export default class Footer extends React.Component {
   render = () => {
     return (
-      <div>
-        <p className="footer">
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          marginTop: '1.25em',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <p>
           <a target="_blank" href="https://www.linkedin.com/in/arambhajan/">
             <LinkedIn size={24} />
           </a>
@@ -25,6 +33,9 @@ export default class Footer extends React.Component {
           <a target="_blank" href="mailto:aaron.rambhajan@mail.utoronto.ca">
             <Email size={24} />
           </a>
+        </p>
+        <p style={{ fontWeight: 100, fontSize: '0.7em', opacity: 0.5 }}>
+          v1.0.0
         </p>
       </div>
     );
