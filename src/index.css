@@ -203,8 +203,9 @@ a:hover {
   /* position: fixed; */
   color: #454545;
   font-size: 0.8em;
-  opacity: 0.2;
+  opacity: 0.5;
   width: 100%;
+  background-color: lightyellow;
 
   transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
@@ -223,7 +224,6 @@ a:hover {
 
 .navigation a {
   font-weight: 100;
-  background-color: #e7e7e7;
   margin: 0;
   padding: 0;
 }
@@ -231,7 +231,8 @@ a:hover {
 .navigation a:hover {
   opacity: 1;
   color: black;
-  background-color: transparent;
+  text-decoration: line-through;
+  text-decoration-color: grey;
 }
 
 .home-modal-dropmobility {
