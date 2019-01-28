@@ -55,7 +55,7 @@ export default class HomePage extends React.Component {
 
           <NewProjectCard
             title="trash.io {psych lab}"
-            caption="@mack-lab. A human-centered way to sort garbage, funded by the United Nations & Baidu. Two experiments studying how better label design impacts people's decisions through rapid categorization and mouse-tracking."
+            caption="@mack-lab. Two experiments studying how better label design impacts people's decisions through rapid categorization and mouse-tracking."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
             color={colors.PROJECT_4}
@@ -64,7 +64,7 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
           <NewProjectCard
             title="trash.io {user research}"
-            caption="@sustainability-office. A human-centered way to sort garbage, funded by the United Nations & Baidu. Using observations & surveys, studying how people's perception and the reality of their performance compare."
+            caption="@sustainability-office. Studying how people's perception, feelings, and reality of their garbage sorting performance compare using observations & surveys."
             route="/projects/trash#user-research"
             image={UrLogo}
             color={colors.PROJECT_1}

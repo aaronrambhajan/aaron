@@ -250,12 +250,14 @@ a:hover {
 /*
   WORK
 */
-.project-card {
-  opacity: 0.5;
+
+.project-card-text {
+  /* opacity: 0.5; */
   color: #454545;
 }
-.project-card:hover {
-  opacity: 1;
+
+.project-card-text:hover {
+  /* opacity: 1; */
 }
 
 .home-hover {

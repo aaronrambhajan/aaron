@@ -68,7 +68,7 @@ export default class NewProjectCard extends React.Component {
 
             <Divider size={1} />
 
-            <div>
+            <div className="project-card-text">
               <h1
                 className="intro-hed"
                 style={{
@@ -85,7 +85,7 @@ export default class NewProjectCard extends React.Component {
                 className="intro-hed"
                 style={{
                   margin: 0,
-                  opacity: 0.5,
+                  opacity: 0.3,
                   fontWeight: 'normal',
                   textAlign: 'left',
                 }}
