@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Divider from '../components/Divider';
-import ImageWide from '../components/ImageWide';
 import AaronDrawing from '../components/AaronDrawing';
+import AaronRound from '../images/aaron-round.png';
 
 export default class AboutPage extends React.Component {
   render = () => {
@@ -13,7 +13,7 @@ export default class AboutPage extends React.Component {
 
         <Divider size={2} />
         {/* Bio description */}
-        <div class="about" style={{ marginTop: 10 }}>
+        <div class="about">
           <h2>
             Who <strong>is</strong> Aaron?
           </h2>
@@ -47,6 +47,7 @@ export default class AboutPage extends React.Component {
             <em>stickers</em>, but through deep, multimodal, rigorous research,
             they became a UN-funded project.
           </p>
+          {/* <img src={AaronRound} /> */}
           <p
             style={{
               maxWidth: '75%',

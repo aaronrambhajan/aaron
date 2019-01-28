@@ -134,35 +134,41 @@ export default class TrashFieldStudy extends React.Component {
             </ul>
           </div>
 
-          <hr />
-          <Divider size={4} />
+          <div id="problem">
+            <hr />
+            <Divider size={4} />
+            <TrashDesign id="problem" />
+          </div>
 
-          <TrashDesign id="problem" />
+          <div id="methodology">
+            <hr />
+            <Divider size={4} />
+            <TrashMethodology id="methodology" />
+          </div>
 
-          <hr />
-          <Divider size={4} />
+          <div id="field-evaluation">
+            <hr />
+            <Divider size={4} />
+            <TrashField id="field-evaluation" />
+          </div>
 
-          <TrashMethodology id="methodology" />
+          <div id="user-research">
+            <hr />
+            <Divider size={4} />
+            <TrashUserResearch id="user-research" />
+          </div>
 
-          <hr />
-          <Divider size={4} />
+          <div id="mack-lab">
+            <hr />
+            <Divider size={4} />
+            <TrashPsychLab id="mack-lab" />
+          </div>
 
-          <TrashField id="field-evaluation" />
-
-          <hr />
-          <Divider size={4} />
-
-          <TrashUserResearch id="user-research" />
-
-          <hr />
-          <Divider size={4} />
-
-          <TrashPsychLab id="mack-lab" />
-
-          <hr />
-          <Divider size={4} />
-
-          <TrashAwards id="awards" />
+          <div id="awards">
+            <hr />
+            <Divider size={4} />
+            <TrashAwards id="awards" />
+          </div>
 
           <hr />
           <Divider size={2} />

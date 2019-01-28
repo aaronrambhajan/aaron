@@ -13,8 +13,8 @@ import { colors, changeOpacity } from '../colors';
 
 import ThrowingOutTrash from '../images/trash-field-study/throwing-out.gif';
 import TrashExp1 from '../images/trash-field-study/trash-exp1.gif';
+import heartbeatExp1 from '../images/heartbeats/exp1.gif';
 import ADHDRoom from '../images/ADHD/natalia-room-adhd.gif';
-import AaronImage from '../components/AaronDrawing';
 import UrLogo from '../images/trash-field-study/ur-logo.png';
 
 export default class HomePage extends React.Component {
@@ -71,7 +71,15 @@ export default class HomePage extends React.Component {
           />
 
           <Divider size={2} />
+          <NewProjectCard
+            title="heartbeats pilot"
+            caption="@mack-lab. Two experiments studying how experts and novices categorize regular and irregular heartbeats, building to Long QT using category learning and psychophysical staircases."
+            route="/projects/heartbeats"
+            image={heartbeatExp1}
+            color={colors.PROJECT_2}
+          />
 
+          <Divider size={2} />
           <NewProjectCard
             title="10four"
             caption="@MI/UXD. Designing a time management app for students struggling with ADHD. It's about helping them live their lives like they want to. "
