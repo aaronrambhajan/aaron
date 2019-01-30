@@ -40,7 +40,12 @@ export default class Navigation extends React.Component {
             <a href="/contact">Contact</a>{' '}
           </div>
           <div>
-            <a href="/">rambhajan.me</a>
+            <a href="/">
+              rambhajan.me{' '}
+              <span role="img" style={{ marginLeft: 5 }}>
+                🏠
+              </span>
+            </a>
           </div>
         </div>
         <Divider />
