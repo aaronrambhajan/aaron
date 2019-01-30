@@ -38,14 +38,15 @@ export default class HomePage extends React.Component {
         <div id="work">
           <HomeTitle
             header="Research"
-            description="🔬 Experiments I've designed"
+            description="🔬 Experimental design, field research, surveys, statistical analysis, "
           />
 
           <Divider size={0.5} />
 
           <NewProjectCard
             title="trash.io {field study}"
-            caption="@quan. A human-centered way to sort garbage, funded by the United Nations & Baidu. Designed and conducted an 8-week long field study to compare old and new garbage labels."
+            org="quan"
+            caption="I founded a non-profit to create a human-centered way to sort garbage. funded by the United Nations & Baidu. Designed and conducted an 8-week long field study to compare old and new garbage labels."
             route="/projects/trash#field-evaluation"
             image={ThrowingOutTrash}
             color={colors.PROJECT_2}
@@ -55,7 +56,8 @@ export default class HomePage extends React.Component {
 
           <NewProjectCard
             title="trash.io {psych lab}"
-            caption="@mack-lab. Two experiments studying how better label design impacts people's decisions through rapid categorization and mouse-tracking."
+            org="mack lab"
+            caption="Two experiments studying how better label design impacts people's decisions through rapid categorization and mouse-tracking."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
             color={colors.PROJECT_4}
@@ -64,7 +66,8 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
           <NewProjectCard
             title="trash.io {user research}"
-            caption="@sustainability-office. Studying how people's perception, feelings, and reality of their garbage sorting performance compare using observations & surveys."
+            org="sustainability office"
+            caption="Studying how people's perception, feelings, and reality of their garbage sorting performance compare using observations & surveys."
             route="/projects/trash#user-research"
             image={UrLogo}
             color={colors.PROJECT_1}
@@ -73,7 +76,8 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
           <NewProjectCard
             title="heartbeats pilot"
-            caption="@mack-lab. Two experiments studying how experts and novices categorize regular and irregular heartbeats, building to Long QT using category learning and psychophysical staircases."
+            org="mack lab"
+            caption="Two experiments studying how experts and novices categorize regular and irregular heartbeats, building to Long QT using category learning and psychophysical staircases."
             route="/projects/heartbeats"
             image={heartbeatExp1}
             color={colors.PROJECT_2}
@@ -82,7 +86,8 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
           <NewProjectCard
             title="10four"
-            caption="@MI/UXD. Designing a time management app for students struggling with ADHD. It's about helping them live their lives like they want to. "
+            org="master of information"
+            caption="Designing a time management app for students struggling with ADHD. It's about helping them live their lives like they want to. "
             route="/projects/ADHD"
             image={ADHDRoom}
             color={colors.PROJECT_3}

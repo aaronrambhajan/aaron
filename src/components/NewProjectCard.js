@@ -85,12 +85,12 @@ export default class NewProjectCard extends React.Component {
                 className="intro-hed"
                 style={{
                   margin: 0,
-                  opacity: 0.3,
+                  opacity: 0.4,
                   fontWeight: 'normal',
                   textAlign: 'left',
                 }}
               >
-                {this.props.caption}
+                @<u>{this.props.org}</u>. {this.props.caption}
               </h1>
             </div>
           </div>
