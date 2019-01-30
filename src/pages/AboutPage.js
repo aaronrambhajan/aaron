@@ -11,97 +11,109 @@ export default class AboutPage extends React.Component {
       <div style={{ color: 'black' }}>
         <AaronDrawing />
 
-        <Divider size={2} />
+        <Divider size={4} />
         {/* Bio description */}
         <div class="about">
           <h2>
-            Who <strong>is</strong> Aaron?
+            My <strong>purpose</strong> is to help build the future by
+            empowering design through rigorous <a href="/#work">research</a> and{' '}
+            <a href="/#code">code</a>.
           </h2>
-          <Divider size={0.33} />
-          <p
-            style={{
-              // maxWidth: '75%',
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            I'm <em>always</em> asking questions, solving problems, and
-            creating. I believe design will solve the world's greatest problems,
-            because in my mind, <strong>design is everywhere</strong>, and in
-            everything. I learned how to think like a designer from music, but I
-            see it in everything from <u>garbage sorting</u> to{' '}
-            <u>heartbeat diagnostics</u>.
-          </p>
-          <p
-            style={{
-              maxWidth: '75%',
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            Design needs advocates, people from all angles who understand it. My
-            work is a testament to this: take <strong>Quan</strong>, the
-            non-profit I founded to redesign garbage bin UX. We created{' '}
-            <em>stickers</em>, but through deep, multimodal, rigorous research,
-            they became a UN-funded project.
-          </p>
-          {/* <img src={AaronRound} /> */}
-          <p
-            style={{
-              maxWidth: '75%',
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            My goal in life is to help build the future by <u>empowering</u>{' '}
-            design through <strong>research</strong> and{' '}
-            <strong>software engineering</strong>.
+          <Divider size={4} />
+          <p>
+            I'm Aaron. <em>Always</em> asking questions, solving problems, and
+            creating things. I connect worlds that seem different because I've
+            spent my life doing things that don't fit together. I'm passionate
+            about a lot of things, but at my core, I'm just in love with being
+            alive. I'm endlessly curious about understanding{' '}
+            <strong>how things work</strong>, and <strong>why they work</strong>{' '}
+            that way.
           </p>
           <Divider />
+          <p>
+            I believe design will solve the world's greatest problems.{' '}
+            <strong>Design is everywhere</strong>, and in everything. Producing{' '}
+            <a href="/music">music</a> taught me how to think like a designer by
+            creating experiences for listeners. I bring that understanding
+            everywhere—whether that be designing scalable UI code at{' '}
+            <a href="http://dropmobility.com">Drop Mobility</a>, designing
+            experiments at the{' '}
+            <a href="http://macklab.utoronto.ca/members.html">Mack Lab</a>, or
+            redesigning garbage sorting at <a href="/projects/trash">Quan</a>.
+          </p>
+          <Divider />
+          <p>
+            As a UX Researcher, I empower design through rigorous experiments. I
+            leverage my background in Psychology Research to study how
+            information design affects us. As a Software Engineer, I empower
+            design by taking a human-centered approach to my code—who is being
+            affected by me, and how can I help them?
+          </p>
+          <Divider size={4} />
           <h2>
             My <strong>Background</strong>
           </h2>
-          <Divider size={0.33} />
-          <p
-            style={{
-              maxWidth: '75%',
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            I've explored this as a <u>design entrepreneur</u>,{' '}
-            <u>psychology researcher</u>, and <u>software engineer</u>. Each
-            experience has taught me invaluable lessons about the impact design
-            has on people's lives, and importantly, what my role is in that.
-            I've seen the power of design
-          </p>
-          <p
-            style={{
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            Music is my foundation for how I understand technology. Producing
-            music is an empathy-first process that constantly reminds me that
-            empathy is about{' '}
-            <u>understanding people as they understand themselves</u>.
-          </p>
-          <p
-            style={{
-              // textAlign: 'center',
-              // fontSize: '0.5em',
-              opacity: 0.7,
-            }}
-          >
-            I still feel like I'm 4 years old, sitting in my grandmother's
-            living room building LEGO. I live to learn, and that I get the
-            opportunity to use that learning to make people's lives better is
-            the most meaningful, beautiful thing I've ever experienced.
+          <Divider />
+          <p>
+            <div class="now">
+              <code style={{ fontFamily: 'menlo', fontWeight: '600' }}>
+                /now
+              </code>
+              <ul style={{ listStyle: 'disc', paddingLeft: '2em' }}>
+                <li>
+                  Researching how design impacts people's decisions at the{' '}
+                  <a href="http://macklab.utoronto.ca/members.html">Mack Lab</a>
+                </li>
+                <li>
+                  Developing software to help build the future of urban
+                  transportation at{' '}
+                  <a href="http://dropmobility.com">Drop Mobility</a>
+                </li>
+                <li>
+                  Doing my{' '}
+                  <a href="https://www.ischool.utoronto.ca">
+                    Master of Information
+                  </a>{' '}
+                  in User Experience Design at the University of Toronto
+                </li>
+                <li>
+                  Producing <a href="/music">music</a> for artists
+                </li>
+              </ul>
+
+              <code style={{ fontFamily: 'menlo', fontWeight: '600' }}>
+                /before
+              </code>
+              <ul
+                style={{
+                  listStyle: 'disc',
+                  paddingLeft: '2em',
+                }}
+              >
+                <li>
+                  Started a non-profit, <a href="/projects/trash">Quan</a>, to
+                  redesign garbage sorting UX
+                </li>
+                <li>
+                  Made UX recommendations to the{' '}
+                  <a href="http://www.fs.utoronto.ca/sustainability-office/sustainability-yearbook/">
+                    Sustainability Office
+                  </a>
+                </li>
+                <li>
+                  Completed my undergrad my undergrad in Psychology, Art
+                  History, and Computer Science at the{' '}
+                  <a href="utoronto.ca">University of Toronto</a>
+                </li>
+                <li>
+                  Studied{' '}
+                  <a href="https://www.berklee.edu/electronic-production-design">
+                    Electronic Production & Design
+                  </a>{' '}
+                  at Berklee College of Music
+                </li>
+              </ul>
+            </div>
           </p>
 
           <Divider />
@@ -109,21 +121,20 @@ export default class AboutPage extends React.Component {
           <h2>
             What I'm <strong>learning</strong>
           </h2>
-          <Divider size={0.33} />
+          <Divider size={0.5} />
           <p
             style={{
               maxWidth: '75%',
               // textAlign: 'center',
               // fontSize: '0.5em',
-              opacity: 0.7,
             }}
           >
             <ul style={{ listStyleType: 'disc', paddingLeft: 30 }}>
               <li>Anything related to music</li>
+              <li>Empowering creators</li>
               <li>Connecting people and communities</li>
               <li>Mental health awareness and treatment</li>
               <li>Sustainability, transportation, and micromobility</li>
-              <li>Empowering creators</li>
             </ul>
           </p>
           <Divider />

@@ -38,7 +38,7 @@ export default class HomePage extends React.Component {
         <div id="work">
           <HomeTitle
             header="Research"
-            description="🔬 Experimental design, field research, surveys, statistical analysis, "
+            description="🔬 Experimental design, field research, surveys, statistical analysis"
           />
 
           <Divider size={0.5} />
@@ -46,7 +46,7 @@ export default class HomePage extends React.Component {
           <NewProjectCard
             title="trash.io {field study}"
             org="quan"
-            caption="I founded a non-profit to create a human-centered way to sort garbage. funded by the United Nations & Baidu. Designed and conducted an 8-week long field study to compare old and new garbage labels."
+            caption="I founded a non-profit to create a human-centered way to sort garbage. I designed and conducted an 8-week long field study to A/B test the performance of old and new garbage labels."
             route="/projects/trash#field-evaluation"
             image={ThrowingOutTrash}
             color={colors.PROJECT_2}
@@ -57,7 +57,7 @@ export default class HomePage extends React.Component {
           <NewProjectCard
             title="trash.io {psych lab}"
             org="mack lab"
-            caption="Two experiments studying how better label design impacts people's decisions through rapid categorization and mouse-tracking."
+            caption="I designed, built, and conducted 2 cognitive and attentional experiments to study how label design impacts people's decisions."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
             color={colors.PROJECT_4}
@@ -67,13 +67,13 @@ export default class HomePage extends React.Component {
           <NewProjectCard
             title="trash.io {user research}"
             org="sustainability office"
-            caption="Studying how people's perception, feelings, and reality of their garbage sorting performance compare using observations & surveys."
+            caption="Using observations and surveys, I studied how people's perception and reality of their garbage sorting performance compares."
             route="/projects/trash#user-research"
             image={UrLogo}
             color={colors.PROJECT_1}
           />
 
-          <Divider size={2} />
+          {/* <Divider size={2} />
           <NewProjectCard
             title="heartbeats pilot"
             org="mack lab"
@@ -81,13 +81,13 @@ export default class HomePage extends React.Component {
             route="/projects/heartbeats"
             image={heartbeatExp1}
             color={colors.PROJECT_2}
-          />
+          /> */}
 
           <Divider size={2} />
           <NewProjectCard
             title="10four"
             org="master of information"
-            caption="Designing a time management app for students struggling with ADHD. It's about helping them live their lives like they want to. "
+            caption="I designed a time management app for students struggling with ADHD. It's about helping them live their lives like they want to. "
             route="/projects/ADHD"
             image={ADHDRoom}
             color={colors.PROJECT_3}
@@ -99,7 +99,7 @@ export default class HomePage extends React.Component {
         <div>
           <HomeTitle
             header="Code"
-            description="❤️ Python, React, PostgreSQL, Bash"
+            description="💻 Python, Javascript, PostgreSQL, Bash"
           />
           <Divider size={0.5} />
           <HomeHover
@@ -131,9 +131,11 @@ export default class HomePage extends React.Component {
 
         <Divider size={2} />
 
-        <a href="https://www.dropbox.com/s/3x0ksm3xb1d3p5e/Aaron-Rambhajan-Resume.pdf?dl=0">
-          <HomeTitle header="Resume" description="🛠️ Things I've done" />
-        </a>
+        <div id="resume">
+          <a href="https://www.dropbox.com/s/3x0ksm3xb1d3p5e/Aaron-Rambhajan-Resume.pdf?dl=0">
+            <HomeTitle header="Resume" description="🛠️ Things I've done" />
+          </a>
+        </div>
 
         {/* <div>
           <HomeTitle header="Experience" description="🛠️ Things I've done" />

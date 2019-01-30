@@ -8,6 +8,7 @@ export default class Footer extends React.Component {
   render = () => {
     return (
       <div
+        id="contact"
         style={{
           display: 'flex',
           flexDirection: 'row',
