@@ -33,7 +33,7 @@ export default class AaronDrawing extends React.Component {
               fontSize: '0.7em',
             }}
           >
-            by <a href="https://www.augustineng.com/365-zine/">Augustine Ng</a>
+            by <a href="https://www.instagram.com/augustineng/">Augustine Ng</a>
           </p>
         </div>
       </div>
