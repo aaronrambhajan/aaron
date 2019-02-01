@@ -30,7 +30,6 @@ export default class HomeModal extends React.Component {
   };
 
   render = () => {
-    console.log(this.props.modalText);
     return (
       <div onClick={this.toggleModal}>
         <div

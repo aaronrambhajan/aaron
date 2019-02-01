@@ -174,14 +174,15 @@ img {
 
 a,
 a:visited {
-  font-weight: 700;
-  text-decoration: none;
+  /* font-weight: 700; */
+  text-decoration: underline;
   color: #181818;
 }
 
 a:hover {
-  text-decoration: none;
-  color: #00adef;
+  /* text-decoration: none; */
+  opacity: 0.5;
+  /* color: #00adef; */
 }
 
 .intro-hed {
@@ -201,40 +202,42 @@ a:hover {
 */
 .navigation {
   /* position: fixed; */
+  width: 100%;
+  transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+}
+
+.navigation-text {
   color: #454545;
   font-size: 0.8em;
-  opacity: 0.7;
-  width: 100%;
-  background-color: lightyellow;
-
-  transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -webkit-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
 }
 
 .navigation:hover {
-  opacity: 1;
   background-color: lightyellow;
-  transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -webkit-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
+  transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
 }
 
 .navigation a {
+  text-decoration: none;
   font-weight: 100;
   margin: 0;
   padding: 0;
 }
 
 .navigation a:hover {
-  opacity: 1;
   color: black;
   text-decoration: line-through;
   text-decoration-color: grey;
 }
 
+/*
+  HOME
+*/
 .home-modal-dropmobility {
   background-color: #ff7d26;
 }
@@ -250,14 +253,15 @@ a:hover {
 /*
   WORK
 */
-
-.project-card-text {
-  /* opacity: 0.5; */
-  color: #454545;
+.project-card {
+  /* This is implicitly <a> */
+  text-decoration: none;
 }
 
-.project-card-text:hover {
-  /* opacity: 1; */
+.project-card:hover {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.1;
 }
 
 .home-hover {
@@ -272,8 +276,41 @@ a:hover {
   cursor: pointer;
 }
 
+#outer-box {
+  position: relative;
+  margin: 0;
+}
+
+#outer-box #inner-box {
+  /* height: 100%; */
+  /* width: 100%; */
+  /* top: 70%; */
+  /* left: 70%; */
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  /* background-color: red; */
+}
+
+#inner-box {
+  border: 5px black;
+  border-radius: 15;
+}
+#inner-inner-box {
+  /* top: 100%; */
+  /* left: 100%; */
+  /* background-color: green; */
+  /* height: 15%; */
+  /* width: 15%; */
+}
+
+/* #outer-box:hover #inner-box {
+  opacity: 0.9;
+  transition: opacity 0.5s;
+} */
+
 /*
-  PROJECT WORK CODE
+  WRITE-UP
 */
 .projects p {
   color: black;
@@ -351,19 +388,8 @@ a:hover {
   opacity: 0.4;
 }
 
-/*
-  CONTACT PAGE
-*/
-.contact a {
-  margin-right: 1em;
-}
-
-/*
-  HOME PAGE
-*/
 .now {
   font-family: 'Times New Roman', Times, serif;
-  /* max-width: 70%; */
 }
 
 /*

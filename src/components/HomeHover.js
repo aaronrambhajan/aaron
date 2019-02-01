@@ -13,7 +13,7 @@ export default class ProjectHover extends React.Component {
   render = () => {
     return (
       <div>
-        <a href={this.props.link}>
+        <a style={{ textDecoration: 'none' }} href={this.props.link}>
           <div
             className="home-hover"
             style={{

@@ -23,19 +23,26 @@ export default class HomePage extends React.Component {
       <div class="home">
         <div>
           <h1 class="intro-hed" style={{ color: 'black' }}>
-            Hi! I’m <a href="/about">Aaron</a>.
+            Hi! I’m{' '}
+            <a
+              style={{ textDecoration: 'none', fontWeight: 600 }}
+              href="/about"
+            >
+              Aaron
+            </a>
+            .
           </h1>
           <Divider size={0.5} />
-          <p style={{ maxWidth: '75%', fontSize: '0.8em' }}>
-            Music producer turned <u>UX Researcher</u> &{' '}
-            <u>Software Engineer</u> passionate about understanding how people
-            interact with the world.
+          <p style={{ maxWidth: '75%', fontSize: '1.25em' }}>
+            Music producer turned <a href="#research">UX Researcher</a> &{' '}
+            <a href="#code">Software Engineer</a> passionate about understanding
+            how people interact with the world.
           </p>
         </div>
 
         <Divider size={2} />
 
-        <div id="work">
+        <div id="research">
           <HomeTitle
             header="Research"
             description="🔬 Experimental design, field research, surveys, statistical analysis"
@@ -45,7 +52,6 @@ export default class HomePage extends React.Component {
 
           <NewProjectCard
             title="trash.io {field study}"
-            org="quan"
             caption="I founded a non-profit to create a human-centered way to sort garbage. I designed and conducted an 8-week long field study to A/B test the performance of old and new garbage labels."
             route="/projects/trash#field-evaluation"
             image={ThrowingOutTrash}
@@ -56,7 +62,6 @@ export default class HomePage extends React.Component {
 
           <NewProjectCard
             title="trash.io {psych lab}"
-            org="mack lab"
             caption="I designed, built, and conducted 2 cognitive and attentional experiments to study how label design impacts people's decisions."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
@@ -66,7 +71,6 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
           <NewProjectCard
             title="trash.io {user research}"
-            org="sustainability office"
             caption="Using observations and surveys, I studied how people's perception and reality of their garbage sorting performance compares."
             route="/projects/trash#user-research"
             image={UrLogo}
@@ -96,7 +100,7 @@ export default class HomePage extends React.Component {
 
         <Divider size={4} />
 
-        <div>
+        <div id="code">
           <HomeTitle
             header="Code"
             description="💻 Python, Javascript, PostgreSQL, Bash"
@@ -127,14 +131,6 @@ export default class HomePage extends React.Component {
             description="A Java-based desktop application for image tagging"
             link="https://github.com/aaronrambhajan/-memories"
           />
-        </div>
-
-        <Divider size={2} />
-
-        <div id="resume">
-          <a href="https://www.dropbox.com/s/3x0ksm3xb1d3p5e/Aaron-Rambhajan-Resume.pdf?dl=0">
-            <HomeTitle header="Resume" description="🛠️ Things I've done" />
-          </a>
         </div>
 
         {/* <div>

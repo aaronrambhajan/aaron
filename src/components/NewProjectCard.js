@@ -17,9 +17,8 @@ export default class NewProjectCard extends React.Component {
 
   render = () => {
     return (
-      <a href={this.props.route}>
+      <a href={this.props.route} className="project-card">
         <div
-          className="project-card"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -55,6 +54,46 @@ export default class NewProjectCard extends React.Component {
                 boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.5)',
               }}
             />
+            {/* <div
+              id="outer-box"
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignContent: 'center',
+              }}
+            >
+              <img
+                src={this.props.image}
+                alt="phone"
+                style={{
+                  maxHeight: 400,
+                  maxWidth: 400,
+                  width: '90%',
+                  minHeight: 250,
+                  minWidth: 250,
+                  boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.5)',
+                }}
+              />
+              <div
+                id="inner-box"
+                style={{
+                  fontFamily:
+                    'BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif, -apple-system',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
+                  color: 'white',
+                  fontSize: '300%',
+                  fontWeight: 600,
+                }}
+              >
+                <div id="inner-inner-box" style={{ padding: 20 }}>
+                  <img src={Arrow} />
+                </div>
+              </div>
+            </div> */}
             {/* <img
                 src={Arrow}
                 style={{
@@ -90,7 +129,7 @@ export default class NewProjectCard extends React.Component {
                   textAlign: 'left',
                 }}
               >
-                @<u>{this.props.org}</u>. {this.props.caption}
+                {this.props.caption}
               </h1>
             </div>
           </div>
