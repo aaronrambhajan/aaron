@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
           </a>
         </p>
         <p style={{ fontWeight: 100, fontSize: '0.7em', opacity: 0.5 }}>
-          v1.0.0
+          v1.0.1
         </p>
       </div>
     );
