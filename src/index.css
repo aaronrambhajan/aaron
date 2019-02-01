@@ -250,18 +250,16 @@ a:hover {
   background-color: black;
 }
 
-/*
-  WORK
-*/
 .project-card {
   /* This is implicitly <a> */
   text-decoration: none;
+  margin-right: 20;
 }
 
 .project-card:hover {
   text-decoration: none;
   color: inherit;
-  opacity: 0.1;
+  opacity: 0.7;
 }
 
 .home-hover {
@@ -310,11 +308,10 @@ a:hover {
 } */
 
 /*
-  WRITE-UP
+  WORK
 */
 .projects p {
   color: black;
-  /* font-size: 0.8em; */
   font-family: times;
   font-weight: 100;
   margin-bottom: 0;
@@ -324,15 +321,6 @@ a:hover {
   font-size: 1.15em;
   font-weight: 600;
   color: black;
-}
-
-.project-article a {
-  color: #00adef;
-  font-weight: 600;
-}
-
-.project-article a:hover {
-  color: #1a2548;
 }
 
 .project-article ol {
@@ -423,6 +411,13 @@ svg.cv:hover {
   fill: #e83e8c;
 }
 
+/* .research {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
 @media only screen and (min-width: 540px) {
   body {
     font-size: 19px;
@@ -430,4 +425,11 @@ svg.cv:hover {
   .container {
     padding-top: 2em;
   }
+  /* .research {
+    display: flex;
+    flex-direction: row;
+  }
+  .project-card {
+    margin: 0;
+  } */
 }

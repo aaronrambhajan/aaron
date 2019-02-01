@@ -33,7 +33,13 @@ export default class HomePage extends React.Component {
             .
           </h1>
           <Divider size={0.5} />
-          <p style={{ maxWidth: '75%', fontSize: '1.25em' }}>
+          <p
+            style={{
+              maxWidth: '75%',
+              fontSize: '1.25em',
+              color: changeOpacity(colors.SECONDARY, '0.5'),
+            }}
+          >
             Music producer turned <a href="#research">UX Researcher</a> &{' '}
             <a href="#code">Software Engineer</a> passionate about understanding
             how people interact with the world.
@@ -51,7 +57,7 @@ export default class HomePage extends React.Component {
           <Divider size={0.5} />
 
           <NewProjectCard
-            title="trash.io {field study}"
+            title="trash.io [field study]"
             caption="I founded a non-profit to create a human-centered way to sort garbage. I designed and conducted an 8-week long field study to A/B test the performance of old and new garbage labels."
             route="/projects/trash#field-evaluation"
             image={ThrowingOutTrash}
@@ -61,7 +67,7 @@ export default class HomePage extends React.Component {
           <Divider size={2} />
 
           <NewProjectCard
-            title="trash.io {psych lab}"
+            title="trash.io [psych lab]"
             caption="I designed, built, and conducted 2 cognitive and attentional experiments to study how label design impacts people's decisions."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
@@ -70,7 +76,7 @@ export default class HomePage extends React.Component {
 
           <Divider size={2} />
           <NewProjectCard
-            title="trash.io {user research}"
+            title="trash.io [user research]"
             caption="Using observations and surveys, I studied how people's perception and reality of their garbage sorting performance compares."
             route="/projects/trash#user-research"
             image={UrLogo}

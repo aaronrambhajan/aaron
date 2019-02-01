@@ -13,7 +13,7 @@ import ContactPage from './pages/ContactPage';
 
 import ADHDProject from './projects/ADHD';
 import HeartbeatProject from './projects/Heartbeats';
-import TrashProject from './projects/TrashProject';
+import TrashProject from './projects/Trash/Project';
 
 // [Nested Routing](https://stackoverflow.com/questions/41474134/nested-routes-with-react-router-v4)
 

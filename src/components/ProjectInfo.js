@@ -40,16 +40,34 @@ export default class ProjectInfo extends React.Component {
       >
         <div style={styles.itemContainer}>
           <p style={styles.title}>Role</p>
-          <p style={styles.caption}>{this.props.roles}</p>
+          <p style={styles.caption}>
+            <ul>
+              {this.props.roles.map((role) => {
+                return <li>{role}</li>;
+              })}
+            </ul>
+          </p>
         </div>
         <div style={styles.itemContainer}>
           <p style={styles.title}>Methods</p>
-          <p style={styles.caption}>{this.props.methods}</p>
+          <p style={styles.caption}>
+            <ul>
+              {this.props.methods.map((method) => {
+                return <li>{method}</li>;
+              })}
+            </ul>
+          </p>
         </div>
 
         <div style={styles.itemContainer}>
           <p style={styles.title}>Collaborators</p>
-          <p style={styles.caption}>{this.props.team}</p>
+          <p style={styles.caption}>
+            <ul>
+              {this.props.team.map((teamMember) => {
+                return <li>{teamMember}</li>;
+              })}
+            </ul>
+          </p>
         </div>
 
         <div style={styles.itemContainer}>

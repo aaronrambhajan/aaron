@@ -1,9 +1,9 @@
 import React from 'react';
-import { colors } from '../colors';
+import { colors } from '../../colors';
 
-import Divider from '../components/Divider';
-import TableOfContents from '../components/TableOfContents';
-import Collaborators from '../images/trash-field-study/collaborators.png';
+import Divider from '../../components/Divider';
+import TableOfContents from '../../components/TableOfContents';
+import Collaborators from '../../images/trash-field-study/collaborators.png';
 
 export default class extends React.Component {
   render = () => {

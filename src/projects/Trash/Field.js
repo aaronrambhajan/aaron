@@ -1,11 +1,11 @@
 // @flow
 
 import React from 'react';
-import { colors } from '../colors';
+import { colors } from '../../colors';
 
-import ProjectInfo from '../components/ProjectInfo';
-import Divider from '../components/Divider';
-import TableOfContents from '../components/TableOfContents';
+import ProjectInfo from '../../components/ProjectInfo';
+import Divider from '../../components/Divider';
+import TableOfContents from '../../components/TableOfContents';
 
 export default class TrashField extends React.Component {
   props: {
@@ -49,10 +49,10 @@ export default class TrashField extends React.Component {
         </p>
         <Divider size={2} />
         <ProjectInfo
-          roles="Experimental Design, Data Analysis"
+          roles={['Experimental Design', 'Data Analysis']}
           timeline="Dec. 2016 - Dec. 2017"
-          team="Te Chen, Dr. John Robinson, Dr. Colin Furness"
-          methods="Field Evaluation, A/B testing"
+          team={['Te Chen', 'Dr. John Robinson', 'Dr. Colin Furness']}
+          methods={['Field Evaluation', 'A/B testing']}
         />
         <Divider />
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>objective</h3>

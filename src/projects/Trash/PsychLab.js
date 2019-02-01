@@ -1,15 +1,15 @@
 import React from 'react';
-import { colors, changeOpacity } from '../colors';
+import { colors, changeOpacity } from '../../colors';
 
-import ProjectInfo from '../components/ProjectInfo';
-import Divider from '../components/Divider';
-import ImageWide from '../components/ImageWide';
-import TableOfContents from '../components/TableOfContents';
+import ProjectInfo from '../../components/ProjectInfo';
+import Divider from '../../components/Divider';
+import ImageWide from '../../components/ImageWide';
+import TableOfContents from '../../components/TableOfContents';
 
-import MouseTracking from '../images/trash-field-study/mouse-tracking.gif';
-import RapidCategorization from '../images/trash-field-study/trash-exp1.gif';
-import exp1results1 from '../images/trash-field-study/exp1results1.png';
-import exp1results2 from '../images/trash-field-study/exp1results2.png';
+import MouseTracking from '../../images/trash-field-study/mouse-tracking.gif';
+import RapidCategorization from '../../images/trash-field-study/trash-exp1.gif';
+import exp1results1 from '../../images/trash-field-study/exp1results1.png';
+import exp1results2 from '../../images/trash-field-study/exp1results2.png';
 
 export default class TrashPsychLab extends React.Component {
   render = () => {
@@ -47,10 +47,13 @@ export default class TrashPsychLab extends React.Component {
         </p>
         <Divider size={2} />
         <ProjectInfo
-          roles="Experimental Design, Programming, Data Analysis"
+          roles={['Experimental Design', 'Programming', 'Data Analysis']}
           timeline="Aug. 2017 - Dec. 2018"
-          team="Dr. Michael Mack"
-          methods="Rapid Categorization (cognitive), Mouse-tracking (attentional)"
+          team={['Dr. Michael Mack']}
+          methods={[
+            'Rapid Categorization (cognitive)',
+            'Mouse-tracking (attentional)',
+          ]}
         />
         <Divider size={2} />
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { colors } from '../colors';
+import { colors } from '../../colors';
 
-import Divider from '../components/Divider';
-import TableOfContents from '../components/TableOfContents';
+import Divider from '../../components/Divider';
+import TableOfContents from '../../components/TableOfContents';
 
 export default class TrashMethodology extends React.Component {
   render = () => {

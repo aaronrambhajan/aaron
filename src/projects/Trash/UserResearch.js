@@ -1,9 +1,9 @@
 import React from 'react';
-import { colors } from '../colors';
+import { colors } from '../../colors';
 
-import ProjectInfo from '../components/ProjectInfo';
-import Divider from '../components/Divider';
-import TableOfContents from '../components/TableOfContents';
+import ProjectInfo from '../../components/ProjectInfo';
+import Divider from '../../components/Divider';
+import TableOfContents from '../../components/TableOfContents';
 
 export default class TrashUserResearch extends React.Component {
   render = () => {
@@ -44,10 +44,10 @@ export default class TrashUserResearch extends React.Component {
         </p>
         <Divider size={2} />
         <ProjectInfo
-          roles="Experimental Design, Data Analysis, Supervision"
+          roles={['Experimental Design', 'Data Analysis', 'Supervision']}
           timeline="Oct. 2017 – Nov. 2017"
-          team="Te Chen, Dr. John Robinson, Sustainability Office"
-          methods="Surveys, Observation"
+          team={['Te Chen', 'Dr. John Robinson', 'Sustainability Office']}
+          methods={['Surveys', 'Observation']}
         />
         <Divider size={2} />
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>objective</h3>
