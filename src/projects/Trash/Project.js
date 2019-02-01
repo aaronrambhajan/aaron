@@ -13,6 +13,8 @@ import PsychLab from './PsychLab';
 import Awards from './Awards';
 import TableOfContents from './TableOfContents';
 
+import Tabs from '../../components/Tabs';
+
 import ThrowingOut from '../../images/trash-field-study/throwing-out.gif';
 
 export default class TrashFieldStudy extends React.Component {
@@ -106,6 +108,7 @@ export default class TrashFieldStudy extends React.Component {
           <div id="problem">
             <hr />
             <Divider size={4} />
+
             <Design id="problem" />
           </div>
 
@@ -121,17 +124,40 @@ export default class TrashFieldStudy extends React.Component {
             <Field id="field-evaluation" />
           </div>
 
-          <div id="user-research">
-            <hr />
-            <Divider size={4} />
-            <UserResearch id="user-research" />
-          </div>
-
           <div id="mack-lab">
             <hr />
             <Divider size={4} />
             <PsychLab id="mack-lab" />
           </div>
+
+          <div id="user-research">
+            <hr />
+            <Divider size={4} />
+            <UserResearch id="user-research" />
+          </div>
+          {/*
+          <Tabs
+            content={{
+              one: (
+                <div id="field-evaluation">
+                  <Divider size={4} />
+                  <Field />
+                </div>
+              ),
+              two: (
+                <div id="user-research">
+                  <Divider size={4} />
+                  <UserResearch />
+                </div>
+              ),
+              three: (
+                <div id="mack-lab">
+                  <Divider size={4} />
+                  <PsychLab id="mack-lab" />
+                </div>
+              ),
+            }}
+          /> */}
 
           <div id="awards">
             <hr />
