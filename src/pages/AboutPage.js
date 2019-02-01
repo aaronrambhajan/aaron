@@ -15,29 +15,23 @@ export default class AboutPage extends React.Component {
         {/* Bio description */}
         <div class="about">
           <h2>
-            My <strong>purpose</strong> is to help build the future by
-            empowering design through rigorous <a href="/#work">research</a> and{' '}
-            <a href="/#code">code</a>.
+            I{' '}
+            <span style={{ backgroundColor: 'yellow', fontWeight: 600 }}>
+              connect disparate worlds
+            </span>{' '}
+            because I've spent my life doing things that don't fit together.
           </h2>
           <Divider size={4} />
           <p>
-            I'm Aaron. <em>Always</em> asking questions, solving problems, and
-            creating things. I connect worlds that seem different because I've
-            spent my life doing things that don't fit together. I'm passionate
-            about a lot of things, but at my core, I'm just in love with being
-            alive. I'm endlessly curious about understanding{' '}
-            <strong>how things work</strong>, and <strong>why they work</strong>{' '}
-            that way.
-          </p>
-          <Divider />
-          <p>
-            I believe design will solve the world's greatest problems.{' '}
-            <strong>Design is everywhere</strong>, and in everything. Producing{' '}
-            <a href="/music">music</a> taught me how to think like a designer by
-            creating experiences for listeners. I bring that understanding
-            everywhere—whether that be designing scalable UI code at{' '}
-            <a href="http://dropmobility.com">Drop Mobility</a>, designing
-            experiments at the{' '}
+            I'm Aaron. Always asking questions and creating things. I'm
+            fascinated by understanding <strong>how things work</strong>, and{' '}
+            <strong>why they work</strong> that way. I believe design will solve
+            the world's greatest problems. I see design is everywhere, and in
+            everything. Producing <a href="/music">music</a> taught me how to
+            think like a designer by creating experiences for listeners. I bring
+            that understanding everywhere—whether that be designing scalable UI
+            code at <a href="http://dropmobility.com">Drop Mobility</a>,
+            designing experiments at the{' '}
             <a href="http://macklab.utoronto.ca/members.html">Mack Lab</a>, or
             redesigning garbage sorting at <a href="/projects/trash">Quan</a>.
           </p>
@@ -49,7 +43,7 @@ export default class AboutPage extends React.Component {
             design by taking a human-centered approach to my code—who is being
             affected by me, and how can I help them?
           </p>
-          <Divider size={4} />
+          <Divider size={2} />
           <h2>
             My <strong>Background</strong>
           </h2>
@@ -116,7 +110,7 @@ export default class AboutPage extends React.Component {
             </div>
           </p>
 
-          <Divider />
+          <Divider size={2} />
 
           <h2>
             What I'm <strong>learning</strong>
@@ -129,7 +123,7 @@ export default class AboutPage extends React.Component {
               // fontSize: '0.5em',
             }}
           >
-            <ul style={{ listStyleType: 'disc', paddingLeft: 30 }}>
+            <ul style={{ listStyleType: 'disc', paddingLeft: 30, margin: 0 }}>
               <li>Anything related to music</li>
               <li>Empowering creators</li>
               <li>Connecting people and communities</li>
@@ -137,51 +131,9 @@ export default class AboutPage extends React.Component {
               <li>Sustainability, transportation, and micromobility</li>
             </ul>
           </p>
-          <Divider />
         </div>
+        <Divider size={2} />
       </div>
     );
   };
-}
-
-{
-  /*
-        <div class="now">
-          <code style={{ fontFamily: 'menlo', fontWeight: '600' }}>/now</code>
-          <ul style={{ listStyle: 'disc', paddingLeft: '2em' }}>
-            <li>
-              Researching how people make decisions with real-world information
-              at the{' '}
-              <a href="http://macklab.utoronto.ca/members.html">Mack Lab</a>
-            </li>
-            <li>
-              Helping build the future of urban transportation at{' '}
-              <a href="http://dropmobility.com">Drop Mobility</a>
-            </li>
-            <li>
-              Producing <a href="/music">music</a> for artists
-            </li>
-            <li>
-              Doing my{' '}
-              <a href="https://www.ischool.utoronto.ca">
-                Master of Information
-              </a>{' '}
-              in Human-Centered Data Science
-            </li>
-          </ul>
-
-          <code style={{ fontFamily: 'menlo', fontWeight: '600' }}>
-            /highlights
-          </code>
-          <ul style={{ listStyle: 'disc', paddingLeft: '2em', fontWeight: 50 }}>
-            <li>
-              Started a non-profit, Quan, to improve UX in waste management
-            </li>
-            <li>Studied U of T's waste UX at the Sustainability Office</li>
-            <li>
-              Finished my undergrad in Psychology, Art History, and Computer
-              Science
-            </li>
-          </ul>
-        </div> */
 }

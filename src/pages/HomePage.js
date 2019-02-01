@@ -68,7 +68,7 @@ export default class HomePage extends React.Component {
 
           <NewProjectCard
             title="trash.io [psych lab]"
-            caption="I designed, built, and conducted 2 cognitive and attentional experiments to study how label design impacts people's decisions."
+            caption="I designed, built, and conducted 2 cognitive experiments to study how label design impacts people's decisions."
             route="/projects/trash#mack-lab"
             image={TrashExp1}
             color={colors.PROJECT_4}
