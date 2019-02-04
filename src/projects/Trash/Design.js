@@ -42,8 +42,8 @@ export default class TrashProjectPage extends React.Component {
         <Divider size={4} />
         <p>
           <strong>Sorting garbage is hard</strong>. What goes where? Everything
-          from the bins to the shape of the holes is different everywhere you
-          go. That's without compounding individual differences in culture,
+          from the bins to the shape of the holes changes everywhere you go—and
+          that's without compounding individual differences in culture,
           language, and accessibility. This is the crux of the problem:{' '}
           <span style={{ backgroundColor: 'yellow' }}>
             <strong>waste management isn't human-centered</strong>
@@ -65,9 +65,9 @@ export default class TrashProjectPage extends React.Component {
         />
         <Divider size={4} />
         <p>
-          They all focus on <strong>giving people more information</strong>.
-          They don't ask <em>how</em> the information is given—they ignore the
-          user.
+          The current solutions focus on giving people{' '}
+          <strong>more information</strong>. They assume people are uneducated
+          or misinformed, ignoring the user.
         </p>
         <Divider size={4} />
         <iframe
@@ -83,10 +83,10 @@ export default class TrashProjectPage extends React.Component {
         <Divider size={4} />
         <p>
           We wanted to work on something that would directly affect garbage bin
-          users and invite dialogue between users and waste management.
-          Ultimately, we chose to work on <strong>labelling</strong>
-          —they're often overlooked, they're confusing, and crucially, it let us
-          move quickly!
+          users, specifically city people and waste management. We focused on{' '}
+          <strong>labelling</strong>
+          —an element that's often overlooked. They're confusing, and crucially,
+          it let us move quickly!
         </p>
         <Divider size={4} />
 
