@@ -237,28 +237,23 @@ export default class TrashField extends React.Component {
             {
               title: 'Sustainability office',
               description:
-                'We performed this experiment in collaboration with the Sustainability Office to build for waste management.',
+                'We performed this experiment in collaboration with the Sustainability Office. We were featured in their 2017-18 yearbook as a result.',
               link:
                 'http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18',
             },
             {
               title: 'Experimental design',
-              description: 'Details about magic',
+              description:
+                'Details about my design of these experiments along with a comprehensive list of confounds.',
               link:
                 'https://www.dropbox.com/s/li3xogv2pkq30lj/Experimental%20Design_%20TRASH.IO.pdf?dl=0',
             },
             {
               title: 'Pilot deck',
-              description: 'Slides from our original pilot pitch',
+              description:
+                'These are slides from our original pitch to the United Nations, and later, the Sustainability Office, after having only done our pilot.',
               link:
                 'https://www.dropbox.com/s/n2w4zxl4d6ydrbf/QUAN-%282%29-Pilot.pdf?dl=0',
-            },
-            {
-              title: 'S.O. yearbook',
-              description:
-                "Featured in the Sustainability Office's 2017-18 yearbook",
-              link:
-                'http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18',
             },
           ]}
         />
