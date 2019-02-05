@@ -53,7 +53,7 @@ export default class TrashMethodology extends React.Component {
             landfill disposal.
           </p>
           <Divider size={6} />
-          <ImageWide image={methods} alt="methods" />
+          <ImageWide className="methods" image={methods} alt="methods" />
           <Divider size={4} />
           <p>
             Comparing new and old labels is naturally structured as an A/B test.

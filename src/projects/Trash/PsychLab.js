@@ -5,6 +5,7 @@ import ProjectInfo from '../../components/ProjectInfo';
 import Divider from '../../components/Divider';
 import ImageWide from '../../components/ImageWide';
 import TableOfContents from '../../components/TableOfContents';
+import NotesTable from '../../components/NotesTable';
 
 import MouseTracking from '../../images/trash-field-study/mouse-tracking.gif';
 import RapidCategorization from '../../images/trash-field-study/trash-exp1.gif';
@@ -161,18 +162,27 @@ export default class TrashPsychLab extends React.Component {
         <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
           <u>notes</u>
         </h3>
-        <p>
-          I wrote this experiment in MATLAB using the Psychtoolbox package,
-          designed the trials using Python, and conducted analysis in R.
-        </p>
-        <p>
-          Links: <a href="https://github.com/aaronrambhajan">Code</a>,{' '}
-          <a href="https://www.dropbox.com/s/qzgze7tzdd2rny4/Experimental%20Design%20Trash-Lab.pdf?dl=0">
-            full experimental design notes
-          </a>
-          .
-        </p>
-        <Divider />
+        <Divider size={0.33} />
+
+        <NotesTable
+          info={[
+            {
+              title: 'Code',
+              description:
+                'This experiment was writen in MATLAB using the Psychtoolbox package. I designed the trials using Python, and conducted analysis in R.',
+              link: 'https://github.com/macklab/trash/tree/master/experiment',
+            },
+            {
+              title: 'Experimental design',
+              description:
+                'All notes and hypotheses regarding my design of this experiment.',
+              link:
+                'https://www.dropbox.com/s/qzgze7tzdd2rny4/Experimental%20Design%20Trash-Lab.pdf?dl=0',
+            },
+          ]}
+        />
+
+        <Divider size={4} />
 
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>
           experiment 2<span style={{ fontWeight: 100 }}>: mouse-tracking</span>
@@ -215,15 +225,23 @@ export default class TrashPsychLab extends React.Component {
           <u>notes</u>
         </h3>
         <Divider size={0.33} />
-        <p>
-          I wrote this using JavaScript, HTML, and CSS using the JSPsych
-          library.
-        </p>
-        <p>
-          Links:{' '}
-          <a href="https://safe-springs-58776.herokuapp.com/">experiment</a>,{' '}
-          <a href="https://github.com/aaronrambhajan/mouse-tracking">code</a>.
-        </p>
+
+        <NotesTable
+          info={[
+            {
+              title: 'Experiment',
+              description:
+                'Run the second experiment yourself and see what you think!',
+              link: 'https://safe-springs-58776.herokuapp.com/',
+            },
+            {
+              title: 'Code',
+              description:
+                'Repository containing all code, using Javascript, HTML, CSS, and the JSPsych library.',
+              link: 'https://github.com/aaronrambhajan/mouse-tracking',
+            },
+          ]}
+        />
         {/* <ul style={{ listStyleType: 'disc', paddingLeft: 20 }}>
           <li>
             2 experiments: rapid categorization [n=64] and mouse-tracking [n=44]

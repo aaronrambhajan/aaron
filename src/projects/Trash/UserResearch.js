@@ -4,6 +4,7 @@ import { colors } from '../../colors';
 import ProjectInfo from '../../components/ProjectInfo';
 import Divider from '../../components/Divider';
 import TableOfContents from '../../components/TableOfContents';
+import NotesTable from '../../components/NotesTable';
 
 export default class TrashUserResearch extends React.Component {
   render = () => {
@@ -129,19 +130,18 @@ export default class TrashUserResearch extends React.Component {
         <Divider />
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>notes</h3>
         <Divider size={0.33} />
-        <p>
-          This study was conducted as a collaboration between Te and I (acting
-          as UX Research Consultants to the Sustainability Office) and a group
-          of 6 others enrolled in a graduate class,{' '}
-          <em>Campus as a Living Lab</em>: Anastasia Bouziouvis, Swinzle
-          Chauhan, Mengxi Gu, Sun Young Lee, Ahmad Shakeri, and Yuqiao Wen. We
-          compiled these findings into a 20-page report, along with
-          recommendations made to the Sustainability Office that can be found{' '}
-          <a href="https://www.dropbox.com/s/uwgrdwn622mtjt2/User-Research-Report.pdf?dl=0">
-            here
-          </a>
-          .
-        </p>
+
+        <NotesTable
+          info={[
+            {
+              title: 'Collaboration',
+              description:
+                'This study was conducted as a collaboration between Te and I (acting as UX Research Consultants to the Sustainability Office) and a group of 6 others enrolled in a graduate class, Campus as a Living Lab: Anastasia Bouziouvis, Swinzle Chauhan, Mengxi Gu, Sun Young Lee, Ahmad Shakeri, and Yuqiao Wen. We compiled these findings into a 20-page report, along with recommendations made to the Sustainability Office.',
+              link:
+                'https://www.dropbox.com/s/uwgrdwn622mtjt2/User-Research-Report.pdf?dl=0',
+            },
+          ]}
+        />
         <Divider size={2} />
       </div>
     );

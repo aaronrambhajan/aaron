@@ -6,6 +6,7 @@ import { colors } from '../../colors';
 import ProjectInfo from '../../components/ProjectInfo';
 import Divider from '../../components/Divider';
 import TableOfContents from '../../components/TableOfContents';
+import NotesTable from '../../components/NotesTable';
 
 export default class TrashField extends React.Component {
   props: {
@@ -230,25 +231,37 @@ export default class TrashField extends React.Component {
         <Divider size={2} />
         <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>notes</h3>
         <Divider size={0.33} />
-        <p>
-          We performed this experiment in collaboration with the{' '}
-          <a href="http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18">
-            Sustainability Office
-          </a>
-          . Links:{' '}
-          <a href="https://www.dropbox.com/s/li3xogv2pkq30lj/Experimental%20Design_%20TRASH.IO.pdf?dl=0">
-            Detailed view of experimental design
-          </a>
-          ,{' '}
-          <a href="https://www.dropbox.com/s/n2w4zxl4d6ydrbf/QUAN-%282%29-Pilot.pdf?dl=0">
-            deck from pilot
-          </a>
-          ,{' '}
-          <a href="http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18">
-            feature in the Sustainability Office Yearbook
-          </a>
-          .
-        </p>
+
+        <NotesTable
+          info={[
+            {
+              title: 'Sustainability office',
+              description:
+                'We performed this experiment in collaboration with the Sustainability Office to build for waste management.',
+              link:
+                'http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18',
+            },
+            {
+              title: 'Experimental design',
+              description: 'Details about magic',
+              link:
+                'https://www.dropbox.com/s/li3xogv2pkq30lj/Experimental%20Design_%20TRASH.IO.pdf?dl=0',
+            },
+            {
+              title: 'Pilot deck',
+              description: 'Slides from our original pilot pitch',
+              link:
+                'https://www.dropbox.com/s/n2w4zxl4d6ydrbf/QUAN-%282%29-Pilot.pdf?dl=0',
+            },
+            {
+              title: 'S.O. yearbook',
+              description:
+                "Featured in the Sustainability Office's 2017-18 yearbook",
+              link:
+                'http://www.fs.utoronto.ca/SustainabilityOffice/SustainabilityYearbook2017-18',
+            },
+          ]}
+        />
         {/* <p>
               <strong>Ethnography: </strong>
               The first two iterations of this study weren't just about tallying
