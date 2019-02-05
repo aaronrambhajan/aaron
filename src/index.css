@@ -235,6 +235,11 @@ a:hover {
   text-decoration-color: grey;
 }
 
+.nav-margin {
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
 /*
   HOME
 */

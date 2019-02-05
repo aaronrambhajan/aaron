@@ -41,10 +41,11 @@ export default class TrashProjectPage extends React.Component {
 
         <Divider size={4} />
         <p>
-          <strong>Sorting garbage is hard</strong>. What goes where? Everything
-          from the bins to the shape of the holes changes everywhere you go—and
-          that's without compounding individual differences in culture,
-          language, and accessibility. This is the crux of the problem:{' '}
+          <strong>Sorting garbage is hard</strong>. Does anyone actually know
+          what goes where? Everything from the bins to the shape of the holes
+          constantly changes, and that's without compounding individual
+          differences in culture and accessibility. This is the crux of the
+          problem:{' '}
           <span style={{ backgroundColor: 'yellow' }}>
             <strong>waste management isn't human-centered</strong>
           </span>
@@ -67,7 +68,7 @@ export default class TrashProjectPage extends React.Component {
         <p>
           The current solutions focus on giving people{' '}
           <strong>more information</strong>. They assume people are uneducated
-          or misinformed, ignoring the user.
+          or misinformed and ignore the user.
         </p>
         <Divider size={4} />
         <iframe
@@ -82,11 +83,11 @@ export default class TrashProjectPage extends React.Component {
         />
         <Divider size={4} />
         <p>
-          We wanted to work on something that would directly affect garbage bin
-          users, specifically city people and waste management. We focused on{' '}
-          <strong>labelling</strong>
-          —an element that's often overlooked. They're confusing, and crucially,
-          it let us move quickly!
+          To <strong>solve</strong> this problem, we focused on{' '}
+          <strong>labelling</strong>. It's an area that's often overlooked and
+          is a source of great confusion. Most importantly, we wanted to connect
+          city users and waste management, and move as quickly as possible
+          towards iterating.
         </p>
         <Divider size={4} />
 

@@ -3,7 +3,7 @@ import Divider from '../components/Divider';
 
 export default class Navigation extends React.Component {
   render = () => {
-    const marginDistance = '5%';
+    const marginDistance = '3%';
 
     return (
       <div>
@@ -24,15 +24,17 @@ export default class Navigation extends React.Component {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                maxWidth: '50%',
               }}
             >
               <div>
                 <a href="/#research">Work</a>
               </div>
               <div
+                className="nav-margin"
                 style={{
-                  marginLeft: marginDistance,
-                  marginRight: marginDistance,
+                  // marginLeft: marginDistance,
+                  // marginRight: marginDistance,
                   opacity: 0.5,
                 }}
               >
