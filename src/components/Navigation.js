@@ -28,13 +28,11 @@ export default class Navigation extends React.Component {
               }}
             >
               <div>
-                <a href="/#research">Work</a>
+                <a href="/work">Work</a>
               </div>
               <div
                 className="nav-margin"
                 style={{
-                  // marginLeft: marginDistance,
-                  // marginRight: marginDistance,
                   opacity: 0.5,
                 }}
               >

@@ -1,6 +1,21 @@
 // @flow
 
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+`;
 
 export default class ImageWide extends React.Component {
   props: {
@@ -12,45 +27,15 @@ export default class ImageWide extends React.Component {
 
   render = () => {
     return (
-      <div
-        class="image-wide"
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: 10,
-          marginBottom: 0,
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-          }}
-        >
+      <Container>
+        <ImageContainer>
           <img
             src={this.props.image}
             alt={this.props.alt}
             style={{ ...this.props.style }}
           />
-        </div>
-
-        {!!this.props.caption && (
-          <p
-            style={{
-              marginTop: 10,
-              marginBottom: 0,
-              fontSize: '0.7em',
-              color: 'grey',
-            }}
-          >
-            {this.props.caption.text}
-          </p>
-        )}
-      </div>
+        </ImageContainer>
+      </Container>
     );
   };
 }

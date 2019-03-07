@@ -1,48 +1,19 @@
 import React from 'react';
-import { colors } from '../../colors';
-
-import Divider from '../../components/Divider';
-import TableOfContents from '../../components/TableOfContents';
-import Collaborators from '../../images/trash-field-study/collaborators.png';
+import images from '../../images/images';
+import { Slides, Prose, SectionContainer, Subheading } from './util';
+import ImageWide from '../../components/ImageWide';
 
 export default class extends React.Component {
   render = () => {
     return (
-      <div id={this.props.id}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontWeight: 100,
-              color: colors.PROJECT_2,
-              fontSize: '150%',
-            }}
-          >
-            awards
-          </h2>
+      <SectionContainer>
+        <Subheading>Awards</Subheading>
 
-          <TableOfContents />
-        </div>
-
-        <Divider />
-        <iframe
-          title="quan-awards"
-          src="https://docs.google.com/presentation/d/e/2PACX-1vQx_DVKtH2wjFn97FOODSPsX7rvLpYRJJ46jIYdIedwOyS6Mom9ozpeEgIY5u1kPMoO-n7vB4CkB61p/embed?start=true&loop=true&delayms=5000"
-          frameborder="0"
-          width="100%"
-          height="300"
-          allowfullscreen="true"
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
+        <Slides
+          url="https://docs.google.com/presentation/d/e/2PACX-1vQx_DVKtH2wjFn97FOODSPsX7rvLpYRJJ46jIYdIedwOyS6Mom9ozpeEgIY5u1kPMoO-n7vB4CkB61p/embed?start=true&loop=true&delayms=5000"
+          alt="quan-awards"
         />
-        <Divider />
-        <p>
+        <Prose>
           <ul style={{ listStyleType: 'disc', paddingLeft: 20 }}>
             <li>
               Placed 2<sup style={{ fontSize: '0.5em' }}>nd</sup> / 2000 teams
@@ -73,21 +44,19 @@ export default class extends React.Component {
               first-hand how design can impact communities
             </li>
           </ul>
-        </p>
+        </Prose>
 
-        <img
-          src={Collaborators}
+        <ImageWide
+          image={images.trash.awards_collaborators}
           alt="collaborators"
           style={{ width: '100%', height: 'auto' }}
         />
-        <Divider />
-        <p>
+        <Prose>
           None of this wouldn't have been possible with every single one of
           these people—and so many other people we met along the way. I'm
           forever grateful to have had this experience.
-        </p>
-        <Divider />
-      </div>
+        </Prose>
+      </SectionContainer>
     );
   };
 }

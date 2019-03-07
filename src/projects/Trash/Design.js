@@ -6,7 +6,6 @@ import { colors, changeOpacity } from '../../colors';
 import Divider from '../../components/Divider';
 import ImageWide from '../../components/ImageWide';
 import ProjectInfo from '../../components/ProjectInfo';
-import TableOfContents from '../../components/TableOfContents';
 
 import fullProcess from '../../images/trash-field-study/full-process.png';
 import torontoBins from '../../images/trash-field-study/toronto-bins.png';
@@ -35,8 +34,6 @@ export default class TrashProjectPage extends React.Component {
           >
             problem
           </h2>
-
-          <TableOfContents />
         </div>
 
         <Divider size={4} />

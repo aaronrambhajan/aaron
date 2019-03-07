@@ -72,9 +72,9 @@ export default class HomeModal extends React.Component {
         <Modal
           isOpen={this.state.showingModal}
           toggle={this.toggle}
+          keyboard={true}
           centered={true}
           autoFocus={true}
-          keyboard={true}
           backdropTransition={500}
         >
           <ModalHeader

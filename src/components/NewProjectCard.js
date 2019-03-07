@@ -3,7 +3,7 @@
 import React from 'react';
 import ImageWide from '../components/ImageWide';
 import Divider from '../components/Divider';
-import Arrow from '../images/arrow.svg';
+import Arrow from '../images/icons/arrow.svg';
 
 export default class NewProjectCard extends React.Component {
   props: {

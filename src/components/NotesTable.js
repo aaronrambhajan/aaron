@@ -1,75 +1,77 @@
 // @flow
 
 import React from 'react';
+import styled from 'styled-components';
 import { colors, changeOpacity } from '../colors';
 
-const styles = {
-  table: {
-    fontSize: '75%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  title: {
-    flex: 3,
-    fontWeight: 600,
-    paddingLeft: 10,
-    // textAlign: 'center',
-  },
-  description: {
-    flex: 6,
-    fontSize: '75%',
-  },
-  arrow: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: '150%',
-    fontWeight: 600,
-    fontFamily:
-      'BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif, -apple-system',
-  },
-  link: {
-    color: '#2d89ef',
-    textDecoration: 'none',
-  },
-};
+const Container = styled.div`
+  opacity: 0.75;
+`;
 
-export default class Example extends React.Component {
+const Table = styled.div`
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const RowTitle = styled.div`
+  display: flex;
+  flex: 3;
+  font-weight: 600;
+  padding-left: 10px;
+`;
+
+const RowDescription = styled.div`
+  display: flex;
+  flex: 6;
+  font-size: 0.9em;
+`;
+
+const RowLink = styled.a`
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  font-size: 150%;
+  font-weight: 600;
+  font-family: BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif,
+    -apple-system;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: #2d89ef;
+  }
+`;
+
+export default class NotesTable extends React.Component {
   props: {
     info: Array<Object>,
   };
 
   render = () => {
     return (
-      <div style={{ color: changeOpacity(colors.SECONDARY, '0.75') }}>
+      <Container>
         {this.props.info.map((rsc, n) => {
           return (
-            <div
+            <Table
               style={{
-                ...styles.table,
                 backgroundColor:
                   (n + 1) % 2 == 1
                     ? changeOpacity(colors.SECONDARY, '0.1')
                     : '',
               }}
-              className="notes-table"
             >
-              <div className="cell" style={styles.title}>
-                {rsc.title}
-              </div>
-              <div className="cell" style={styles.description}>
-                {rsc.description}
-              </div>
-              <div className="cell" style={styles.arrow}>
-                <a href={rsc.link} style={styles.link}>
-                  ↗
-                </a>
-              </div>
-            </div>
+              <RowTitle>{rsc.title}</RowTitle>
+              <RowDescription>{rsc.description}</RowDescription>
+              <RowLink href={rsc.link}>↗</RowLink>
+            </Table>
           );
         })}
-      </div>
+      </Container>
     );
   };
 }

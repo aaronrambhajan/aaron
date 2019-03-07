@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import { Button } from 'reactstrap';
 
 export default class HomeHeader extends React.Component {
   props: {
@@ -29,6 +30,21 @@ export default class HomeHeader extends React.Component {
               fontWeight: 100,
             }}
           >
+            {/* <Button
+            size="sm"
+            color="info"
+            style={{ borderRadius: 30, fontFamily: 'times' }}
+          >
+            💭Qualitative
+          </Button>
+          <Button
+            size="sm"
+            color="success"
+            style={{ borderRadius: 30, fontFamily: 'times' }}
+          >
+            ➗Quantitative
+          </Button> */}
+
             {this.props.description}
           </p>
         </div>

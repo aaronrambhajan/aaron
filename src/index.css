@@ -174,15 +174,12 @@ img {
 
 a,
 a:visited {
-  /* font-weight: 700; */
   text-decoration: underline;
   color: #181818;
 }
 
 a:hover {
-  /* text-decoration: none; */
   opacity: 0.5;
-  /* color: #00adef; */
 }
 
 .intro-hed {
@@ -197,12 +194,68 @@ a:hover {
   margin: 0 auto;
 }
 
+.closed-caption {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  /* font-size: 20vw; */
+  /* top: 0; */
+  /* z-index: 9999; */
+  /* height: 80px; */
+  /* transform: translateZ(0); */
+  /* -webkit-transform: translateZ(0); */
+}
+
+.closed-caption .rainbow {
+  background: red;
+  background: -webkit-linear-gradient(
+    left,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -o-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -moz-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /*
   NAVIGATION
 */
 .navigation {
   /* position: fixed; */
   width: 100%;
+  /* background-color: lightyellow; */
   transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
   -webkit-transition: background-color 0.5s ease-out;
@@ -256,7 +309,6 @@ a:hover {
 }
 
 .project-card {
-  /* This is implicitly <a> */
   text-decoration: none;
   margin-right: 20;
 }
@@ -279,48 +331,21 @@ a:hover {
   cursor: pointer;
 }
 
-#outer-box {
-  position: relative;
-  margin: 0;
-}
-
-#outer-box #inner-box {
-  /* height: 100%; */
-  /* width: 100%; */
-  /* top: 70%; */
-  /* left: 70%; */
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  /* background-color: red; */
-}
-
-#inner-box {
-  border: 5px black;
-  border-radius: 15;
-}
-#inner-inner-box {
-  /* top: 100%; */
-  /* left: 100%; */
-  /* background-color: green; */
-  /* height: 15%; */
-  /* width: 15%; */
-}
-
-/* #outer-box:hover #inner-box {
-  opacity: 0.9;
-  transition: opacity 0.5s;
-} */
-
 /*
   WORK
 */
+
 .projects p {
-  font-family: times;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 100;
   margin-bottom: 0;
-  /* line-height: 2; */
-  font-size: 1.25em;
+  font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+
+  /* max-width: 40rem;
+  margin: 1rem auto;
+  padding: 0 1rem; */
 }
 
 .projects p strong {
@@ -328,7 +353,6 @@ a:hover {
 }
 
 .project-article h2 {
-  font-size: 1.15em;
   font-weight: 600;
   color: black;
 }
@@ -390,6 +414,7 @@ a:hover {
   font-family: times;
   opacity: 0.8;
   margin: 0;
+  line-height: 1.5;
 }
 
 .about a {
@@ -437,12 +462,24 @@ svg.cv:hover {
   fill: #e83e8c;
 }
 
-/* .research {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+.test-work-page {
+  height: 100%;
+  overflow: hidden;
+  max-width: 1620px;
+}
+
+.test-work {
+  padding: 1em 0;
+}
+
+.test-work-text {
+  margin-top: 0.5em;
+}
+
+.test-work-image {
+  display: block;
+  width: 100%;
+}
 
 @media only screen and (min-width: 540px) {
   body {
@@ -451,11 +488,24 @@ svg.cv:hover {
   .container {
     padding-top: 2em;
   }
-  /* .research {
-    display: flex;
-    flex-direction: row;
+  .test-work {
+    float: left;
+    width: 50%;
+    padding: 1em;
   }
-  .project-card {
-    margin: 0;
-  } */
+  .test-work:nth-child(2n + 1) {
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .test-work {
+    width: 33.3%;
+  }
+  .test-work:nth-child(2n + 1) {
+    clear: none;
+  }
+  .test-work:nth-child(3n + 1) {
+    clear: both;
+  }
 }

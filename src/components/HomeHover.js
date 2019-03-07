@@ -25,7 +25,10 @@ export default class ProjectHover extends React.Component {
             }}
           >
             <div style={{ maxWidth: '75%' }}>
-              <h1 style={{ fontSize: '1.35em' }}>{this.props.header}</h1>
+              {this.props.header && (
+                <h1 style={{ fontSize: '1.35em' }}>{this.props.header}</h1>
+              )}
+
               <p
                 style={{
                   fontSize: '0.8em',

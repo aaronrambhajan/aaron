@@ -1,53 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
 import { colors, changeOpacity } from '../../colors';
+import images from '../../images/images';
 
+import {
+  SectionContainer,
+  SectionTitleContainer,
+  Prose,
+  SectionHeader,
+  Subheading,
+  ImageRow,
+  CenteredImage,
+} from './util';
 import ProjectInfo from '../../components/ProjectInfo';
-import Divider from '../../components/Divider';
 import ImageWide from '../../components/ImageWide';
-import TableOfContents from '../../components/TableOfContents';
 import NotesTable from '../../components/NotesTable';
-
-import MouseTracking from '../../images/trash-field-study/mouse-tracking.gif';
-import RapidCategorization from '../../images/trash-field-study/trash-exp1.gif';
-import exp1results1 from '../../images/trash-field-study/exp1results1.png';
-import exp1results2 from '../../images/trash-field-study/exp1results2.png';
+import Header from '../../components/Header';
 
 export default class TrashPsychLab extends React.Component {
   render = () => {
     return (
-      <div id={this.props.id}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontWeight: 100,
-              color: colors.PROJECT_2,
-              fontSize: '150%',
-            }}
-          >
-            psychology lab
-          </h2>
-
-          <TableOfContents />
-        </div>
-
-        <Divider size={2} />
-        <p
-          style={{
-            fontSize: '1.25em',
-            textAlign: 'center',
-          }}
-        >
-          <em>How does design impact decision-making?</em>
-        </p>
-        <Divider size={2} />
-        <ProjectInfo
+      <SectionContainer>
+        <SectionTitleContainer>
+          <SectionHeader
+            title="Psych Lab"
+            description="Design & decision-making"
+          />
+        </SectionTitleContainer>
+        {/* <ProjectInfo
           roles={['Experimental Design', 'Programming', 'Data Analysis']}
           timeline="Aug. 2017 - Dec. 2018"
           team={['Dr. Michael Mack']}
@@ -55,114 +35,75 @@ export default class TrashPsychLab extends React.Component {
             'Rapid Categorization (cognitive)',
             'Mouse-tracking (attentional)',
           ]}
-        />
-        <Divider size={2} />
-        <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>
-          experiment 1
-          <span style={{ fontWeight: 100 }}>: rapid categorization</span>
-        </h3>
-        <Divider size={0.5} />
+        /> */}
 
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>objective</u>
-        </h3>
-        <Divider size={0.33} />
-        <p>
-          The objective of the first experiment was to study how the label
-          design impacts the accuracy and speed of people's decisions. I
-          hypothesized that people would be more accurate and have faster
+        <Subheading>[E1, Rapid Categorization] Objective</Subheading>
+
+        <Prose>
+          I hypothesized that people would be more accurate and have faster
           response times with the new labels. The new icons were designed with
-          human vision processing in mind, so they should better map onto (1)
-          our cognitive models of the items, and (2) our visual perception of
-          objects. Ultimately, I hoped to answer:{' '}
-          <u>can we help people make better decisions in less time</u>?
-        </p>
-        <Divider />
-        <ImageWide
-          image={RapidCategorization}
+          human vision processing in mind, so in theory, they should better map
+          onto (1) our cognitive models of the items, and (2) our visual
+          perception of objects. Ultimately, I hoped to answer:{' '}
+          <strong>can we help people make better decisions in less time</strong>
+          ?
+        </Prose>
+        <CenteredImage
+          image={images.trash.psych_rc_gif}
           alt="rapid-categorization"
           style={{ maxWidth: '75%' }}
-          caption={{
-            text: <div>Rapid categorization design</div>,
-          }}
         />
-        <Divider />
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>experimental design</u>
-        </h3>
-        <Divider size={0.33} />
-        <p>
-          I used{' '}
+        <Subheading>[E1] Experimental Design</Subheading>
+
+        <Prose>
+          I modified{' '}
           <a href="https://www.ncbi.nlm.nih.gov/pubmed/25938178">
             rapid categorization
           </a>
-          , which exposes users to an image for lengths as short as <u>25ms</u>.
-          People are shown an image of an item for 1000ms, then exposed to
-          either an <u>old</u> or <u>new</u> icon for 25, 33, 50, 75, 125, or
-          250ms, followed by an image mask. After this, they're given a 2000ms
-          window to press a button to indicate{' '}
-          <u>whether the item and icon match</u>.
-        </p>
-        <Divider />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <ImageWide
-            image={exp1results1}
+          , a paradigm where people are shown an image of an item for 1000ms,
+          then exposed to either an <em>old</em> or <em>new</em> icon for 25,
+          33, 50, 75, 125, or 250ms, followed by a mask. They're given a 2000ms
+          to <strong>indicate whether the item and icon match</strong>.
+        </Prose>
+        <Subheading>[E1] Analysis</Subheading>
+
+        <Prose>
+          As it turns out,{' '}
+          <span>
+            we actually <em>can</em> help people make{' '}
+            <strong>better decisions in less time</strong>
+          </span>
+          ! <em>D'</em> (d-prime),borrowed from signal detection theory,
+          measures response sensitivity—a.k.a. accuracy. The D' of the{' '}
+          <strong>new labels is consistently higher</strong>, especially at 25ms
+          and 250ms, where the <em>least</em> and <em>most</em> visual
+          information is given. This is critical, especially in light of the{' '}
+          user research findings which suggest people look at the labels for
+          very brief times.
+        </Prose>
+
+        <ImageRow>
+          <CenteredImage
+            image={images.trash.psych_rc_results1}
             alt="exp1-results1"
             style={{ maxWidth: '90%' }}
-            caption={{
-              text: (
-                <div style={{ fontFamily: 'helvetica' }}>
-                  <strong>
-                    <em>D'</em>
-                  </strong>
-                  : our accuracy measure
-                </div>
-              ),
-            }}
           />
-          <ImageWide
-            image={exp1results2}
+          <CenteredImage
+            image={images.trash.psych_rc_results2}
             alt="exp1-results2"
             style={{ maxWidth: '90%' }}
-            caption={{
-              text: (
-                <div style={{ fontFamily: 'helvetica' }}>
-                  Mean <strong>Response Times</strong>
-                </div>
-              ),
-            }}
           />
-        </div>
-        <Divider />
-        <p>
-          As it turns out, <strong>yes, we can</strong>! <em>D'</em> (d-prime),
-          borrowed from signal detection theory, measures response
-          sensitivity—a.k.a. accuracy. The D' of the <u>new labels</u> is
-          consistently higher, especially at 25ms and 250ms, where both the
-          least and most visual information is given. This is critical,
-          especially in light of the <a href="#user-research">user research</a>{' '}
-          findings, because of how little time is spent looking at the labels.
-        </p>
-        <Divider />
-        <p>
+        </ImageRow>
+
+        <Prose>
           Ultimately, this research has been crucial to proving our design
           methodology. Being able to test these labels through an exhaustive
           cognitive paradigm introduces rigor that is rarely held by
-          design—rigor that is essential for building a standard
-        </p>
+          design—rigor that is essential for building a open-source standard of
+          any kind.
+        </Prose>
 
-        <Divider />
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>notes</u>
-        </h3>
-        <Divider size={0.33} />
+        <Subheading>[E1] Materials</Subheading>
 
         <NotesTable
           info={[
@@ -182,49 +123,42 @@ export default class TrashPsychLab extends React.Component {
           ]}
         />
 
-        <Divider size={4} />
-
-        <h3 style={{ fontWeight: 600, color: colors.PROJECT_2 }}>
-          experiment 2<span style={{ fontWeight: 100 }}>: mouse-tracking</span>
-        </h3>
-        <Divider size={0.5} />
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>objective</u>
-        </h3>
-        <Divider size={0.33} />
-
-        <p>
+        <Subheading>[E2, Mouse-Tracking] Objective</Subheading>
+        <Prose>
           The objective of the second study was to further the first—how do the
           label designs impact the accuracy and speed of people's decisions? The
-          first experiment gave us insight into these measures coarsely, and
-          focused solely on the icons. This mouse-tracking experiment focuses on
-          using the <em>labels</em> to make decisions, and the paradigm itself
-          gives us data we can use to map people's decisions paths to better to
-          understand how they're perceiving the labels.
-        </p>
-        <Divider />
-        <ImageWide
-          image={MouseTracking}
+          first experiment gave us coarse insights, focusing solely on the
+          icons. This experiment focuses on using the <em>labels</em> to make
+          decisions, and the paradigm itself gives us data we can use to{' '}
+          <strong>
+            map people's decisions paths to better to understand how they're
+            using the labels
+          </strong>
+          .
+        </Prose>
+
+        <CenteredImage
+          image={images.trash.psych_mt_gif}
           alt="trash-exp1"
           style={{ maxWidth: '75%' }}
-          caption={{
-            text: <div>Mouse tracking</div>,
-          }}
         />
-        <Divider />
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>objective</u>
-        </h3>
-        <Divider size={0.33} />
-        <p>
-          This experiment just finished data collection with <strong>41</strong>{' '}
-          participants, but is still in the analysis stage—more to come!
-        </p>
-        <Divider />
-        <h3 style={{ fontWeight: 100, color: colors.SECONDARY }}>
-          <u>notes</u>
-        </h3>
-        <Divider size={0.33} />
+        <Subheading>[E2] Experimental Design</Subheading>
+
+        <Prose>
+          Users would be shown an item image. Once they click the image and drag
+          it out, the labels appear. They are then to drag the item to the label
+          they think it belongs to.
+        </Prose>
+
+        <Subheading>[E2] Analysis</Subheading>
+
+        <Prose>
+          This experiment just finished data collection with{' '}
+          <strong>41 participants</strong>, but is still in the analysis
+          stage—more to come!
+        </Prose>
+
+        <Subheading>[E2] Materials</Subheading>
 
         <NotesTable
           info={[
@@ -242,30 +176,7 @@ export default class TrashPsychLab extends React.Component {
             },
           ]}
         />
-        {/* <ul style={{ listStyleType: 'disc', paddingLeft: 20 }}>
-          <li>
-            2 experiments: rapid categorization [n=64] and mouse-tracking [n=44]
-          </li>
-          <li>Supervised by Dr. Michael Mack</li>
-          <Divider />
-          <li>Methods: Rapid categorization, mouse-tracking </li>
-          <li>
-            Product impact: Confirmation of theory of low-level designing,
-            understanding <em>why</em> this design style works better, and how
-            to focus in on designing for low-level, brief exposure vision
-          </li>
-          <li>
-            Teamwork: Collaborating with Dr. Mack to identify research goals,
-            calibrating my intention to evaluate our labels and abstracting it
-            into a category-learning task for the real world
-          </li>
-          <li>
-            Synthesis & socialization of research: more reliable guarantees that
-            the icons are the most effective
-          </li>
-        </ul> */}
-        <Divider size={2} />
-      </div>
+      </SectionContainer>
     );
   };
 }
