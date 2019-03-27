@@ -5,24 +5,16 @@ import styled from 'styled-components';
 import images from '../../images/images';
 import Header from '../../components/Header';
 import ImageWide from '../../components/ImageWide';
-import {
-  SectionContainer,
-  SectionTitleContainer,
-  SectionHeader,
-  Prose,
-  CenteredImage,
-} from './util';
+import { SectionContainer, SectionHeader, Prose, CenteredImage } from './util';
 
 export default class TrashMethodology extends React.Component {
   render = () => {
     return (
       <SectionContainer>
-        <SectionTitleContainer>
-          <SectionHeader
-            title="Methodology"
-            description="Measuring label success"
-          />
-        </SectionTitleContainer>
+        <SectionHeader
+          title="Methodology"
+          description="Measuring label success"
+        />
 
         {/* <ImageWide
           image={images.trash.methodology_label_change}

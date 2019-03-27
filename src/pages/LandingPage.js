@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { colors } from '../colors';
 import images from '../images/images';
 import ProjectCard from '../components/ProjectCard';
+import { Subheading } from '../projects/Trash/util';
 
 const HeaderContainer = styled.div`
-  max-width: 480px;
+  /* max-width: 480px; */
 `;
 
 const Header = styled.h1`
@@ -16,6 +17,7 @@ const SubHeader = styled.h2`
   font-size: 0.7em;
   opacity: 0.6;
   margin-bottom: 2rem;
+  max-width: 480px;
 `;
 
 const Topic = styled.section`
@@ -67,10 +69,12 @@ export default class Landing extends React.Component {
           <Header>
             Hi! I'm <strong> Aaron Rambhajan</strong>.
           </Header>
+
           <SubHeader>
-            Music Producer turned UX Researcher & Software Engineer. I'm
-            passionate about understanding how people interact with the world. I
-            love creating, building, and questioning.
+            Music Producer turned Software Engineer & UX Researcher. I'm
+            passionate about understanding how people interact with the world.
+            Constantly creating, building, and questioning. Grateful to be
+            alive.
           </SubHeader>
         </HeaderContainer>
 
@@ -104,7 +108,7 @@ export default class Landing extends React.Component {
           </Projects>
         </Topic>
 
-        <TopicHeader>Code –</TopicHeader>
+        {/* <TopicHeader>Code –</TopicHeader>
         <Projects>
           <Project>
             <ProjectCard
@@ -114,7 +118,7 @@ export default class Landing extends React.Component {
               img={images.trash.psych_rc_gif}
             />
           </Project>
-        </Projects>
+        </Projects> */}
       </div>
     );
   };

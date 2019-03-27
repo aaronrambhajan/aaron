@@ -14,9 +14,9 @@ export default class ProjectIndex extends React.Component {
     return (
       <ArticleContainer>
         <Intro />
-        <hr />
+        {/* <hr />
         <Methodology />
-        <hr />
+        <hr /> */}
         <Field />
         <PsychLab />
         <UserResearch />

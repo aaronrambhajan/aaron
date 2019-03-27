@@ -5,7 +5,6 @@ import images from '../../images/images';
 
 import {
   SectionContainer,
-  SectionTitleContainer,
   Prose,
   SectionHeader,
   Subheading,
@@ -21,12 +20,10 @@ export default class TrashPsychLab extends React.Component {
   render = () => {
     return (
       <SectionContainer>
-        <SectionTitleContainer>
-          <SectionHeader
-            title="Psych Lab"
-            description="Design & decision-making"
-          />
-        </SectionTitleContainer>
+        <SectionHeader
+          title="Psych Lab"
+          description="Design & decision-making"
+        />
         {/* <ProjectInfo
           roles={['Experimental Design', 'Programming', 'Data Analysis']}
           timeline="Aug. 2017 - Dec. 2018"

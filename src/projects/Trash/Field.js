@@ -21,12 +21,11 @@ export default class TrashField extends React.Component {
   render = () => {
     return (
       <SectionContainer>
-        <SectionTitleContainer>
-          <SectionHeader
-            title="Field Evaluation"
-            description="Do the new labels perform better in the real world?"
-          />
-        </SectionTitleContainer>
+        <SectionHeader
+          title="Field"
+          description="Do the new labels perform better in the real world?"
+          image={images.trash.field_logo}
+        />
 
         <Subheading>Objective</Subheading>
         <Prose>
@@ -49,7 +48,7 @@ export default class TrashField extends React.Component {
             here
           </a>
           ). We managed to collect enough data in the first 3 attempts (5,000+
-          items!) to pitch and win 2nd prize from the{' '}
+          items!) to pitch and win 2<sup>nd</sup> prize from the{' '}
           <a href="#awards">United Nations</a>.
         </Prose>
 

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  SectionContainer,
-  SectionTitleContainer,
-  SectionHeader,
-  Prose,
-  Subheading,
-} from './util';
+import { SectionContainer, SectionHeader, Prose, Subheading } from './util';
 import ProjectInfo from '../../components/ProjectInfo';
 import NotesTable from '../../components/NotesTable';
 import Header from '../../components/Header';
@@ -14,12 +8,10 @@ export default class TrashUserResearch extends React.Component {
   render = () => {
     return (
       <SectionContainer>
-        <SectionTitleContainer>
-          <SectionHeader
-            title="User Research"
-            description="How does perception compare to performance?"
-          />
-        </SectionTitleContainer>
+        <SectionHeader
+          title="User Research"
+          description="How does perception compare to performance?"
+        />
 
         <Subheading>Objective</Subheading>
         <Prose>

@@ -8,11 +8,9 @@ import images from '../../images/images';
 const ArticleContainer = styled.section`
   font-size: inherit;
   width: 100%;
-  /* max-width: 600px; */
   max-width: 40rem;
-  padding: 1em;
   margin: 0 auto;
-  color: ${colors.SECONDARY};
+  color: black;
 `;
 
 const ArticleHeaderContainer = styled.div`
@@ -42,32 +40,6 @@ const SectionContainer = styled.section`
   margin-bottom: 8rem;
 `;
 
-const SectionTitleContainer = styled.div`
-  /* background-image: url(${images.trash.field_logo}); */
-  background-color: ${colors.PROJECT_1};
-  margin-bottom: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  padding: 1em;
-  width: auto;
-`;
-
-const SectionTitle = styled.h4`
-  font-weight: normal;
-  color: black;
-  font-size: 0.75em;
-`;
-
-const SectionTagline = styled.h2`
-  font-size: 1.5em;
-  font-weight: 100;
-
-  span {
-    /* background-color: black; */
-    color: white;
-  }
-`;
-
 const Summary = styled.h2`
   font-family: 'Times New Roman', Times, serif;
   margin-top: 3.75rem;
@@ -79,24 +51,74 @@ const Summary = styled.h2`
   }
 `;
 
+const Subheading = styled.h4`
+  font-weight: 600;
+  font-size: 0.6em;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+  color: ${colors.PROJECT_2};
+`;
+
 const Prose = styled.p`
   font-size: 0.8em;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  opacity: 0.75;
+  font-weight: 100;
   font-weight: normal;
   margin-bottom: 1rem;
+  line-height: 1.5;
 
-  span {
+  &:span {
     background-color: black;
     color: white;
   }
+
+  sup {
+    font-size: 0.5em;
+  }
+
+  strong {
+    color: black;
+  }
 `;
 
-const Subheading = styled.h3`
-  font-weight: 600;
-  color: black;
-  margin-top: 2rem;
-  margin-bottom: 0.25rem;
+const SectionTitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
 `;
+
+const SectionTitle = styled.h4`
+  background-color: ${colors.PROJECT_2};
+  border-radius: 60px;
+  padding: 1rem 4rem;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  font-weight: normal;
+`;
+
+const SectionHeader = ({ title, description, image }) => {
+  return (
+    <SectionTitleContainer>
+      <SectionTitle>
+        {title}
+        {/* {image && (
+          <img
+            src={image}
+            alt={title}
+            style={{
+              maxWidth: 100,
+              height: 'auto',
+            }}
+          />
+        )} */}
+      </SectionTitle>
+    </SectionTitleContainer>
+  );
+};
 
 const ImageRow = styled.div`
   display: flex;
@@ -121,31 +143,24 @@ const ImageCenteringContainer = styled.div`
   align-items: flex-start;
 `;
 
-const SlideContainer = styled.div`
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-`;
-
 const CenteredImage = ({ image, alt, style }) => {
   return (
     <ImageWideContainer>
       <ImageCenteringContainer>
-        <img src={image} alt={alt} style={!!style ? style : {}} />
+        <img
+          src={image}
+          alt={alt}
+          style={!!style ? style : { maxWidth: '75%' }}
+        />
       </ImageCenteringContainer>
     </ImageWideContainer>
   );
 };
 
-const SectionHeader = ({ title, description }) => {
-  return (
-    <div>
-      <SectionTitle>{title} –</SectionTitle>
-      <SectionTagline>
-        <span>{description}</span>
-      </SectionTagline>
-    </div>
-  );
-};
+const SlideContainer = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+`;
 
 const Slides = ({ url, alt }) => {
   return (
@@ -169,7 +184,6 @@ export {
   ArticleHeaderContainer,
   ArticleHeaderText,
   ArticleHeaderCaption,
-  SectionTitleContainer,
   SectionContainer,
   SectionHeader,
   Summary,

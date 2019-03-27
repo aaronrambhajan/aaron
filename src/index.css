@@ -175,7 +175,7 @@ img {
 a,
 a:visited {
   text-decoration: underline;
-  color: #181818;
+  /* color: #181818; */
 }
 
 a:hover {
