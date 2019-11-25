@@ -1,12 +1,12 @@
 // @flow
 
 import React from 'react';
-import { colors, changeOpacity } from '../colors';
-import NewNewProjectCard from '../components/NewNewProjectCard';
-import Divider from '../components/Divider';
-import HomeTitle from '../components/HomeTitle';
-import HomeHover from '../components/HomeHover';
-import HomeModal from '../components/HomeModal';
+import { colors, changeOpacity } from '../../src/colors';
+import NewNewProjectCard from '../../src/components/NewNewProjectCard';
+import Divider from '../../src/components/Divider';
+import HomeTitle from '../../src/components/HomeTitle';
+import HomeHover from '../../src/components/HomeHover';
+import HomeModal from '../../src/components/HomeModal';
 
 import ThrowingOutTrash from '../images/trash-field-study/throwing-out.gif';
 import TrashExp1 from '../images/trash-field-study/trash-exp1.gif';

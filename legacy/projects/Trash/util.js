@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { colors } from '../../colors';
+import { colors } from '../../../src/colors';
 import styled from 'styled-components';
 import images from '../../images/images';
 

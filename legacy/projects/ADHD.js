@@ -14,7 +14,7 @@ import {
   ImageRow,
   Slides,
 } from './Trash/util';
-import { colors, changeOpacity } from '../colors';
+import { colors, changeOpacity } from '../../src/colors';
 
 // Components
 // import ImageRow from '../components/ImageRow';

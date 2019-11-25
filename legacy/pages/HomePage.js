@@ -2,14 +2,14 @@
 
 import React from 'react';
 
-import Divider from '../components/Divider';
-import ImageWide from '../components/ImageWide';
-import NewProjectCard from '../components/NewProjectCard';
-import HomeHover from '../components/HomeHover';
-import HomeTitle from '../components/HomeTitle';
-import HomeModal from '../components/HomeModal';
+import Divider from '../../src/components/Divider';
+import ImageWide from '../../src/components/ImageWide';
+import NewProjectCard from '../../src/components/NewProjectCard';
+import HomeHover from '../../src/components/HomeHover';
+import HomeTitle from '../../src/components/HomeTitle';
+import HomeModal from '../../src/components/HomeModal';
 
-import { colors, changeOpacity } from '../colors';
+import { colors, changeOpacity } from '../../src/colors';
 
 import ThrowingOutTrash from '../images/trash-field-study/throwing-out.gif';
 import TrashExp1 from '../images/trash-field-study/trash-exp1.gif';
@@ -17,7 +17,7 @@ import heartbeatExp1 from '../images/heartbeats/exp1.gif';
 import ADHDRoom from '../images/ADHD/natalia-room-adhd.gif';
 import UrLogo from '../images/trash-field-study/ur-logo.png';
 
-import ClosedCaption from '../components/ClosedCaption';
+import ClosedCaption from '../../src/components/ClosedCaption';
 
 export default class HomePage extends React.Component {
   render = () => {
