@@ -13,9 +13,9 @@ import Contact from './content/Contact';
 
 const Container = styled.div`
   width: 100%;
-  // max-width: 600px;
+  max-width: 700px;
   padding: 2em;
-  margin: 0 auto;
+  // margin: 0 auto;
   font-size: calc(1em + 0.5vw);
   line-height: 1.5;
 `;

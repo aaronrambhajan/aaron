@@ -10,6 +10,10 @@ const BodyText = styled.p`
   line-height: 1.5em;
 `;
 
+const Link = styled.a`
+  text-decoration: underline;
+`;
+
 export default class About extends React.Component {
   render = () => {
     if (!this.props.isLanding) {
@@ -17,21 +21,22 @@ export default class About extends React.Component {
         <Container>
           <Subheader>About</Subheader>
           <BodyText>
-            Hey! I'm Aaron. I'm a full-stack software developer, aspiring
-            scientist, and music producer. I'm passionate about web development,
-            artificial intelligence and how it can be improved and inspired by
-            the human brain, and music.
+            Hey! I'm Aaron. I'm a software developer, aspiring scientist, and
+            music producer. I'm passionate about web development, artificial
+            intelligence and how it can be improved and inspired by the human
+            brain, and music.
             <br />
             <br />
-            Currently, I’m a junior at Harvard College, studying Computer
-            Science on the Mind-Brain-Behavior track. I’m also joint-enrolled at
-            the New England Conservatory, where I study piano performance.
+            Currently, I'm in my final year of my Master's at U of T, studying
+            UX & Data. I did my undergraduate at U of T in Psychology, Art
+            History, and Computer Science, and spent a term studying Sound
+            Design at Berklee College of Music.
             <br />
             <br />
-            During Summer 2016, I was a Garage software engineering intern at
-            Microsoft in Cambridge, MA. I'll be working as a software
-            engineering intern at Snap Inc. (formerly Snapchat) in Venice, CA
-            starting in May 2017.
+            During Summer 2019, I was a Full Stack Development Intern at
+            TouchBistro in Toronto. I work as a developer at the Mack Lab now,
+            and am looking for full-time and internship opportunities for June
+            2020.
             <br />
             <br />I took a leave of absence from Harvard in 2015 as a founding
             team member of gifs.com, the world's fastest and most fully-featured
@@ -78,21 +83,22 @@ export default class About extends React.Component {
       <Container>
         <Subheader>About Me</Subheader>
         <BodyText>
-          Hey! I'm Aaron. I'm a full-stack software developer, aspiring
-          scientist, and music producer. I'm passionate about web development,
-          artificial intelligence and how it can be improved and inspired by the
-          human brain, and music.
+          Hey! I'm Aaron. I'm a software developer, aspiring scientist, and
+          music producer. I'm passionate about web development, artificial
+          intelligence and how it can be improved and inspired by the human
+          brain, and music.
           <br />
           <br />
-          Currently, I’m a junior at Harvard College, studying Computer Science
-          on the Mind-Brain-Behavior track. I’m also joint-enrolled at the New
-          England Conservatory, where I study piano performance.
+          Currently, I'm in my final year of my{' '}
+          <Link href="/code">Master's</Link> at U of T, studying UX & Data. I
+          did my undergraduate at U of T in Psychology, Art History, and
+          Computer Science, and spent a term studying Sound Design at{' '}
+          <Link href="/code">Berklee College of Music</Link>.<br />
           <br />
-          <br />
-          During Summer 2016, I was a Garage software engineering intern at
-          Microsoft in Cambridge, MA. I'll be working as a software engineering
-          intern at Snap Inc. (formerly Snapchat) in Venice, CA starting in May
-          2017.
+          During Summer 2019, I was a Full Stack Development Intern at{' '}
+          <Link href="/code">TouchBistro</Link> in Toronto. I work as a
+          developer at the <Link href="/code">Mack Lab</Link> now, and am
+          looking for full-time and internship opportunities for June 2020.
           <br />
           <br />
           <a

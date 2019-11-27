@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const DescriptionContainer = styled.div`
-  max-width: 75%;
+  // max-width: 75%;
 `;
 
 const OnHoverDescription = styled.li`
@@ -27,7 +27,6 @@ export const MagicListItem = ({
         // href={link}
         style={{
           color: isDroppedDown ? 'grey' : 'inherit',
-          // fontSize: '0.75em',
         }}
       >
         {title}

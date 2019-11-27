@@ -1,67 +1,76 @@
 import React from 'react';
+import styled from 'styled-components';
 import { MagicListItem } from '../components/MagicListItem';
 import { Subheader } from '../Landing';
 
+const Container = styled.div`
+  margin-bottom: 4em;
+`;
+
 export default class Music extends React.Component {
   state: {
-    songOneDrop: boolean,
-    songTwoDrop: boolean,
-    songThreeDrop: boolean,
-    songFourDrop: boolean,
+    displayItem1: Boolean,
+    displayItem2: Boolean,
+    displayItem3: Boolean,
+    displayItem4: Boolean,
+    displayItem5: Boolean,
+    displayItem6: Boolean,
   };
 
   state = {
-    songOneDrop: false,
-    songTwoDrop: false,
-    songThreeDrop: false,
-    songFourDrop: false,
+    displayItem1: false,
+    displayItem2: false,
+    displayItem3: false,
+    displayItem4: false,
+    displayItem5: false,
+    displayItem6: false,
   };
 
   render = () => {
     if (!this.props.isLanding) {
       return (
-        <div style={{ marginBottom: '4em' }}>
+        <Container>
           <Subheader>Music</Subheader>
           <ul>
             <MagicListItem
               link="https://open.spotify.com/album/0sbxn9qTMpw6kWriqDyqif"
-              title="For You – Clay Vega (2019)"
+              title="For You – Clay Vega"
               description="Made with Irwan Poerba and Kyle Nethersole."
               headers="production, writing | 2019"
               toggle={() => {
-                this.setState({ songOneDrop: !this.state.songOneDrop });
+                this.setState({ displayItem1: !this.state.displayItem1 });
               }}
-              isDroppedDown={this.state.songOneDrop}
+              isDroppedDown={this.state.displayItem1}
             />
             <MagicListItem
               link="https://soundcloud.com/thisisriamusic/some-days"
-              title="Some Days – Ria (2018)"
+              title="Some Days – Ria"
               description="Made with Kyle Nethersole and Ria Prakash."
               headers="production, writing | 2018"
               toggle={() => {
-                this.setState({ songTwoDrop: !this.state.songTwoDrop });
+                this.setState({ displayItem2: !this.state.displayItem2 });
               }}
-              isDroppedDown={this.state.songTwoDrop}
+              isDroppedDown={this.state.displayItem2}
             />
             <MagicListItem
               link="https://soundcloud.com/thisisriamusic/planes"
-              title="Planes – Ria (2018)"
+              title="Planes – Ria"
               description="Made with Kyle Nethersole and Ria Prakash."
               headers="production, writing | 2018"
               toggle={() => {
-                this.setState({ songThreeDrop: !this.state.songThreeDrop });
+                this.setState({ displayItem3: !this.state.displayItem3 });
               }}
-              isDroppedDown={this.state.songThreeDrop}
+              isDroppedDown={this.state.displayItem3}
             />
             <MagicListItem
               link="https://www.youtube.com/watch?v=aQk-j1IbGhw"
-              title="Roses – Loose Ends (2014)"
+              title="Roses – Loose Ends"
               description="Made with Irwan Poerba."
               headers="production, writing | 2014"
               toggle={() => {
-                this.setState({ songFourDrop: !this.state.songFourDrop });
+                this.setState({ displayItem4: !this.state.displayItem4 });
               }}
-              isDroppedDown={this.state.songFourDrop}
+              isDroppedDown={this.state.displayItem4}
             />
 
             <li>
@@ -75,11 +84,11 @@ export default class Music extends React.Component {
               </a>
             </li>
           </ul>
-        </div>
+        </Container>
       );
     }
     return (
-      <div style={{ marginBottom: '4em' }}>
+      <Container>
         <Subheader>Music</Subheader>
         <ul>
           <MagicListItem
@@ -88,9 +97,9 @@ export default class Music extends React.Component {
             description="Made with Irwan Poerba and Kyle Nethersole."
             headers="production, writing | 2019"
             toggle={() => {
-              this.setState({ songOneDrop: !this.state.songOneDrop });
+              this.setState({ displayItem1: !this.state.displayItem1 });
             }}
-            isDroppedDown={this.state.songOneDrop}
+            isDroppedDown={this.state.displayItem1}
           />
           <MagicListItem
             link="https://soundcloud.com/thisisriamusic/some-days"
@@ -98,9 +107,9 @@ export default class Music extends React.Component {
             description="Made with Kyle Nethersole and Ria Prakash."
             headers="production, writing | 2018"
             toggle={() => {
-              this.setState({ songTwoDrop: !this.state.songTwoDrop });
+              this.setState({ displayItem2: !this.state.displayItem2 });
             }}
-            isDroppedDown={this.state.songTwoDrop}
+            isDroppedDown={this.state.displayItem2}
           />
           <MagicListItem
             link="https://soundcloud.com/thisisriamusic/planes"
@@ -108,9 +117,9 @@ export default class Music extends React.Component {
             description="Made with Kyle Nethersole and Ria Prakash."
             headers="production, writing | 2018"
             toggle={() => {
-              this.setState({ songThreeDrop: !this.state.songThreeDrop });
+              this.setState({ displayItem3: !this.state.displayItem3 });
             }}
-            isDroppedDown={this.state.songThreeDrop}
+            isDroppedDown={this.state.displayItem3}
           />
 
           <li>
@@ -124,7 +133,7 @@ export default class Music extends React.Component {
             </a>
           </li>
         </ul>
-      </div>
+      </Container>
     );
   };
 }

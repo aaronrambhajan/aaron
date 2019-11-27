@@ -1,28 +1,49 @@
 import React from 'react';
+import styled from 'styled-components';
 import { MagicListItem } from '../components/MagicListItem';
 import { Subheader } from '../Landing';
 
+const Container = styled.div`
+  margin-bottom: 4em;
+`;
+
 export default class Code extends React.Component {
   state: {
-    songOneDrop: boolean,
-    songTwoDrop: boolean,
-    songThreeDrop: boolean,
-    songFourDrop: boolean,
+    displayItem1: Boolean,
+    displayItem2: Boolean,
+    displayItem3: Boolean,
+    displayItem4: Boolean,
+    displayItem5: Boolean,
+    displayItem6: Boolean,
   };
 
   state = {
-    songOneDrop: false,
-    songTwoDrop: false,
-    songThreeDrop: false,
-    songFourDrop: false,
+    displayItem1: false,
+    displayItem2: false,
+    displayItem3: false,
+    displayItem4: false,
+    displayItem5: false,
+    displayItem6: false,
   };
 
   render = () => {
     if (!this.props.isLanding) {
       return (
-        <div style={{ marginBottom: '4em' }}>
+        <Container>
           <Subheader>Code</Subheader>
           <ul>
+            <MagicListItem
+              link="https://github.com/aaronrambhajan/images-scraper"
+              title="Spotify Playlist VCS" // 🔬
+              headers="Bash, JavaScript | Mack Lab | 2018"
+              description="CLI tool for scraping popular search engines to help
+            build image databases for classification experiments. Used throughout
+            the lab for a variety of experiments."
+              toggle={() => {
+                this.setState({ displayItem1: !this.state.displayItem1 });
+              }}
+              isDroppedDown={this.state.displayItem1}
+            />
             <MagicListItem
               link="https://github.com/aaronrambhajan/heartbeat-scripts"
               title="Digital Heartbeat Synthesis" // ❤️
@@ -50,9 +71,9 @@ export default class Code extends React.Component {
                 </div>
               }
               toggle={() => {
-                this.setState({ songOneDrop: !this.state.songOneDrop });
+                this.setState({ displayItem2: !this.state.displayItem2 });
               }}
-              isDroppedDown={this.state.songOneDrop}
+              isDroppedDown={this.state.displayItem2}
             />
             <MagicListItem
               link="https://github.com/aaronrambhajan/hb-staircase"
@@ -72,9 +93,9 @@ export default class Code extends React.Component {
                 </div>
               }
               toggle={() => {
-                this.setState({ songTwoDrop: !this.state.songTwoDrop });
+                this.setState({ displayItem3: !this.state.displayItem3 });
               }}
-              isDroppedDown={this.state.songTwoDrop}
+              isDroppedDown={this.state.displayItem3}
             />
             <MagicListItem
               link="https://github.com/aaronrambhajan/-memories"
@@ -84,9 +105,9 @@ export default class Code extends React.Component {
             users to search tags, review history (and subsequently revert), and
             autosave. Built with a team of 3."
               toggle={() => {
-                this.setState({ songFourDrop: !this.state.songFourDrop });
+                this.setState({ displayItem4: !this.state.displayItem4 });
               }}
-              isDroppedDown={this.state.songFourDrop}
+              isDroppedDown={this.state.displayItem4}
             />
             <MagicListItem
               link="https://github.com/aaronrambhajan/images-scraper"
@@ -96,21 +117,9 @@ export default class Code extends React.Component {
             build image databases for classification experiments. Used throughout
             the lab for a variety of experiments."
               toggle={() => {
-                this.setState({ songThreeDrop: !this.state.songThreeDrop });
+                this.setState({ displayItem5: !this.state.displayItem5 });
               }}
-              isDroppedDown={this.state.songThreeDrop}
-            />
-            <MagicListItem
-              link="https://github.com/aaronrambhajan/images-scraper"
-              title="Spotify Playlist VCS" // 🔬
-              headers="Bash, JavaScript | Mack Lab | 2018"
-              description="CLI tool for scraping popular search engines to help
-            build image databases for classification experiments. Used throughout
-            the lab for a variety of experiments."
-              toggle={() => {
-                this.setState({ songThreeDrop: !this.state.songThreeDrop });
-              }}
-              isDroppedDown={this.state.songThreeDrop}
+              isDroppedDown={this.state.displayItem5}
             />
             <MagicListItem
               link="https://github.com/aaronrambhajan/images-scraper"
@@ -120,9 +129,9 @@ export default class Code extends React.Component {
             build image databases for classification experiments. Used throughout
             the lab for a variety of experiments."
               toggle={() => {
-                this.setState({ songThreeDrop: !this.state.songThreeDrop });
+                this.setState({ displayItem6: !this.state.displayItem6 });
               }}
-              isDroppedDown={this.state.songThreeDrop}
+              isDroppedDown={this.state.displayItem6}
             />
             <li>
               <a
@@ -135,30 +144,32 @@ export default class Code extends React.Component {
               </a>
             </li>
           </ul>
-        </div>
+        </Container>
       );
     }
 
     return (
-      <div style={{ marginBottom: '4em' }}>
+      <Container>
         <Subheader>Projects</Subheader>
         <ul>
+          <MagicListItem
+            link="https://github.com/aaronrambhajan/images-scraper"
+            title="Spotify Playlist VCS" // 🔬
+            headers="Bash, JavaScript | Mack Lab | 2018"
+            description="CLI tool for scraping popular search engines to help
+            build image databases for classification experiments. Used throughout
+            the lab for a variety of experiments."
+            toggle={() => {
+              this.setState({ displayItem1: !this.state.displayItem1 });
+            }}
+            isDroppedDown={this.state.displayItem1}
+          />
           <MagicListItem
             link="https://github.com/aaronrambhajan/heartbeat-scripts"
             title="Digital Heartbeat Synthesis" // ❤️
             headers="Python, SciPy, Librosa, MATLAB | Mack Lab | 2019"
             description={
               <div>
-                {/* <img
-                src={images.hb.heartbeats_gif}
-                style={{
-                  height: '50%',
-                  width: '50%',
-                  marginBottom: '1em',
-                  marginTop: '1em',
-                  textAlign: 'center',
-                }}
-              /> */}
                 A suite of scripts generating heartbeat sounds for a
                 psychophysics experiment testing perceptual thresholds, based on{' '}
                 <a
@@ -179,31 +190,9 @@ export default class Code extends React.Component {
               </div>
             }
             toggle={() => {
-              this.setState({ songOneDrop: !this.state.songOneDrop });
+              this.setState({ displayItem2: !this.state.displayItem2 });
             }}
-            isDroppedDown={this.state.songOneDrop}
-          />
-          <MagicListItem
-            link="https://github.com/aaronrambhajan/hb-staircase"
-            title="Heartbeat Perception" // ❤️
-            headers="React, Express, MongoDB, Bootstrap | Mack Lab | 2018"
-            description={
-              <div>
-                A web application to test perceptual thresholds using the{' '}
-                <em>Just-Noticeable Differences</em> paradigm. See{' '}
-                <a
-                  href="https://docs.google.com/presentation/d/1GYVKaBqv_7PKEjhkFaf2I5y2KmKbAHzyULz5O2AVHLU/edit?usp=sharing"
-                  style={{ textDecoration: 'underline' }}
-                >
-                  here
-                </a>{' '}
-                for context.
-              </div>
-            }
-            toggle={() => {
-              this.setState({ songTwoDrop: !this.state.songTwoDrop });
-            }}
-            isDroppedDown={this.state.songTwoDrop}
+            isDroppedDown={this.state.displayItem2}
           />
           <MagicListItem
             link="https://github.com/aaronrambhajan/-memories"
@@ -213,9 +202,9 @@ export default class Code extends React.Component {
             users to search tags, review history (and subsequently revert), and
             autosave. Built with a team of 3."
             toggle={() => {
-              this.setState({ songFourDrop: !this.state.songFourDrop });
+              this.setState({ displayItem4: !this.state.displayItem4 });
             }}
-            isDroppedDown={this.state.songFourDrop}
+            isDroppedDown={this.state.displayItem4}
           />
           <li>
             <a
@@ -228,7 +217,7 @@ export default class Code extends React.Component {
             </a>
           </li>
         </ul>
-      </div>
+      </Container>
     );
   };
 }
