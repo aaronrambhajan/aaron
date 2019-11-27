@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Code from './content/Code';
+import Projects from './content/Projects';
 import Music from './content/Music';
 import About from './content/About';
 import Contact from './content/Contact';
@@ -20,7 +20,7 @@ export default class Landing extends React.Component {
     return (
       <Container>
         <About isLanding={true} />
-        <Code isLanding={true} />
+        <Projects isLanding={true} />
         <Music isLanding={true} />
         <Contact isLanding={true} />
       </Container>

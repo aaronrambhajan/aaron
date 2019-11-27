@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 import Landing from './Landing';
-import Code from './content/Code';
+import Projects from './content/Projects';
 import Music from './content/Music';
 import About from './content/About';
 import Contact from './content/Contact';
@@ -35,7 +35,7 @@ const App = () => (
       </a>
       <Subtitle> Programmer | Researcher | Music Producer</Subtitle>
       <Route exact path="/" component={Landing} />
-      <Route exact path="/code" component={Code} />
+      <Route exact path="/projects" component={Projects} />
       <Route exact path="/music" component={Music} />
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />

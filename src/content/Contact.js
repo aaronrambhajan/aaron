@@ -16,14 +16,14 @@ export default class Contact extends React.Component {
         <div style={{ marginBottom: '4em' }}>
           <Subheader>Contact</Subheader>
           <ul>
-            <li>
+            {/* <li>
               <a
                 href="https://www.dropbox.com/s/txwwykhhr39h16j/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
                 target="_blank"
               >
                 CV
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="https://www.dropbox.com/s/txwwykhhr39h16j/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
@@ -75,6 +75,11 @@ export default class Contact extends React.Component {
           </li>
           <li>
             <a href="mailto:aaronrambhajan@gmail.com">Message</a>
+          </li>
+          <li>
+            <a href="https://github.com/aaronrambhajan" target="_blank">
+              GitHub
+            </a>
           </li>
           <li>
             <a href="/contact">...</a>
