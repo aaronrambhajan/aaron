@@ -115,15 +115,24 @@ export default class Projects extends React.Component {
               </a>
             </li>
           </ul>
-          <Subheader>Research</Subheader>
+          <Subheader>UX Research</Subheader>
           <ul>
             <MagicListItem
-              link="https://www.dropbox.com/sh/h3c66jkngi6a053/AACm6rvn0RHXu_7T6aTz-W28a?dl=0"
+              link="[coming soon]"
               title="Quan" // ❤️
               headers="Leadership, Experiment Design, User Research | 2016 - 2018"
               description={
                 <div>
-                  Co-founded a non-profit to simplify sorting garbage. Won 2
+                  Co-founded a non-profit to make sorting garbage easy. Led,
+                  designed, and conducted an{' '}
+                  <Link href="https://docs.google.com/presentation/d/127h2mwepAqv4HKEnXUcC711Umd3Ksw5tLYzAGz6xUJ8/edit?usp=sharing">
+                    8-week long field experiment
+                  </Link>
+                  ,{' '}
+                  <Link href="https://www.dropbox.com/s/uwgrdwn622mtjt2/User-Research-Report.pdf?dl=0">
+                    an observational study
+                  </Link>
+                  , and two psychophysical studies. Won 2
                   <sup style={{ fontSize: '0.5em' }}>nd</sup> / 2000 teams at
                   the UN & Baidu design challenge. Presented research at the{' '}
                   <Link href="https://www.issst.net/">
@@ -134,7 +143,9 @@ export default class Projects extends React.Component {
                   <Link href="https://www.iso.org/standard/69050.html">
                     ISO 37122
                   </Link>
-                  , the new standard for smart cities.
+                  , the new standard for smart cities. First-hand experience
+                  learning how to strategically design research to meet business
+                  needs. Materials coming soon.
                 </div>
               }
               toggle={() => {
@@ -142,6 +153,8 @@ export default class Projects extends React.Component {
               }}
               isDroppedDown={this.state.displayItem5}
             />
+            <li style={{ color: 'lightgrey' }}>10Four</li>
+            <li style={{ color: 'lightgrey' }}>TTC IA</li>
           </ul>
         </Container>
       );

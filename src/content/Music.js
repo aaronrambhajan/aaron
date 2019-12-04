@@ -35,7 +35,7 @@ export default class Music extends React.Component {
             <MagicListItem
               link="https://open.spotify.com/album/0sbxn9qTMpw6kWriqDyqif"
               title="For You – Clay Vega"
-              description="Made with Irwan Poerba and Kyle Nethersole."
+              description="Irwan Poerba, Kyle Nethersole."
               headers="production, writing | 2019"
               toggle={() => {
                 this.setState({ displayItem1: !this.state.displayItem1 });
@@ -45,7 +45,7 @@ export default class Music extends React.Component {
             <MagicListItem
               link="https://soundcloud.com/thisisriamusic/some-days"
               title="Some Days – Ria"
-              description="Made with Kyle Nethersole and Ria Prakash."
+              description="Kyle Nethersole, Ria Prakash."
               headers="production, writing | 2018"
               toggle={() => {
                 this.setState({ displayItem2: !this.state.displayItem2 });
@@ -55,7 +55,7 @@ export default class Music extends React.Component {
             <MagicListItem
               link="https://soundcloud.com/thisisriamusic/planes"
               title="Planes – Ria"
-              description="Made with Kyle Nethersole and Ria Prakash."
+              description="Kyle Nethersole, Ria Prakash."
               headers="production, writing | 2018"
               toggle={() => {
                 this.setState({ displayItem3: !this.state.displayItem3 });
@@ -65,7 +65,7 @@ export default class Music extends React.Component {
             <MagicListItem
               link="https://www.youtube.com/watch?v=aQk-j1IbGhw"
               title="Roses – Loose Ends"
-              description="Made with Irwan Poerba."
+              description="Irwan Poerba."
               headers="production, writing | 2014"
               toggle={() => {
                 this.setState({ displayItem4: !this.state.displayItem4 });

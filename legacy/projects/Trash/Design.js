@@ -1,17 +1,14 @@
 // @flow
 
 import React from 'react';
-import { colors, changeOpacity } from '../../colors';
+import { colors } from '../../colors';
 
 import Divider from '../../components/Divider';
 import ImageWide from '../../components/ImageWide';
-import ProjectInfo from '../../components/ProjectInfo';
 
 import fullProcess from '../../images/trash-field-study/full-process.png';
 import torontoBins from '../../images/trash-field-study/toronto-bins.png';
 import cupIcon from '../../images/trash-field-study/cup-icon.png';
-import labelChange from '../../images/trash-field-study/label-change.svg';
-import trashProcess from '../../images/trash-field-study/trash-process.png';
 
 export default class TrashProjectPage extends React.Component {
   render = () => {

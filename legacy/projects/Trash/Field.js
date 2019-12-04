@@ -1,20 +1,16 @@
 // @flow
 
 import React from 'react';
-import { colors, changeOpacity } from '../../colors';
 import images from '../../images/images';
 
 import {
   SectionContainer,
-  SectionTitleContainer,
   Prose,
   Subheading,
   SectionHeader,
   Slides,
   CenteredImage,
 } from './util';
-import Header from '../../components/Header';
-import ProjectInfo from '../../components/ProjectInfo';
 import NotesTable from '../../components/NotesTable';
 
 export default class TrashField extends React.Component {

@@ -16,17 +16,9 @@ export default class Contact extends React.Component {
         <div style={{ marginBottom: '4em' }}>
           <Subheader>Contact</Subheader>
           <ul>
-            {/* <li>
-              <a
-                href="https://www.dropbox.com/s/txwwykhhr39h16j/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
-                target="_blank"
-              >
-                CV
-              </a>
-            </li> */}
             <li>
               <a
-                href="https://www.dropbox.com/s/txwwykhhr39h16j/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
+                href="https://www.dropbox.com/s/zskiixj0tu92l8y/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
                 target="_blank"
               >
                 Resumé
@@ -52,9 +44,7 @@ export default class Contact extends React.Component {
               </a>
             </li>
             <li>
-              <a href="/">
-                <Subtitle>[more]</Subtitle>
-              </a>
+              <a href="/">...</a>
             </li>
           </ul>
         </div>
@@ -67,7 +57,7 @@ export default class Contact extends React.Component {
         <ul>
           <li>
             <a
-              href="https://www.dropbox.com/s/txwwykhhr39h16j/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
+              href="https://www.dropbox.com/s/zskiixj0tu92l8y/Aaron-Rambhajan-Resum%C3%A9.pdf?dl=0"
               target="_blank"
             >
               Resumé
