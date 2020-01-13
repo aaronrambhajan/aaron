@@ -23,24 +23,24 @@ export default class About extends React.Component {
           <BodyText>
             Hey! I'm Aaron. I'm a software developer, aspiring scientist, and
             music producer. I'm passionate about using science and software to
-            understand the human experience. My ultimate aspiration is to build
-            tools that help creators tell their stories.
+            understand the human experience. My ultimate aspiration is to help
+            creators tell their stories.
             <br />
             <br />
             Currently, I'm in my final year of my{' '}
             <Link href="/https://ischool.utoronto.ca/">Master's</Link> at U of
-            T, studying UX & Data. I did my undergraduate at U of T in
-            Psychology, Art History, and Computer Science, and spent a term
-            studying Sound Design at{' '}
+            T, studying UX Design. I did my undergraduate at U of T in
+            Psychology, Art History, and Computer Science, and briefly studied
+            Sound Design at{' '}
             <Link href="/https://www.berklee.edu/">
               Berklee College of Music
             </Link>
             .<br />
             <br />
-            During Summer 2019, I was a Full Stack Development Intern at{' '}
+            In Summer 2019, I was a Full Stack Development Intern at{' '}
             <Link href="https://www.touchbistro.com/">TouchBistro</Link> in
-            Toronto. I work as a developer and researcher at the{' '}
-            <Link href="http://macklab.utoronto.ca/">Mack Lab</Link> now, and am
+            Toronto. I now work as a developer and researcher at the{' '}
+            <Link href="http://macklab.utoronto.ca/">Mack Lab</Link>, and am
             looking for full-time and internship opportunities for June 2020.
             <br />
             <br />
@@ -48,8 +48,8 @@ export default class About extends React.Component {
             <Link href="https://docs.google.com/presentation/d/1PmflOEb9WzHWy8FFKMhvz4lXCbUsodbxkNTIA7OZryU/edit?usp=sharing">
               Quan
             </Link>
-            , to make sorting garbage easy. We created a low-cost, universal
-            labelling system and won 2
+            . We tried to make sorting garbage easy by creating a low-cost,
+            universal labelling system. We raised won 2
             <sup style={{ fontSize: '0.5em' }}>nd</sup> / 2000 teams at the UN &
             Baidu design challenge, raising $20,000. Soon after, in 2017, I led
             product and research for{' '}
@@ -64,21 +64,19 @@ export default class About extends React.Component {
             computational cognitive neuroscience lab. Under the supervision of
             Dr. Michael Mack, I research the ecological validity of visual
             object categorization using real-world stimuli. I'm currently
-            writing a paper comparing deep learning models to humans. In
-            addition to psychology, computer science, and music, I have done
-            extensive coursework in art history: I wrote an undergraduate thesis
-            on <strong>Off-White™</strong> under the supervision of{' '}
+            writing a paper comparing deep learning models to humans. I have
+            also done extensive coursework in art history—I wrote an
+            undergraduate thesis on Off-White™ under the supervision of{' '}
             <Link href="https://arthistory-pat.iit.artsci.utoronto.ca/people/directories/all-faculty/jordan-bear">
               Dr. Jordan Bear
             </Link>
             .<br />
-            <br />I was born and raised in Brampton and attended Mayfield
-            Secondary in the arts program (I played flute and piano!). My father
-            is an Air Traffic Controller and my mother is a Systems
-            Programmer—though my mother has always been hugely passionate about
-            the arts. Combined with my Montessori education, I ended up as a
-            crazy kid who sees math and art as one in the same. Needless to say,
-            I love nothing more than learning.
+            <br />I was born in Brampton, ON and attended Mayfield Secondary in
+            the arts program (I played flute and piano!). My father is an Air
+            Traffic Controller and my mother is a Systems Programmer. My parents
+            were strong believers that art and science are one in the same.
+            Combined with my Montessori education, it's safe to say there's
+            nonthing I love more than learning.
             <br />
             <br />
             In my free time, I make music with my friends{' '}
@@ -90,8 +88,8 @@ export default class About extends React.Component {
             <Link href="https://open.spotify.com/playlist/0vdJIP2WcbGWqwth5Nlvn6?si=DDxngs3aRpSstkIaJLFQyw">
               listen to music
             </Link>
-            , write poetry, and read. Occassionally, I play Breath of the Wild,
-            but honestly I love doing anything that involves a great story.
+            , write poetry, and read. I do many different things in my life, but
+            I am always inspired by story.
             <br />
             <br />
             <a
@@ -113,22 +111,21 @@ export default class About extends React.Component {
         <BodyText>
           Hey! I'm Aaron. I'm a software developer, aspiring scientist, and
           music producer. I'm passionate about using science and software to
-          understand the human experience. My ultimate aspiration is to build
-          tools that help creators tell their stories.
+          understand the human experience. My ultimate aspiration is to help
+          creators tell their stories.
           <br />
           <br />
           Currently, I'm in my final year of my{' '}
           <Link href="/https://ischool.utoronto.ca/">Master's</Link> at U of T,
-          studying UX & Data. I did my undergraduate at U of T in Psychology,
-          Art History, and Computer Science, and spent a term studying Sound
-          Design at{' '}
+          studying UX Design. I did my undergraduate at U of T in Psychology,
+          Art History, and Computer Science, and briefly studied Sound Design at{' '}
           <Link href="/https://www.berklee.edu/">Berklee College of Music</Link>
           .<br />
           <br />
-          During Summer 2019, I was a Full Stack Development Intern at{' '}
+          In Summer 2019, I was a Full Stack Development Intern at{' '}
           <Link href="https://www.touchbistro.com/">TouchBistro</Link> in
-          Toronto. I work as a developer and researcher at the{' '}
-          <Link href="http://macklab.utoronto.ca/">Mack Lab</Link> now, and am
+          Toronto. I now work as a developer and researcher at the{' '}
+          <Link href="http://macklab.utoronto.ca/">Mack Lab</Link>, and am
           looking for full-time and internship opportunities for June 2020.
           <br />
           <br />
