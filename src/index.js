@@ -11,11 +11,16 @@ import Music from './content/Music';
 import About from './content/About';
 import Contact from './content/Contact';
 
+import Synthesis from './content/projects/Synthesis';
+import Staircase from './content/projects/Staircase';
+import Memories from './content/projects/Memories';
+import Scraper from './content/projects/Scraper';
+import Quan from './content/projects/Quan';
+
 const Container = styled.div`
   width: 100%;
   max-width: 700px;
   padding: 2em;
-  // margin: 0 auto;
   font-size: calc(1em + 0.5vw);
   line-height: 1.5;
 `;
@@ -39,6 +44,11 @@ const App = () => (
       <Route exact path="/music" component={Music} />
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/projects/synthesis" component={Synthesis} />
+      <Route exact path="/projects/staircase" component={Staircase} />
+      <Route exact path="/projects/memories" component={Memories} />
+      <Route exact path="/projects/scraper" component={Scraper} />
+      <Route exact path="/projects/quan" component={Quan} />
     </Container>
   </Router>
 );
