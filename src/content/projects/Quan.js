@@ -1,37 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import {
+  Container,
+  Header,
+  HeroImage,
+  Content,
+  Subheader,
+  FooterLine,
+  FooterList,
+  FooterItem,
+} from './styles';
 import stuff from '../../images/exp1.gif';
-
-const Container = styled.div``;
-
-const Header = styled.h2`
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-`;
-
-const HeroImage = styled.img`
-  margin-top: 1em;
-  margin-bottom: 1em;
-`;
-
-const Subheader = styled.h3`
-  font-weight: bold;
-  font-size: 1.25em;
-  margin-top: 2em;
-  margin-bottom: 1em;
-`;
-
-const Content = styled.p`
-  font-size: 0.75em;
-`;
-
-const Back = styled.a`
-  font-weight: bold;
-  margin-top: 3em;
-  margin-bottom: 1em;
-`;
 
 export default class Synthesis extends React.Component {
   /*
@@ -121,9 +99,20 @@ export default class Synthesis extends React.Component {
           pinned down early on, rather than trying to retrofit them at the every
           end. I should've built this more than a day before the election.
         </Content>
-        <Subheader>
-          <a href="/projects">Read more</a> / <a href="/projects">Link</a> /
-        </Subheader>
+
+        <FooterLine />
+        <Subheader>Links</Subheader>
+
+        <FooterList>
+          <FooterItem>
+            <a href="/projects">More projects</a>
+          </FooterItem>
+          <FooterItem>
+            <a href="https://github.com/aaronrambhajan/heartbeat-scripts">
+              GitHub
+            </a>
+          </FooterItem>
+        </FooterList>
       </Container>
     );
   };
