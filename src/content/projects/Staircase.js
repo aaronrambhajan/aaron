@@ -13,9 +13,6 @@ import stuff from '../../images/exp1.gif';
 
 export default class Synthesis extends React.Component {
   /*
-          <MagicListItem
-            link="https://github.com/aaronrambhajan/hb-staircase"
-            title="Heartbeat Perception" // ❤️
             headers="React, Express, MongoDB, Bootstrap | Mack Lab | 2018"
             description={
               <div>
@@ -27,10 +24,6 @@ export default class Synthesis extends React.Component {
                 for context.
               </div>
             }
-            toggle={() => {
-              this.setState({ displayItem2: !this.state.displayItem2 });
-            }}
-            isDroppedDown={this.state.displayItem2}
           />
 
   */
@@ -48,7 +41,6 @@ export default class Synthesis extends React.Component {
           how much I could get done between 10:30 AM and my astrophysics lecture
           at 2:30. I managed to deploy right before class.
         </Content>
-        <Content>You can check out the code at my github.</Content>
         <Subheader>Technologies</Subheader>
         <Content>
           The webapp itself was built with a react.js and node stack, using the
@@ -91,9 +83,10 @@ export default class Synthesis extends React.Component {
             <a href="/projects">More projects</a>
           </FooterItem>
           <FooterItem>
-            <a href="https://github.com/aaronrambhajan/heartbeat-scripts">
-              GitHub
-            </a>
+            <a href="https://github.com/aaronrambhajan/hb-staircase">GitHub</a>
+          </FooterItem>
+          <FooterItem>
+            <a href="https://fathomless-spire-44257.herokuapp.com/">App</a>
           </FooterItem>
         </FooterList>
       </Container>

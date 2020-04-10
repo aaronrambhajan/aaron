@@ -8,6 +8,7 @@ const Container = styled.div`
 
 const BodyText = styled.p`
   line-height: 1.5em;
+  margin-bottom: 4em;
 `;
 
 const Link = styled.a`
@@ -76,7 +77,7 @@ export default class About extends React.Component {
             Traffic Controller and my mother is a Systems Programmer. My parents
             were strong believers that art and science are one in the same.
             Combined with my Montessori education, it's safe to say there's
-            nonthing I love more than learning.
+            nothing I love more than learning.
             <br />
             <br />
             In my free time, I make music with my friends{' '}
@@ -90,17 +91,33 @@ export default class About extends React.Component {
             </Link>
             , write poetry, and read. I do many different things in my life, but
             I am always inspired by story.
-            <br />
-            <br />
-            <a
-              href="/"
-              style={{
-                textDecoration: 'none',
-              }}
-            >
-              ...
-            </a>
           </BodyText>
+
+          <Subheader>What I'm reading</Subheader>
+          <ul>
+            <li>
+              DHH's Blog;{' '}
+              <a href="https://signalvnoise.com/the-majestic-monolith/">
+                The Majestic Monolith
+              </a>
+            </li>
+            <li>
+              <a href="/projects/staircase">Staircasing Experiment</a>
+            </li>
+            <li>
+              <a href="/projects/memories">@memories</a>
+            </li>
+            <li>
+              <a
+                href="/projects"
+                style={{
+                  textDecoration: 'none',
+                }}
+              >
+                ...
+              </a>
+            </li>
+          </ul>
         </Container>
       );
     }

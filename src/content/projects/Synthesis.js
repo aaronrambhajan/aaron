@@ -9,26 +9,9 @@ import {
   FooterLine,
   FooterList,
   FooterItem,
+  Code,
 } from './styles';
-import styled from 'styled-components';
 import stuff from '../../images/exp1.gif';
-
-const OnHoverDescription = styled.p`
-  font-size: 0.5em;
-  font-family: monospace;
-  text-transform: uppercase;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-`;
-
-const Code = styled.code`
-  font-family: monospace;
-  // color: grey;
-  font-size: 0.75em;
-  margin-bottom: 4em;
-  // background-color: black;
-  // text-transform: uppercase;
-`;
 
 export default class Synthesis extends React.Component {
   render = () => {
@@ -41,29 +24,35 @@ export default class Synthesis extends React.Component {
           <Link href="https://docs.google.com/presentation/d/1GYVKaBqv_7PKEjhkFaf2I5y2KmKbAHzyULz5O2AVHLU/edit?usp=sharing">
             experiment
           </Link>{' '}
-          with heartbeats in my{' '}
-          <Link href="http://macklab.utoronto.ca/">lab</Link>, we kept
-          encountering issues getting good-quality sounds. They were often cut
-          short, sounded like garbage, and incorrectly classified. I decided to
-          develop a way of systematically synthesizing them to give us control
-          over abnormalities and recording quality. It was my first time working
-          with DSP, so I thought it a great opportunity to experiment. It's
-          based on{' '}
+          testing how people perceive heartbeat abnormalities, we kept
+          encountering issues with the recordings. They were cut short, ripe
+          with digital artifacts, and (critically) incorrectly classified. I
+          decided to develop a way of synthesizing them to give us control over
+          these issues. It was my first time working with DSP, so there was a
+          steep learning curve, but I based it on{' '}
           <Link href="https://github.com/bencholmes/heartbeat">
             Ben Holmes' heartbeat script
           </Link>
-          , and includes a whole pipeline of code—from synthesis to file
-          parsing, sorting to audio effects.
+          . This repository includes code for everything from synthesis to
+          file-parsing to audio effects.
         </Content>
 
         <Subheader>Technologies</Subheader>
 
-        {/* <OnHoverDescription>Python, SciPy, Librosa, MATLAB</OnHoverDescription> */}
+        {/* <OnHoverDescription>Python, SciPy, Librosa, MATLAB</OnHoverDescription>
+        Software engineering generalist looking for experience with architecture and design with experiencne in UXR
+
+        */}
         <Content>
-          The webapp itself was built with a react.js and node stack, using the
-          usual webpack and react-router boilerplate that I use for most of my
-          web dev projects. The front end uses react-router, although it became
-          clear a couple hours in that it had been mostly a waste of time.
+          <Code>synthesis/</Code> was written in Python, though I spent a great
+          deal of time creating custom Python functions to mock MATLAB
+          behaviour. <Code>numpy</Code> was used to model MATLAB data
+          structures; <Code>scipy</Code> was used for Digital Signal Processing;
+          and <Code>librosa</Code>. portinn The webapp itself was built with a{' '}
+          <Code>react.js</Code> and node stack, using the usual webpack and
+          react-router boilerplate that I use for most of my web dev projects.
+          The front end uses react-router, although it became clear a couple
+          hours in that it had been mostly a waste of time.
         </Content>
         <Content>
           The backend uses express to handle routing, in addition to passport.js
@@ -86,10 +75,11 @@ export default class Synthesis extends React.Component {
         </Content>
         <Subheader>Lessons</Subheader>
         <Content>
-          There's no need to use a technology you don't need (looking at you,
-          react-router). It's important to get layouts for headers and footers
-          pinned down early on, rather than trying to retrofit them at the every
-          end. I should've built this more than a day before the election.
+          I wasted a lot of time trying to There's no need to use a technology
+          you don't need (looking at you, react-router). It's important to get
+          layouts for headers and footers pinned down early on, rather than
+          trying to retrofit them at the every end. I should've built this more
+          than a day before the election.
         </Content>
 
         <FooterLine />

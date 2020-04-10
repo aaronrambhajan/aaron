@@ -11,21 +11,13 @@ import {
 } from './styles';
 import stuff from '../../images/exp1.gif';
 
-export default class Synthesis extends React.Component {
+export default class Memories extends React.Component {
   /*
 
-          <MagicListItem
-            link="https://github.com/aaronrambhajan/-memories"
-            title="@memories" // 📚
             headers="Java, JavaFX, Git, Agile | CSC207 | 2018"
             description="Desktop app for managing and tagging image files. Enabled
             users to search tags, review history (and subsequently revert), and
             autosave. Built with a team of 3."
-            toggle={() => {
-              this.setState({ displayItem3: !this.state.displayItem3 });
-            }}
-            isDroppedDown={this.state.displayItem3}
-          />
 
   */
   render = () => {
@@ -85,9 +77,7 @@ export default class Synthesis extends React.Component {
             <a href="/projects">More projects</a>
           </FooterItem>
           <FooterItem>
-            <a href="https://github.com/aaronrambhajan/heartbeat-scripts">
-              GitHub
-            </a>
+            <a href="https://github.com/aaronrambhajan/-memories">GitHub</a>
           </FooterItem>
         </FooterList>
       </Container>

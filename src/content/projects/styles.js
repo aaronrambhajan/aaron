@@ -10,7 +10,7 @@ const Header = styled.h2`
   font-weight: bold;
   font-size: 1.5em;
   margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 `;
 
 const HeroImage = styled.img`
@@ -22,7 +22,7 @@ const Subheader = styled.h3`
   font-weight: bold;
   font-size: 1.25em;
   margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 `;
 
 const Content = styled.p`
@@ -40,6 +40,16 @@ const FooterList = styled.ul`
 
 const FooterItem = styled.li``;
 
+const Code = styled.code`
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  color: inherit;
+`;
+
 export {
   Container,
   Link,
@@ -50,4 +60,5 @@ export {
   FooterLine,
   FooterList,
   FooterItem,
+  Code,
 };

@@ -11,21 +11,13 @@ import {
 } from './styles';
 import stuff from '../../images/exp1.gif';
 
-export default class Synthesis extends React.Component {
+export default class Scraper extends React.Component {
   /*
 
-            <MagicListItem
-              link="https://github.com/aaronrambhajan/images-scraper"
-              title="Image Scraper" // 🔬
               headers="Bash, JavaScript | Mack Lab | 2018"
               description="CLI tool for scraping popular search engines to help
             build image databases for classification experiments. Used throughout
             the lab for a variety of experiments."
-              toggle={() => {
-                this.setState({ displayItem4: !this.state.displayItem4 });
-              }}
-              isDroppedDown={this.state.displayItem4}
-            />
 
   */
   render = () => {
@@ -85,7 +77,7 @@ export default class Synthesis extends React.Component {
             <a href="/projects">More projects</a>
           </FooterItem>
           <FooterItem>
-            <a href="https://github.com/aaronrambhajan/heartbeat-scripts">
+            <a href="https://github.com/aaronrambhajan/images-scraper">
               GitHub
             </a>
           </FooterItem>

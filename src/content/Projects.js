@@ -13,36 +13,24 @@ export default class Projects extends React.Component {
         <Container>
           <Subheader>Code</Subheader>
           <ul>
-            <li>
-              <a href="/projects/synthesis">Heartbeat Synthesis</a>
-            </li>
-            <li>
-              <a href="/projects/staircase">Staircasing Experiment</a>
-            </li>
-            <li>
-              <a href="/projects/memories">@memories</a>
-            </li>
-            <li>
-              <a href="/projects/scraper">Image Scraper</a>
-            </li>
-            <li>
-              <a
-                href="/"
-                style={{
-                  textDecoration: 'none',
-                }}
-              >
-                ...
-              </a>
-            </li>
+            <li style={{ color: 'lightgrey' }}>Heartbeat Synthesis</li>
+            <li style={{ color: 'lightgrey' }}>Staircasing Experiment</li>
+            <li style={{ color: 'lightgrey' }}>@memories</li>
+            <li style={{ color: 'lightgrey' }}>Image Scraper</li>
           </ul>
           <Subheader>UX Research</Subheader>
           <ul>
-            <li>
-              <a href="/projects/quan">Quan</a>
-            </li>
+            <li style={{ color: 'lightgrey' }}>Quan</li>
             <li style={{ color: 'lightgrey' }}>10Four</li>
-            <li style={{ color: 'lightgrey' }}>TTC IA</li>
+            <li style={{ color: 'lightgrey' }}>TTC Information Architecture</li>
+          </ul>
+          <Subheader>Augmented Reality</Subheader>
+          <ul>
+            <li>
+              <a href="/projects/arr">Night Market AR</a>
+            </li>
+            <li style={{ color: 'lightgrey' }}>SoundClout</li>
+            <li style={{ color: 'lightgrey' }}>Measure</li>
           </ul>
         </Container>
       );
@@ -50,7 +38,7 @@ export default class Projects extends React.Component {
 
     return (
       <Container>
-        <Subheader>Projects</Subheader>
+        <Subheader>Work</Subheader>
         <ul>
           <li>
             <a href="/projects/synthesis">Heartbeat Synthesis</a>
